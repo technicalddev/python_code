@@ -2,40 +2,64 @@
 // For more information: https://material.angular.io/guide/theming
 @import '~@angular/material/theming';
 // Plus imports for other components in your app.
-
-// Include the common styles for Angular Material. We include this here so that you only
-// have to load a single css file for Angular Material in your app.
-// Be sure that you only ever include this mixin once!
 @include mat-core();
 
-// Define the palettes for your theme using the Material Design palettes available in palette.scss
-// (imported above). For each palette, you can optionally specify a default, lighter, and darker
-// hue. Available color palettes: https://material.io/design/color/
-$moneytor-in-primary: mat-palette($mat-indigo);
-$moneytor-in-accent: mat-palette($mat-pink, A200, A100, A400);
+@import 'theme/palettes';
+@import 'theme/light-theme';
+@import 'theme/dark-theme';
+@import 'theme/global';
+@import 'theme/base';
 
-// The warn palette is optional (defaults to red).
-$moneytor-in-warn: mat-palette($mat-red);
+@import 'assets/scss/nav';
 
-// Create the theme object (a Sass map containing all of the palettes).
-$moneytor-in-theme: mat-light-theme(
-  $moneytor-in-primary,
-  $moneytor-in-accent,
-  $moneytor-in-warn
+@import 'theme/fonts';
+
+// Typography
+$moneytor-typography: mat-typography-config(
+  $font-family: 'Avenir-LT-Std-Book',
+  $headline: mat-typography-level(34px, 1.21, 900),
+  $title: mat-typography-level(22px, 1.27, 900),
+  $subheading-2: mat-typography-level(17px, 1.29, 900),
+  $subheading-1: mat-typography-level(15px, 1.33, 900),
+  $body-1: mat-typography-level(15px, 1.33, 400),
+  $body-2: mat-typography-level(13px, 1.38, 400),
+  $caption: mat-typography-level(11px, 1.18, 400),
+  $display-1: mat-typography-level(17px, 1.29, 500),
+  $display-2: mat-typography-level(13px, 1.38, 500),
+  $display-3: mat-typography-level(11px, 1.18, 500),
+  $button: mat-typography-level(17px, 20px, 500),
+  $input: mat-typography-level(15px, 1.33, 400),
 );
 
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
-@include angular-material-theme($moneytor-in-theme);
+// Primary, Secondary and Warn
+$mt-theme-primary: mat-palette($mt-primary-color);
+$mt-theme-accent: mat-palette($mt-accent-color);
+$mt-theme-warn: mat-palette($mt-warn-color);
 
-/* You can add global styles to this file, and also import other style files */
+// for light theme
+$light-theme: moneytor-light-theme(
+  $mt-theme-primary,
+  $mt-theme-accent,
+  $mt-theme-warn
+);
 
-html,
-body {
-  height: 100%;
+$dark-theme: moneytor-dark-theme(
+  $mt-theme-primary,
+  $mt-theme-accent,
+  $mt-theme-warn
+);
+
+@mixin custom-components-theme($theme) {
+  @include baseTheme($theme);
+  @include navBarStyle($theme);
 }
-body {
-  margin: 0;
-  font-family: Roboto, 'Helvetica Neue', sans-serif;
+
+@include angular-material-theme($light-theme);
+@include custom-components-theme($light-theme);
+
+.dark-theme {
+  @include angular-material-theme($dark-theme);
+  @include custom-components-theme($dark-theme);
 }
+
+@include angular-material-typography($moneytor-typography);

@@ -1,1 +1,58 @@
-<router-outlet></router-outlet>
+<div class="mt-container" [class.is-mobile]="mobileQuery.matches">
+  <mat-sidenav-container class="mt-sidenav-container">
+    <mat-sidenav
+      #sideNav
+      mode="over"
+      [opened]="mobileQuery.matches ? false : false"
+      fixedTopGap="56"
+    >
+      <mat-nav-list>
+        <ng-container *ngFor="let navItem of navItems">
+          <a
+            mat-list-item
+            [routerLink]="navItem.link"
+            routerLinkActive="mt-nav-active"
+            [ngClass]="navItem.class"
+            (click)="navigateTo(navItem)"
+            >{{ navItem.name }}</a
+          >
+        </ng-container>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <mat-toolbar
+        color="primary"
+        class="mt-toolbar"
+        [ngClass]="sideNav.opened ? 'side-bar-open' : 'side-bar-closed'"
+      >
+        <button
+          mat-icon-button
+          fxHide="false"
+          (click)="sideNav.toggle()"
+          fxHide.gt-sm
+        >
+          <span class="ic_burger"></span>
+        </button>
+        <a>
+          <img src="../../../assets/img/logo/side-nav-logo.svg" height="40" />
+        </a>
+        <span class="spacer"></span>
+        <div fxLayout="row" fxShow="false" fxShow.gt-sm>
+          <ng-container *ngFor="let navItem of navItems">
+            <a
+              matRipple
+              [routerLink]="navItem.link"
+              class="mt-toolbar-item"
+              routerLinkActive="mt-nav-active"
+              [ngClass]="navItem.class"
+              >{{ navItem.name }}</a
+            >
+          </ng-container>
+        </div>
+      </mat-toolbar>
+      <div class="mt-page-wrapper">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

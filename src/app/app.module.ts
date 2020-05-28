@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { NavbarComponent } from './Components/navbar/navbar.component';
+import { AngularMaterialModule } from './Shared/_Modules/angular.material.module';
 
 @NgModule({
   declarations: [AppComponent, NavbarComponent],
@@ -17,6 +18,7 @@ import { NavbarComponent } from './Components/navbar/navbar.component';
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
     }),
+    AngularMaterialModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

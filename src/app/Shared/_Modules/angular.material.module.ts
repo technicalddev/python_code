@@ -53,6 +53,7 @@ import { PortalModule } from '@angular/cdk/portal';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { CdkStepperModule } from '@angular/cdk/stepper';
 import { OverlayModule } from '@angular/cdk/overlay';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   exports: [
@@ -106,6 +107,7 @@ import { OverlayModule } from '@angular/cdk/overlay';
     ScrollingModule,
     CdkStepperModule,
     OverlayModule,
+    FlexLayoutModule,
   ],
   providers: [
     {

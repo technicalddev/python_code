@@ -1,0 +1,78 @@
+@import '~@angular/material/theming';
+@import 'palettes';
+// Background palette for dark themes.
+$dark-color: rgb(19, 12, 45);
+$mt-dark-background: (
+  tranparant: transparent,
+  base-bg: #342d4c,
+  base: $dark-color,
+  background: $dark-color,
+  bg: $dark-color,
+  white: #ffffff,
+  primary: #6979f8,
+  secondary: #808df9,
+  dark-blue: #3b49f3,
+  light-blue: #96a1fa,
+  mt-green: #00c48c,
+  dark-green: #43cf76,
+  success: #00c48c,
+  light-green: #a9e2b7,
+  mt-pink: #be52f2,
+  warning: orange,
+  yellow: rgb(249, 249, 127),
+  error: #ff647c,
+  card: $dark-color,
+  checkbox: rgb(112, 98, 98),
+  checkbox-border: #afaab9,
+  radio-border: #a5affb,
+  chip-background: #e5e7fa,
+  disabled-input: #ebeaec,
+  disable-button: #ece9f1,
+  disabled: #ece9f1,
+  shadow1: rgba(0, 0, 0, 0.07),
+  disabled-border: rgba(128, 128, 128, 0.95),
+  gray: #d9d9d9,
+  light-gray: #f5f5f5,
+  purple: #663399,
+  voilet-dark: #190036,
+  voilet-light: #221849,
+  blur: rgba(0, 0, 0, 0.6),
+  phone: rgba(144, 196, 218, 1),
+  sms: #02c075,
+  email: #499fcc,
+  field: #f5a623,
+  ivr: #21d3cd,
+  whatsapp: rgb(37, 211, 102),
+);
+
+// Foreground palette for dark themes.
+$mt-dark-foreground: (
+  base: $dark-color,
+  text: #ffffff,
+  secondary-text: rgb(205, 207, 227),
+  link: #524fdd,
+  checkbox: rgb(227, 221, 221),
+  icon: #c9cad6,
+  chip-icon: #f5ba08,
+  divider-color: #ece9f1,
+  black: #fff,
+  light-black: #fefefe,
+);
+
+$mt-shadows: (
+  shadow: 0 1px 4px 0 rgba(95, 95, 101, 0.468),
+  bg-shadow: 0 7px 64px 0 rgba(84, 86, 97, 0.4),
+  mat-shadow:
+    '0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12)',
+);
+@function moneytor-dark-theme($primary, $accent, $warn) {
+  @return (
+    primary: $primary,
+    accent: $accent,
+    warn: $warn,
+    is-dark: true,
+    foreground: $mt-dark-foreground,
+    background: $mt-dark-background,
+    shadows: $mt-shadows
+  );
+}
