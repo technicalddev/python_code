@@ -6,7 +6,14 @@ import { environment } from './environments/environment';
 
 if (environment.production) {
   enableProdMode();
+  // to disable console.log on production mode
+  if (window) {
+    window.console.log = () => {};
+  }
 }
 
-platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.error(err));
+document.addEventListener('DOMContentLoaded', () => {
+  platformBrowserDynamic()
+    .bootstrapModule(AppModule)
+    .catch((err) => console.error(err));
+});
