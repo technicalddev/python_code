@@ -1,0 +1,166 @@
+@import '~@angular/material/theming';
+
+@mixin inputStyle($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $foreground: map-get($theme, foreground);
+  $background: map-get($theme, background);
+  $shadows: map-get($theme, shadows);
+
+  .moneytor-input {
+    font-size: 15px;
+    &.mat-form-field-appearance-outline {
+      width: 100%;
+      margin-bottom: 0.4em;
+      .mat-form-field-wrapper {
+        margin: 0.25em 0;
+        padding-bottom: 1em;
+      }
+      .mat-form-field-outline {
+        box-shadow: 0 7px 64px 0 mat-color($background, shadow1);
+      }
+      .mat-form-field-infix {
+        padding: 2px 0 10px 0;
+        height: 40px;
+        border-top: 0.65em solid transparent;
+        .mat-select-arrow-wrapper {
+          display: block;
+          .mat-select-arrow {
+            color: mat-color($foreground, icon);
+          }
+        }
+        .mat-error {
+          display: block;
+          margin-top: 1em;
+        }
+      }
+      // &.login {
+      //   .mat-form-field-infix {
+      //   border-top: 0.75em solid transparent;
+      //   }
+      // }
+      .mat-form-field-outline-start {
+        border: 1px solid mat-color($background, checkbox-border);
+        border-right-style: none;
+        background: mat-color($background, card);
+      }
+      .mat-form-field-outline-gap {
+        border: 1px solid mat-color($background, checkbox-border);
+        border-left-style: none;
+        border-right-style: none;
+        background: mat-color($background, card);
+      }
+      .mat-form-field-outline-end {
+        border: 1px solid mat-color($background, checkbox-border);
+        border-left-style: none;
+        background: mat-color($background, card);
+      }
+      .mat-form-field-label {
+        top: 1.9975em;
+        margin-top: -0.75em;
+      }
+      &.mat-form-field-can-float.mat-form-field-should-float {
+        .mat-form-field-label {
+          transform: translateY(-1.175em) scale(0.75);
+        }
+      }
+      &.mat-form-field-disabled {
+        .mat-form-field-outline {
+          background: mat-color($background, disabled-input);
+          border-radius: 5px;
+        }
+        .mat-form-field-label {
+          color: mat-color($foreground, disabled-text);
+        }
+        .mat-form-field-outline-start {
+          background: mat-color($background, disabled-input);
+        }
+        .mat-form-field-outline-gap {
+          background: mat-color($background, disabled-input);
+        }
+        .mat-form-field-outline-end {
+          background: mat-color($background, disabled-input);
+        }
+      }
+      .mat-form-field-prefix {
+        left: -5px;
+        top: 0.1em;
+        align-self: center;
+      }
+      .mat-form-field-suffix {
+        right: -5px;
+        top: 0.1em;
+        align-self: center;
+      }
+      // .mat-icon {
+      //   color: mat-color($foreground, icon);
+      //   cursor: pointer;
+      //   outline: 0;
+      //   &.mt-active-icon {
+      //     color: mat-color($foreground, text);
+      //   }
+      // }
+      // &.mat-focused {
+      //   .mat-icon {
+      //     color: mat-color($foreground, text);
+      //   }
+      // }
+
+      &.textarea {
+        .mat-form-field-infix {
+          height: auto !important;
+        }
+      }
+      &.small {
+        &.mat-form-field-appearance-outline {
+          margin-bottom: 0;
+        }
+        .mat-form-field-wrapper {
+          padding-bottom: 0;
+        }
+        .mat-form-field-infix {
+          height: 38px;
+          border-top: 0.5em solid transparent;
+        }
+      }
+    }
+  }
+
+  .mt-input-file-wrapper {
+    border: 1px solid mat-color($background, disabled-text);
+    border-radius: 5px;
+    padding: 0 1rem;
+    line-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    background: mat-color($background, card);
+    color: currentColor;
+    width: 100%;
+    height: 44px;
+    label {
+      margin: 0;
+      background: mat-color($background, light-green);
+      color: mat-color($background, mt-green);
+      padding: 0.4rem;
+      border-radius: 5px;
+      margin: 0 0.5rem;
+      height: 30px;
+      line-height: 30px;
+      > .mt-attachment-icon-rotate {
+        transform: rotate(45deg);
+      }
+    }
+    input[type='file'] {
+      display: none;
+    }
+  }
+  .mt-upload-file-name {
+    max-width: 70%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin: 0;
+    padding: 0;
+  }
+}

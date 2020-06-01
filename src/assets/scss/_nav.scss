@@ -39,6 +39,7 @@
               &:before {
                 content: '';
                 position: absolute;
+                transition: 0.5s all;
                 width: 5px;
                 top: 0;
                 left: 0;
@@ -80,18 +81,19 @@
           align-items: center;
           white-space: nowrap;
           box-shadow: mat-color($shadows, mat-shadow);
-          background: mat-color($background, primary);
+          background: mat-color($background, transparent);
           .mt-toolbar-item {
             color: mat-color($background, white);
             font-size: 14px;
             margin: 0 0.5rem;
             text-decoration: none;
-            padding: 20px 10px;
+            padding: 11px;
             transition: 0.5s all;
             &:hover,
             &.mt-nav-active {
               &:before {
                 content: '';
+                transition: 0.5s all;
                 position: absolute;
                 height: 3px;
                 background: mat-color($background, white);
@@ -101,25 +103,30 @@
                 border-radius: 4px;
               }
             }
+            &.raised {
+              border-radius: 3px;
+              color: mat-color($background, primary);
+              padding: 11px 22px;
+            }
           }
-          &.side-bar-open {
-            width: calc(100% - 220px);
-          }
-        }
-      }
-      .mt-page-wrapper {
-        padding: 70px 10px;
-      }
-    }
-    &.mt-is-mobile {
-      .mat-drawer-container {
-        background: mat-color($background, base);
-        .mt-toolbar {
-          &.side-bar-open {
-            width: 100%;
+          .nav-item-container {
+            padding-right: 5%;
           }
         }
       }
+      // .mt-page-wrapper {
+      //   padding: 64px 0px;
+      // }
     }
+    // &.mt-is-mobile {
+    //   .mat-drawer-container {
+    //     background: mat-color($background, base);
+    //     .mt-toolbar {
+    //       &.side-bar-open {
+    //         width: 100%;
+    //       }
+    //     }
+    //   }
+    // }
   }
 }

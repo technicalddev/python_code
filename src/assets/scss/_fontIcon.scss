@@ -17,124 +17,152 @@
   height: 15px;
   width: 15px;
 }
+// copy of .ic_non-verified
 .ic_cross:before {
-  content: '\e912';
+  content: '\e919';
 }
 
+.ic_arrow-left:before {
+  content: '\e901';
+}
 .ic_action:before {
   content: '\e900';
 }
 .ic_burger:before {
-  content: '\e901';
-}
-.ic_call-log:before {
   content: '\e902';
 }
-.ic_callback:before {
+.ic_call-log:before {
   content: '\e903';
 }
-.ic_delete:before {
+.ic_callback:before {
   content: '\e904';
 }
-.ic_download:before {
+.ic_delete:before {
   content: '\e905';
 }
-.ic_email:before {
+.ic_dot:before {
   content: '\e906';
 }
-.ic_expired-account:before {
+.ic_download:before {
   content: '\e907';
 }
-.ic_filters:before {
+.ic_email:before {
   content: '\e908';
 }
-.ic_grow-up:before {
+.ic_expired-account:before {
   content: '\e909';
 }
-.ic_high-value:before {
+.ic_fb:before {
   content: '\e90a';
 }
-.ic_home-solid:before {
+.ic_filters:before {
   content: '\e90b';
 }
-.ic_ivr:before {
+.ic_grow-up:before {
   content: '\e90c';
 }
-.ic_logo-old:before {
+.ic_high-value:before {
   content: '\e90d';
 }
-.ic_logo:before {
+.ic_home-solid:before {
   content: '\e90e';
 }
-.ic_low-value:before {
+.ic_instagram:before {
   content: '\e90f';
 }
-.ic_mobile:before {
+.ic_ivr:before {
   content: '\e910';
 }
-.ic_non-primary:before {
+.ic_lamp:before {
   content: '\e911';
 }
-.ic_non-verified:before {
+.ic_linkedin:before {
   content: '\e912';
 }
-.ic_notification-outline:before {
+.ic_logo-old:before {
   content: '\e913';
 }
-.ic_paid:before {
+.ic_logo:before {
   content: '\e914';
 }
-.ic_part-paid:before {
+.ic_low-value:before {
   content: '\e915';
 }
-.ic_pending:before {
+.ic_mobile:before {
   content: '\e916';
 }
-.ic_primary:before {
+.ic_next:before {
   content: '\e917';
 }
-.ic_ptp:before {
+.ic_non-primary:before {
   content: '\e918';
 }
-.ic_question-outline:before {
+.ic_non-verified:before {
   content: '\e919';
 }
-.ic_refresh:before {
+.ic_notification-outline:before {
   content: '\e91a';
 }
-.ic_rejected:before {
+.ic_paid:before {
   content: '\e91b';
 }
-.ic_said-yes:before {
+.ic_part-paid:before {
   content: '\e91c';
 }
-.ic_settings:before {
+.ic_pending:before {
   content: '\e91d';
 }
-.ic_sms:before {
+.ic_primary:before {
   content: '\e91e';
 }
-.ic_sort:before {
+.ic_ptp:before {
   content: '\e91f';
 }
-.ic_unaction:before {
+.ic_question-outline:before {
   content: '\e920';
 }
-.ic_upload:before {
+.ic_quote:before {
   content: '\e921';
 }
-.ic_verified:before {
+.ic_refresh:before {
   content: '\e922';
 }
-.ic_visit:before {
+.ic_rejected:before {
   content: '\e923';
 }
-.ic_wallet-outline:before {
+.ic_said-yes:before {
   content: '\e924';
 }
-.ic_whatsapp-1:before {
+.ic_settings:before {
   content: '\e925';
 }
-.ic_whatsapp:before {
+.ic_sms:before {
   content: '\e926';
+}
+.ic_sort:before {
+  content: '\e927';
+}
+.ic_twitter:before {
+  content: '\e928';
+}
+.ic_unaction:before {
+  content: '\e929';
+}
+.ic_upload:before {
+  content: '\e92a';
+}
+.ic_verified:before {
+  content: '\e92b';
+}
+.ic_visit:before {
+  content: '\e92c';
+}
+.ic_wallet-outline:before {
+  content: '\e92d';
+}
+.ic_whatsapp-1:before {
+  content: '\e92e';
+}
+.ic_whatsapp:before {
+  content: '\e92f';
 }

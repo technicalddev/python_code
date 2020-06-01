@@ -10,7 +10,11 @@
 @import 'theme/global';
 @import 'theme/base';
 
+@import 'assets/scss/common';
+@import 'assets/scss/button';
+@import 'assets/scss/input';
 @import 'assets/scss/nav';
+@import 'assets/scss/layouts';
 
 @import 'theme/fonts';
 
@@ -51,7 +55,11 @@ $dark-theme: moneytor-dark-theme(
 
 @mixin custom-components-theme($theme) {
   @include baseTheme($theme);
+  @include commonStyle($theme);
+  @include buttonStyle($theme);
+  @include inputStyle($theme);
   @include navBarStyle($theme);
+  @include layoutStyle($theme);
 }
 
 @include angular-material-theme($light-theme);

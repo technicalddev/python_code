@@ -1,0 +1,26 @@
+<ng-container *ngFor="let item of arrLoader">
+  <div class="mt-ghost-loader-wrapper">
+    <div class="mt-ghost-loader-item">
+      <div
+        class="animated-background"
+        [ngClass]="(loaderType == 'timeline') ? 'm-timeline-loader-height' : ''"
+      >
+        <!-- for timeline loader -->
+        <ng-container *ngIf="loaderType === 'timeline'">
+          <div class="background-masker header-top"></div>
+          <div class="background-masker header-left"></div>
+          <div class="background-masker header-right"></div>
+          <div class="background-masker header-bottom"></div>
+          <div class="background-masker subheader-left"></div>
+          <div class="background-masker subheader-right"></div>
+          <div class="background-masker subheader-bottom"></div>
+        </ng-container>
+      </div>
+      <!-- for default loader -->
+      <ng-container *ngIf="loaderType == 'default'">
+        <div class="animated-background second-line-animated"></div>
+        <div class="animated-background third-line-animated"></div>
+      </ng-container>
+    </div>
+  </div>
+</ng-container>

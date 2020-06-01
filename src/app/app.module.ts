@@ -7,7 +7,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { NavbarComponent } from './Components/navbar/navbar.component';
-import { AngularMaterialModule } from './Shared/_Modules/angular.material.module';
+import { AngularMaterialModule } from './shared/_Modules/angular.material.module';
+import { SharedComponentsModule } from './shared/_Components/shared.module';
 
 @NgModule({
   declarations: [AppComponent, NavbarComponent],
@@ -19,6 +20,7 @@ import { AngularMaterialModule } from './Shared/_Modules/angular.material.module
       enabled: environment.production,
     }),
     AngularMaterialModule,
+    SharedComponentsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

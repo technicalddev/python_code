@@ -1,0 +1,12 @@
+<button
+  mat-button
+  [type]="type"
+  class="mt-btn"
+  [ngClass]="class"
+  [color]="color"
+  [disabled]="disabled || loading"
+  (click)="action()"
+>
+  <ng-content></ng-content>
+  <span *ngIf="loading" class="ic_refresh rotate ml-5"></span>
+</button>

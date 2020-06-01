@@ -1,0 +1,17 @@
+<mat-form-field
+  appearance="outline"
+  class="moneytor-input textarea"
+  [ngClass]="class"
+>
+  <mat-label *ngIf="label">{{ label }}</mat-label>
+  <textarea
+    matInput
+    [name]="placeholder"
+    [placeholder]="placeholder"
+    [required]="required"
+    [(ngModel)]="model"
+    [disabled]="disabled"
+    [rows]="rows"
+    (ngModelChange)="onModelChange($event)"
+  ></textarea>
+</mat-form-field>

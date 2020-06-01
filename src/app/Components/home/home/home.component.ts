@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { homeSection, secondSection } from '../mock';
 
 @Component({
   selector: 'app-home',
@@ -6,7 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
+  homeSection: any = {};
+  secondSection: any = {};
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.homeSection = homeSection;
+    this.secondSection = secondSection;
+  }
 }

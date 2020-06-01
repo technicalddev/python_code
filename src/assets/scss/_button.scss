@@ -1,0 +1,238 @@
+@import '~@angular/material/theming';
+
+@mixin buttonStyle($theme) {
+  $config: mat-typography-config();
+
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $foreground: map-get($theme, foreground);
+  $background: map-get($theme, background);
+  $shadows: map-get($theme, shadows);
+
+  .mt-btn,
+  .mt-btn.mat-button {
+    box-sizing: border-box;
+    position: relative;
+    white-space: nowrap;
+    text-decoration: none;
+    vertical-align: baseline;
+    text-align: center;
+    margin-right: 4px;
+    font-weight: 500;
+    border-radius: 4px;
+    font-size: 14px;
+    color: mat-color($background, white);
+    background-color: mat-color($background, primary);
+    border: 1px solid;
+    border-color: mat-color($background, primary);
+    padding: 0rem 1.5rem;
+    min-width: 50px;
+    line-height: 32px;
+    &.small {
+      padding: 0 8px;
+      font-size: 12px;
+      line-height: 30px;
+    }
+    &.large {
+      padding: 0.813rem 1.5rem;
+      font-size: 14px;
+    }
+    &.full-width {
+      width: 100%;
+    }
+    &.primary {
+      background-color: mat-color($background, primary);
+      border-color: mat-color($background, primary);
+    }
+    &.secondary {
+      background-color: mat-color($background, light-blue);
+      border-color: mat-color($background, light-blue);
+    }
+    &.warning {
+      background-color: mat-color($background, warning);
+      border-color: mat-color($background, warning);
+    }
+    &.error {
+      background-color: mat-color($background, error);
+      border-color: mat-color($background, error);
+    }
+    &.success {
+      background-color: mat-color($background, success);
+      border-color: mat-color($background, success);
+    }
+    &.white {
+      background-color: mat-color($background, white);
+      border-color: mat-color($background, white);
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+      color: mat-color($background, primary);
+      &.red {
+        color: mat-color($background, error);
+      }
+    }
+    &.rounded {
+      border-radius: 18px;
+    }
+    &.circle {
+      min-height: 24px;
+      min-width: 24px;
+      line-height: 1;
+      text-align: center;
+      padding: 0;
+      border-radius: 50%;
+      margin: 0;
+      border: 0;
+      .mat-icon {
+        height: 18px;
+        width: 18px;
+        line-height: 18px;
+        font-size: 18px;
+      }
+      &.large {
+        min-height: 40px;
+        min-width: 40px;
+        .mat-icon {
+          height: 24px;
+          width: 24px;
+          line-height: 24px;
+          font-size: 24px;
+        }
+      }
+      &.small {
+        min-height: 18px;
+        min-width: 18px;
+        .mat-icon {
+          height: 18px;
+          width: 18px;
+          line-height: 18px;
+          font-size: 18px;
+        }
+      }
+    }
+    &.outline {
+      background-color: mat-color($background, white);
+      color: mat-color($background, primary);
+      border-color: mat-color($background, primary);
+      &.error {
+        border-color: mat-color($background, error);
+        color: mat-color($background, error);
+      }
+      &.warning {
+        border-color: mat-color($background, warning);
+        color: mat-color($background, warning);
+      }
+      &.success {
+        border-color: mat-color($background, success);
+        color: mat-color($background, success);
+      }
+    }
+    &.nobg {
+      background-color: mat-color($background, tranparant);
+      border-color: mat-color($background, white);
+      color: mat-color($foreground, light-black);
+      border: 0;
+      box-shadow: none;
+      &.primary {
+        color: mat-color($background, primary);
+      }
+      &.warning {
+        color: mat-color($background, warning);
+      }
+      &.error {
+        color: mat-color($background, error);
+      }
+      &.success {
+        color: mat-color($background, success);
+      }
+      &.white {
+        color: mat-color($background, white);
+      }
+    }
+    &.link {
+      border: 0;
+      background: mat-color($background, tranparant);
+      color: mat-color($background, primary);
+      line-height: 1;
+      white-space: normal;
+      margin: 0;
+      padding: 0;
+      &:hover {
+        color: mat-color($background, dark-blue);
+        .mat-button-focus-overlay {
+          background-color: mat-color($background, tranparant);
+        }
+      }
+      &.warning {
+        color: mat-color($background, warning);
+      }
+      &.error {
+        color: mat-color($background, error);
+      }
+      &.success {
+        color: mat-color($background, success);
+      }
+    }
+    &.icon-btn,
+    &.icon {
+      background: mat-color($background, tranparant);
+      height: 30px;
+      min-width: 30px;
+      padding: 0;
+      margin: 0;
+      // line-height: 24px;
+      line-height: 1;
+      color: mat-color($background, primary);
+      border: 0;
+      &:hover {
+        color: mat-color($background, dark-blue);
+        .mat-button-focus-overlay {
+          background-color: mat-color($background, tranparant);
+        }
+      }
+      &.outline {
+        border: 1px solid;
+        border-radius: 50%;
+        height: 32px;
+        min-width: 32px;
+        .mat-icon {
+          font-size: 18px;
+          line-height: 18px;
+          height: 18px;
+          width: 18px;
+        }
+      }
+      &.circle {
+        border-radius: 50%;
+      }
+      &.error {
+        color: mat-color($background, error);
+      }
+      &.warning {
+        color: mat-color($background, warning);
+      }
+      &.white {
+        color: mat-color($background, white);
+      }
+      &.black {
+        color: mat-color($foreground, black);
+      }
+      &.success {
+        color: mat-color($background, success);
+      }
+    }
+    &.grn {
+      color: mat-color($background, dark-green);
+    }
+    &.blue {
+      color: mat-color($background, dark-blue);
+    }
+    &:disabled {
+      background: mat-color($background, disabled);
+      border-color: mat-color($background, disabled);
+      color: mat-color($foreground, text);
+      cursor: not-allowed;
+    }
+    &.no-border {
+      border: 0;
+    }
+  }
+}

@@ -1,9 +1,48 @@
-<section class="content">
-  <div fxLayout="row" fxLayoutAlign="space-around none">
-    <div class="col blocks" style="background: red;">1</div>
-    <div class="col blocks" style="background: teal;">2</div>
-    <div class="col blocks" style="background: blue;">3</div>
-    <div class="col blocks" style="background: green;">4</div>
-    <div class="col blocks" style="background: yellowgreen;">5</div>
+<section class="section">
+  <div class="home-bg">
+    <div class="page-container">
+      <div fxLayout="row wrap" fxLayoutAlign="center center">
+        <div fxFlex="48%" fxFlex.xs="100%">
+          <div fxLayout="column">
+            <h1 class="title-large" [innerHTML]="homeSection.title"></h1>
+            <h4 class="title-small" [innerHTML]="homeSection.subTitle"></h4>
+            <mt-btn class="large white">
+              Schedule a demo
+              <span class="ic_next ml-10"></span>
+            </mt-btn>
+          </div>
+        </div>
+        <div fxFlex="48%" fxFlex.xs="100%" fxShow="false" fxShow.gt-sm>
+          <img
+            src="../../../../assets/img/page/home-1.svg"
+            alt="Moneytor home screen image"
+            height="100%"
+          />
+        </div>
+      </div>
+      <div fxLayout="row wrap" fxLayoutAlign="center center">
+        <div fxFlex="100%">
+          <div fxLayout="column" fxLayoutAlign="center center">
+            <mt-btn class="icon white">
+              <span class="ic_download"></span>
+            </mt-btn>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- second section -->
+
+  <div class="page-container">
+    <div fxLayout="row wrap" fxLayoutAlign="center center" class="container">
+      <div fxFlex="90%">
+        <mt-h1>{{ secondSection.line1 }}</mt-h1>
+      </div>
+      <div fxFlex="90%">
+        <mt-text-large>{{ secondSection.line2 }}</mt-text-large>
+      </div>
+    </div>
   </div>
 </section>
+
+<!-- fxHide.gt-sm -->

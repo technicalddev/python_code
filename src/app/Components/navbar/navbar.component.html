@@ -21,23 +21,22 @@
     </mat-sidenav>
     <mat-sidenav-content>
       <mat-toolbar
-        color="primary"
         class="mt-toolbar"
         [ngClass]="sideNav.opened ? 'side-bar-open' : 'side-bar-closed'"
       >
-        <button
-          mat-icon-button
+        <mt-btn
+          class="icon white"
           fxHide="false"
           (click)="sideNav.toggle()"
           fxHide.gt-sm
         >
           <span class="ic_burger"></span>
-        </button>
+        </mt-btn>
         <a>
           <img src="../../../assets/img/logo/side-nav-logo.svg" height="40" />
         </a>
         <span class="spacer"></span>
-        <div fxLayout="row" fxShow="false" fxShow.gt-sm>
+        <div fxLayout="row" fxShow="false" fxShow.gt-sm class="">
           <ng-container *ngFor="let navItem of navItems">
             <a
               matRipple

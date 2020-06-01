@@ -1,0 +1,11 @@
+export const homeSection: any = {
+  title: `Moneytor Helps <br>You Collect More`,
+  subTitle: 'Automate  •  Engage  •  Collect  •  Liquidate',
+};
+export const secondSection: any = {
+  line1:
+    'Communicate and engage with your borrowers, generate actionable insights, optimise efforts, and collect more',
+  line2: `Moneytor is Collections Technology company which offers solutions across SaaS, Collections, and Distressed Debt Purchase to lenders,
+    and aids them in the collection and liquidation efforts of their consumer loan portfolios,
+    all the while fostering happy borrower experiences.`,
+};

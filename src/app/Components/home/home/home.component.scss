@@ -1,12 +1,5 @@
-.col {
-  box-shadow: rgba(52, 47, 51, 0.63) 0px 2px 5px 0px;
-  opacity: 0.9;
-  color: rgb(255, 255, 255);
-  text-align: center;
-  padding: 8px;
-}
-.blocks {
-  min-width: 75px;
-  min-height: 50px;
-  border-radius: 3px;
+.home-bg {
+  background: url('../../../../assets/img/page/bg.svg') no-repeat;
+  min-height: calc(100vh - 1px);
+  background-size: cover;
 }

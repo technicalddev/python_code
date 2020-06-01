@@ -1,0 +1,63 @@
+@import '~@angular/material/theming';
+
+@mixin layoutStyle($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $foreground: map-get($theme, foreground);
+  $background: map-get($theme, background);
+  $shadows: map-get($theme, shadows);
+
+  .page-container {
+    padding: 70px 10px;
+  }
+  // this class will use to show the button's shadows etc to make it different
+  .raised {
+    border-radius: 3px;
+    background: mat-color($background, bg);
+    box-shadow: mat-color($shadows, shadow1);
+    color: mat-color($background, primary);
+  }
+
+  .blocks {
+    box-shadow: mat-color($shadows, shadow);
+    opacity: 0.9;
+    color: mat-color($background, white);
+    text-align: center;
+    padding: 8px;
+    min-height: 50px;
+    border-radius: 3px;
+  }
+  [class^='title-'],
+  [class*=' title-'] {
+    margin: 0 0 16px;
+    line-height: 1.32;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+  }
+  .title-large {
+    font-size: 300%;
+    font-weight: 300;
+    color: mat-color($background, white);
+  }
+  .title-small {
+    font-size: 18px;
+    font-weight: 900;
+    color: mat-color($background, white);
+  }
+
+  .flexRow {
+    display: flex;
+  }
+  .container {
+    width: 100%;
+    text-align: center;
+    padding: 0 20%;
+  }
+
+  @media screen and (max-width: 768px) {
+    .container {
+      padding: 0 5%;
+    }
+  }
+}
