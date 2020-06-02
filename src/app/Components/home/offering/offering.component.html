@@ -1,1 +1,35 @@
-<p>offering works!</p>
+<div fxLayout="row" fxLayoutAlign="space-around center">
+  <div fxFlex="100%" fxLayoutAlign="center">
+    <mt-h1 class="txt-black">Offerings for Enterprises</mt-h1>
+  </div>
+</div>
+<div fxLayoutAlign="center">
+  <div fxFlex="60%" fxFlex.xs="100%" fxFlex.sm="100%">
+    <ng-container *ngFor="let offer of offers">
+      <div
+        [fxLayout]="offer.reverse ? 'row-reverse' : 'row'"
+        fxLayout.sm="column"
+        fxLayout.xs="column"
+        fxLayoutAlign="space-around center"
+        class="my-20"
+      >
+        <div fxFlex="40%" fxFlex.xs="100%">
+          <img
+            [src]="baseURL + offer.img.imgUrl"
+            [alt]="offer.img.name + offer.img.height"
+            height="100%"
+            width="100%"
+          />
+        </div>
+
+        <div fxFlex="48%" fxFlex.xs="100%">
+          <mt-h1 class="txt-primary">{{ offer.title }}</mt-h1>
+          <mt-body-large>{{ offer.description }}</mt-body-large>
+          <mt-btn class="{{ offer.btn.class }} my-20">{{
+            offer.btn.name
+          }}</mt-btn>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>

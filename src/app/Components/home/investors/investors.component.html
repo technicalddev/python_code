@@ -1,23 +1,21 @@
-<div class="page-container mt-inv-bg">
-  <div fxLayout="row" fxLayoutAlign="space-around center">
-    <div fxFlex="100%" fxLayoutAlign="center">
-      <mt-h1 class="txt-black">Investors</mt-h1>
-    </div>
+<div fxLayout="row" fxLayoutAlign="space-around center">
+  <div fxFlex="100%" fxLayoutAlign="center">
+    <mt-h1 class="txt-black">Investors</mt-h1>
   </div>
-  <div fxLayout="row" fxLayoutAlign="space-around center">
-    <div fxFlex="55%" fxFlex.xs="100%" fxLayoutAlign="center">
-      <div fxLayout="row" fxLayout.sm="column" fxLayout.xs="column">
-        <ng-container *ngFor="let investor of investorsList">
-          <div fxFlex="33%">
-            <img
-              [src]="baseURL + investor.imgUrl"
-              [alt]="investor.name"
-              [height]="investor.height"
-              [width]="investor.width"
-            />
-          </div>
-        </ng-container>
-      </div>
+</div>
+<div fxLayout="row" fxLayoutAlign="space-around center">
+  <div fxFlex="55%" fxFlex.xs="100%" fxLayoutAlign="center">
+    <div fxLayout="row" fxLayout.sm="column" fxLayout.xs="column">
+      <ng-container *ngFor="let investor of investorsList">
+        <div fxFlex="33%">
+          <img
+            [src]="baseURL + investor.imgUrl"
+            [alt]="investor.name"
+            [height]="investor.height"
+            [width]="investor.width"
+          />
+        </div>
+      </ng-container>
     </div>
   </div>
 </div>

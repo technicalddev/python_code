@@ -1,5 +1,5 @@
 import { Component, OnInit, ChangeDetectorRef, OnDestroy } from '@angular/core';
-import { homeSection, secondSection } from '../mock';
+import { homeSection, secondSection } from './home.mock';
 import { MediaMatcher } from '@angular/cdk/layout';
 
 @Component({
