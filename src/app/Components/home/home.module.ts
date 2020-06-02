@@ -7,6 +7,7 @@ import { AngularMaterialModule } from 'src/app/shared/_Modules/angular.material.
 import { SharedComponentsModule } from 'src/app/shared/_Components/shared.module';
 import { InvestorsComponent } from './investors/investors.component';
 import { OfferingComponent } from './offering/offering.component';
+import { MediaCoverageModule } from '../media-coverage/media-coverage.module';
 
 @NgModule({
   declarations: [HomeComponent, InvestorsComponent, OfferingComponent],
@@ -15,6 +16,7 @@ import { OfferingComponent } from './offering/offering.component';
     HomeRoutingModule,
     AngularMaterialModule,
     SharedComponentsModule,
+    MediaCoverageModule,
   ],
 })
 export class HomeModule {}
