@@ -5,9 +5,11 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home/home.component';
 import { AngularMaterialModule } from 'src/app/shared/_Modules/angular.material.module';
 import { SharedComponentsModule } from 'src/app/shared/_Components/shared.module';
+import { InvestorsComponent } from './investors/investors.component';
+import { OfferingComponent } from './offering/offering.component';
 
 @NgModule({
-  declarations: [HomeComponent],
+  declarations: [HomeComponent, InvestorsComponent, OfferingComponent],
   imports: [
     CommonModule,
     HomeRoutingModule,

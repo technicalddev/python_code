@@ -25,10 +25,10 @@
         [ngClass]="sideNav.opened ? 'side-bar-open' : 'side-bar-closed'"
       >
         <mt-btn
+          *ngIf="mobileQuery.matches"
           class="icon white"
           fxHide="false"
           (click)="sideNav.toggle()"
-          fxHide.gt-sm
         >
           <span class="ic_burger"></span>
         </mt-btn>
@@ -36,7 +36,11 @@
           <img src="../../../assets/img/logo/side-nav-logo.svg" height="40" />
         </a>
         <span class="spacer"></span>
-        <div fxLayout="row" fxShow="false" fxShow.gt-sm class="">
+        <div
+          fxLayout="row"
+          class="nav-item-container"
+          *ngIf="!mobileQuery.matches"
+        >
           <ng-container *ngFor="let navItem of navItems">
             <a
               matRipple

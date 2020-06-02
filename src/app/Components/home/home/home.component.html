@@ -1,9 +1,9 @@
 <section class="section">
   <div class="home-bg">
     <div class="page-container">
-      <div fxLayout="row wrap" fxLayoutAlign="center center">
-        <div fxFlex="48%" fxFlex.xs="100%">
-          <div fxLayout="column">
+      <div fxLayout="row" fxLayoutAlign="center center">
+        <div fxFlex="45%" fxFlex.xs="100%">
+          <div fxLayout="column" class="pl-10">
             <h1 class="title-large" [innerHTML]="homeSection.title"></h1>
             <h4 class="title-small" [innerHTML]="homeSection.subTitle"></h4>
             <mt-btn class="large white">
@@ -12,7 +12,7 @@
             </mt-btn>
           </div>
         </div>
-        <div fxFlex="48%" fxFlex.xs="100%" fxShow="false" fxShow.gt-sm>
+        <div fxFlex="55%" fxFlex.xs="100%" fxShow="false" fxShow.gt-sm>
           <img
             src="../../../../assets/img/page/home-1.svg"
             alt="Moneytor home screen image"
@@ -34,15 +34,21 @@
   <!-- second section -->
 
   <div class="page-container">
-    <div fxLayout="row wrap" fxLayoutAlign="center center" class="container">
-      <div fxFlex="90%">
+    <div fxLayout="row wrap" fxLayoutAlign="center center">
+      <div fxFlex="55%" fxFlex.xs="100%" fxFlex.sm="80%" class="ta-c">
         <mt-h1>{{ secondSection.line1 }}</mt-h1>
       </div>
-      <div fxFlex="90%">
-        <mt-text-large>{{ secondSection.line2 }}</mt-text-large>
+    </div>
+    <div fxLayout="row wrap" fxLayoutAlign="center center">
+      <div fxFlex="47%" fxFlex.xs="100%" fxFlex.sm="70%" class="ta-c">
+        <mt-body-large>{{ secondSection.line2 }}</mt-body-large>
       </div>
     </div>
   </div>
-</section>
 
-<!-- fxHide.gt-sm -->
+  <!-- our Investors Section -->
+  <mt-investors></mt-investors>
+
+  <!-- we are Offerings for Enterprises Section -->
+  <mt-offering></mt-offering>
+</section>

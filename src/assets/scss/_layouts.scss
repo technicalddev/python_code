@@ -7,6 +7,9 @@
   $background: map-get($theme, background);
   $shadows: map-get($theme, shadows);
 
+  .section {
+    background: mat-color($background, bg);
+  }
   .page-container {
     padding: 70px 10px;
   }
@@ -49,15 +52,13 @@
   .flexRow {
     display: flex;
   }
+
   .container {
-    width: 100%;
-    text-align: center;
-    padding: 0 20%;
+    max-width: 85%;
   }
 
-  @media screen and (max-width: 768px) {
-    .container {
-      padding: 0 5%;
-    }
+  // for investors section
+  .mt-inv-bg {
+    background: mat-color($background, blue-gray);
   }
 }

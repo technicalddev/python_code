@@ -24,7 +24,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
     private changeDetectorRef: ChangeDetectorRef,
     private media: MediaMatcher
   ) {
-    this.mobileQuery = this.media.matchMedia('(max-width: 768px)');
+    this.mobileQuery = this.media.matchMedia('(max-width: 1110px)');
     this.mobileQueryListener = () => this.changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this.mobileQueryListener);
   }

@@ -1,15 +1,17 @@
 import { Component, OnInit, ChangeDetectorRef, OnDestroy } from '@angular/core';
-import { homeSection, secondSection } from '../mock';
+import { investors } from './investors.mock';
 import { MediaMatcher } from '@angular/cdk/layout';
 
 @Component({
-  selector: 'mt-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
+  selector: 'mt-investors',
+  templateUrl: './investors.component.html',
+  styleUrls: ['./investors.component.scss'],
 })
-export class HomeComponent implements OnInit, OnDestroy {
+export class InvestorsComponent implements OnInit, OnDestroy {
   mobileQuery: MediaQueryList;
   mobileQueryListener: () => void;
+  baseURL: string = '../../../../assets/img/page/';
+  investorsList: any[];
   homeSection: any = {};
   secondSection: any = {};
   constructor(
@@ -22,8 +24,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.homeSection = homeSection;
-    this.secondSection = secondSection;
+    this.investorsList = investors;
   }
   ngOnDestroy(): void {
     this.mobileQuery.removeListener(this.mobileQueryListener);
