@@ -729,4 +729,7 @@
   .txt-primary {
     color: mat-color($background, primary);
   }
+  .txt-secondary {
+    color: mat-color($foreground, secondary-text);
+  }
 }

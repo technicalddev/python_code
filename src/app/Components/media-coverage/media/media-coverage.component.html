@@ -1,1 +1,38 @@
-<h1>Media Coverage Works</h1>
+<div fxLayout="row" fxLayoutAlign="space-around center">
+  <div fxFlex="100%" fxLayoutAlign="center">
+    <mt-h1 class="txt-black">Featured Media Coverage</mt-h1>
+  </div>
+</div>
+<div class="mt-slider-list">
+  <div
+    fxLayout="row"
+    fxLayout.sm="column"
+    fxLayout.xs="column"
+    fxLayoutAlign="space-around center"
+    class="mt-cards-group"
+  >
+    <ng-container *ngFor="let item of [1, 2, 3, 4, 5]">
+      <div class="mt-card" fxFlex="25%" fxFlex.sm="50%" fxFlex.xs="100%">
+        <div class="mt-card-header">
+          <div class="mt-card-title txt-primary">Economic Times</div>
+          <div class="mt-card-subtitle">24 Aug 2019</div>
+        </div>
+
+        <div class="mt-card-body">
+          “ At vero eos et accusamus et iusto odio dignissimos ducimus qui
+          blanditiis praesentium
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>
+<div fxLayout="row" fxLayoutAlign="space-around center">
+  <div fxFlex="100%" fxLayoutAlign="center">
+    <mt-btn class="circle large m-5">
+      <mat-icon>keyboard_arrow_left</mat-icon>
+    </mt-btn>
+    <mt-btn class="circle large m-5">
+      <mat-icon>keyboard_arrow_right</mat-icon>
+    </mt-btn>
+  </div>
+</div>

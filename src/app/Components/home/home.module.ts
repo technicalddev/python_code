@@ -12,7 +12,6 @@ import { MediaCoverageModule } from '../media-coverage/media-coverage.module';
 @NgModule({
   declarations: [HomeComponent, InvestorsComponent, OfferingComponent],
   imports: [
-    CommonModule,
     HomeRoutingModule,
     AngularMaterialModule,
     SharedComponentsModule,

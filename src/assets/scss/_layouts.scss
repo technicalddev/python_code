@@ -61,4 +61,9 @@
   .mt-inv-bg {
     background: mat-color($background, blue-gray);
   }
+
+  // for media coverage section
+  .mt-media-cov-bg {
+    background: mat-color($background, base-bg);
+  }
 }
