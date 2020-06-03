@@ -4,6 +4,7 @@ import {
   OnDestroy,
   ChangeDetectorRef,
   ViewChild,
+  HostListener,
 } from '@angular/core';
 import { MediaMatcher } from '@angular/cdk/layout';
 import { navData } from './navdata';
@@ -34,6 +35,17 @@ export class NavbarComponent implements OnInit, OnDestroy {
   }
   ngOnDestroy(): void {
     this.mobileQuery.removeListener(this.mobileQueryListener);
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  onScroll(event: any) {
+    let element = document.querySelector('.mt-toolbar');
+    if (window.pageYOffset > element.clientHeight) {
+      // element.setAttribute('color', 'primary')
+      element.classList.add('navbar-primary');
+    } else {
+      element.classList.remove('navbar-primary');
+    }
   }
   // to close side nave on mobile
   navigateTo(nav: any) {

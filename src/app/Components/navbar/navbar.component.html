@@ -1,4 +1,8 @@
-<div class="mt-container" [class.is-mobile]="mobileQuery.matches">
+<div
+  class="mt-container"
+  [class.is-mobile]="mobileQuery.matches"
+  (scroll)="onScroll($event)"
+>
   <mat-sidenav-container class="mt-sidenav-container">
     <mat-sidenav
       #sideNav

@@ -80,7 +80,7 @@
           flex-direction: row;
           align-items: center;
           white-space: nowrap;
-          box-shadow: mat-color($shadows, mat-shadow);
+          box-shadow: none;
           background: mat-color($background, transparent);
           .mt-toolbar-item {
             color: mat-color($background, white);
@@ -111,6 +111,10 @@
           }
           .nav-item-container {
             padding-right: 5%;
+          }
+          &.navbar-primary {
+            background: mat-color($background, primary);
+            box-shadow: mat-color($shadows, shadow1);
           }
         }
       }
