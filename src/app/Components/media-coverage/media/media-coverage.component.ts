@@ -28,7 +28,7 @@ export class MediaCoverageComponent implements OnInit, OnChanges {
     direction: 'horizontal',
     keyboard: true,
     centeredSlides: true,
-    spaceBetween: 30,
+    spaceBetween: 40,
   };
 
   @ViewChild(SwiperComponent) componentRef: SwiperComponent;
