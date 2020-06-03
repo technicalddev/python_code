@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { investors } from './investors.mock';
+import { HomeService } from '../home.service';
 
 @Component({
   selector: 'mt-investors',
@@ -8,13 +8,19 @@ import { investors } from './investors.mock';
 })
 export class InvestorsComponent implements OnInit {
   @Input() isMobile: boolean = false;
-  baseURL: string = '../../../../assets/img/page/';
-  investorsList: any[];
-  homeSection: any = {};
-  secondSection: any = {};
-  constructor() {}
+  @Input() baseURL: string = '';
+  investorsList: any = [];
+  constructor(private homeService: HomeService) {}
 
   ngOnInit(): void {
-    this.investorsList = investors;
+    this.getInvestorsData();
+  }
+  getInvestorsData() {
+    this.homeService.getInvestorsData().subscribe((res) => {
+      const { data } = res;
+      if (data && data.length > 0) {
+        this.investorsList = data;
+      }
+    });
   }
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit, ChangeDetectorRef, OnDestroy } from '@angular/core';
-import { homeSection, secondSection } from './home.mock';
 import { MediaMatcher } from '@angular/cdk/layout';
+import { HomeService } from '../home.service';
 
 @Component({
   selector: 'mt-home',
@@ -9,21 +9,31 @@ import { MediaMatcher } from '@angular/cdk/layout';
 })
 export class HomeComponent implements OnInit, OnDestroy {
   mobileQuery: MediaQueryList;
+  baseURL: string = '../../../../assets/img/page/';
   mobileQueryListener: () => void;
   homeSection: any = {};
   secondSection: any = {};
+  bg: string;
   constructor(
     private changeDetectorRef: ChangeDetectorRef,
-    private media: MediaMatcher
+    private media: MediaMatcher,
+    private homeService: HomeService
   ) {
-    this.mobileQuery = this.media.matchMedia('(max-width: 1110px)');
+    this.mobileQuery = this.media.matchMedia('(max-width: 991px)');
     this.mobileQueryListener = () => this.changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this.mobileQueryListener);
   }
 
   ngOnInit(): void {
-    this.homeSection = homeSection;
-    this.secondSection = secondSection;
+    this.getHomeData();
+  }
+  getHomeData() {
+    this.homeService.getHomeData().subscribe((res) => {
+      const { homeSection, secondSection, backgroundImg } = res;
+      this.homeSection = homeSection;
+      this.secondSection = secondSection;
+      this.bg = backgroundImg;
+    });
   }
   ngOnDestroy(): void {
     this.mobileQuery.removeListener(this.mobileQueryListener);

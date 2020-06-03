@@ -1,7 +1,7 @@
 <section class="section">
   <div class="home-bg">
     <div class="block-container">
-      <div fxLayout="row" fxLayoutAlign="center center">
+      <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutAlign="center center">
         <div fxFlex="45%" fxFlex.md="40%" fxFlex.xs="100%">
           <div fxLayout="column" class="pl-10">
             <h1 class="title-large" [innerHTML]="homeSection.title"></h1>
@@ -12,9 +12,9 @@
             </mt-btn>
           </div>
         </div>
-        <div fxFlex.sm="60%" fxShow="false" fxShow.gt-sm>
+        <div fxFlex.sm="60%" fxShow="false" fxShow.gt-sm *ngIf="bg">
           <img
-            src="../../../../assets/img/page/home-1.svg"
+            [src]="baseURL + bg"
             alt="Moneytor home screen image"
             height="100%"
           />
@@ -48,16 +48,25 @@
 
   <!-- our Investors Section -->
   <div class="block-container mt-inv-bg">
-    <mt-investors [isMobile]="mobileQuery.matches"></mt-investors>
+    <mt-investors
+      [isMobile]="mobileQuery.matches"
+      [baseURL]="baseURL"
+    ></mt-investors>
   </div>
 
   <!-- we are Offerings for Enterprises Section -->
   <div class="block-container">
-    <mt-offering [isMobile]="mobileQuery.matches"></mt-offering>
+    <mt-offering
+      [isMobile]="mobileQuery.matches"
+      [baseURL]="baseURL"
+    ></mt-offering>
   </div>
 
   <!-- for media coverage -->
   <div class="block-container mt-media-cov-bg">
-    <mt-media-coverage></mt-media-coverage>
+    <mt-media-coverage
+      [isMobile]="mobileQuery.matches"
+      [baseURL]="baseURL"
+    ></mt-media-coverage>
   </div>
 </section>

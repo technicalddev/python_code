@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { offers } from './offering.mock';
+import { HomeService } from '../home.service';
 
 @Component({
   selector: 'mt-offering',
@@ -8,11 +8,19 @@ import { offers } from './offering.mock';
 })
 export class OfferingComponent implements OnInit {
   @Input() isMobile: boolean = false;
-  baseURL: string = '../../../../assets/img/page/';
+  @Input() baseURL: string = '';
   offers: any = [];
-  constructor() {}
+  constructor(private homeService: HomeService) {}
 
   ngOnInit(): void {
-    this.offers = offers;
+    this.getOffersData();
+  }
+  getOffersData() {
+    this.homeService.getOffersData().subscribe((res) => {
+      const { data } = res;
+      if (data && data.length > 0) {
+        this.offers = data;
+      }
+    });
   }
 }

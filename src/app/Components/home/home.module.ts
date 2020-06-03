@@ -8,6 +8,7 @@ import { SharedComponentsModule } from 'src/app/shared/_Components/shared.module
 import { InvestorsComponent } from './investors/investors.component';
 import { OfferingComponent } from './offering/offering.component';
 import { MediaCoverageModule } from '../media-coverage/media-coverage.module';
+import { HomeService } from './home.service';
 
 @NgModule({
   declarations: [HomeComponent, InvestorsComponent, OfferingComponent],
@@ -17,5 +18,6 @@ import { MediaCoverageModule } from '../media-coverage/media-coverage.module';
     SharedComponentsModule,
     MediaCoverageModule,
   ],
+  providers: [HomeService],
 })
 export class HomeModule {}

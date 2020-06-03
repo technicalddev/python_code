@@ -9,6 +9,7 @@ import { environment } from '../environments/environment';
 import { NavbarComponent } from './Components/navbar/navbar.component';
 import { AngularMaterialModule } from './shared/_Modules/angular.material.module';
 import { SharedComponentsModule } from './shared/_Components/shared.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent, NavbarComponent],
@@ -21,6 +22,7 @@ import { SharedComponentsModule } from './shared/_Components/shared.module';
     }),
     AngularMaterialModule,
     SharedComponentsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

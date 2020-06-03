@@ -55,6 +55,21 @@ import { CdkStepperModule } from '@angular/cdk/stepper';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
+import {
+  SwiperModule,
+  SwiperConfigInterface,
+  SWIPER_CONFIG,
+} from 'ngx-swiper-wrapper';
+const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
+  observer: true,
+  direction: 'horizontal',
+  threshold: 50,
+  spaceBetween: 5,
+  initialSlide: 0,
+  centeredSlides: true,
+  mousewheel: false,
+  scrollbar: false,
+};
 @NgModule({
   exports: [
     CommonModule,
@@ -108,6 +123,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     CdkStepperModule,
     OverlayModule,
     FlexLayoutModule,
+
+    SwiperModule,
   ],
   providers: [
     {
@@ -123,6 +140,10 @@ import { FlexLayoutModule } from '@angular/flex-layout';
       useValue: {
         appearance: 'outline',
       },
+    },
+    {
+      provide: SWIPER_CONFIG,
+      useValue: DEFAULT_SWIPER_CONFIG,
     },
   ],
 })
