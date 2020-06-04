@@ -5,8 +5,8 @@ import {
   SwiperConfigInterface,
 } from 'ngx-swiper-wrapper';
 
-import { MediaCoverageService } from '../media-coverage.service';
 import swiper from 'swiper';
+import { HomeService } from '../home.service';
 
 @Component({
   selector: 'mt-media-coverage',
@@ -35,7 +35,7 @@ export class MediaCoverageComponent implements OnInit, OnChanges {
   @ViewChild(SwiperDirective) directiveRef: SwiperDirective;
   @ViewChild('swiperContainer') swiper: swiper;
 
-  constructor(private mediaService: MediaCoverageService) {}
+  constructor(private homeService: HomeService) {}
 
   ngOnInit(): void {
     this.getMediaCoverage();
@@ -50,7 +50,7 @@ export class MediaCoverageComponent implements OnInit, OnChanges {
   }
 
   getMediaCoverage() {
-    this.mediaService.getMediaCoverage().subscribe((res) => {
+    this.homeService.getMediaCoverage().subscribe((res) => {
       const { data } = res;
       if (data && data.length > 0) {
         this.slides = data;

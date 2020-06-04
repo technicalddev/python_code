@@ -8,5 +8,6 @@
   (click)="action()"
 >
   <ng-content></ng-content>
-  <span *ngIf="loading" class="ic_refresh rotate ml-5"></span>
+  <!-- <span *ngIf="loading" class="ic_refresh rotate ml-5"></span> -->
+  <div *ngIf="loading" class="mt-dual-ring"></div>
 </button>

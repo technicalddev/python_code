@@ -9,7 +9,7 @@ export class TextareaComponent implements OnInit {
   @Input() label?: string;
   @Input() required?: boolean;
   @Input() variant?: string;
-  @Input() class?: number = 4;
+  @Input() class?: string = '';
   @Input() model?: string;
   @Input() disabled?: boolean;
   @Input() rows?: number = 4;

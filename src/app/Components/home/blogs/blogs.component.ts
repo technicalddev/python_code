@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'mt-blogs',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./blogs.component.scss'],
 })
 export class BlogsComponent implements OnInit {
+  @Input() isMobile: boolean = false;
+  @Input() baseURL: string = '';
   constructor() {}
 
   ngOnInit(): void {}

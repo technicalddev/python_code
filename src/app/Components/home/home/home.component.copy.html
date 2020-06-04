@@ -1,20 +1,38 @@
 <section class="section">
-  <div
-    class="block-container home-bg"
-    fxLayout="row"
-    fxLayoutAlign="center center"
-  >
-    <div fxLayout="column" fxLayoutAlign="center center">
-      <h1 class="title-large ta-c" [innerHTML]="homeSection.title"></h1>
-      <h4 class="title-small" [innerHTML]="homeSection.subTitle"></h4>
-      <mt-btn class="large white">
-        Schedule a demo
-        <span class="ic_next ml-10"></span>
-      </mt-btn>
+  <div class="home-bg">
+    <div class="block-container">
+      <div fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign="center center">
+        <div fxFlex="100%" fxFlex.xs="100%">
+          <div fxLayout="column" class="pl-10" fxLayoutAlign="center center">
+            <h1 class="title-large" [innerHTML]="homeSection.title"></h1>
+            <h4 class="title-small" [innerHTML]="homeSection.subTitle"></h4>
+            <mt-btn class="large white">
+              Schedule a demo
+              <span class="ic_next ml-10"></span>
+            </mt-btn>
+          </div>
+        </div>
+        <!-- <div fxFlex.sm="60%" fxShow="false" fxShow.gt-sm *ngIf="bg">
+          <img
+            [src]="baseURL + bg"
+            alt="Moneytor home screen image"
+            height="100%"
+          />
+        </div> -->
+      </div>
+      <div fxLayout="row wrap" fxLayoutAlign="center center">
+        <div fxFlex="100%">
+          <div fxLayout="column" fxLayoutAlign="center center">
+            <mt-btn class="icon white">
+              <span class="ic_download"></span>
+            </mt-btn>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-
   <!-- second section -->
+
   <div class="block-container">
     <div fxLayout="row wrap" fxLayoutAlign="center center">
       <div fxFlex="55%" fxFlex.xs="100%" fxFlex.sm="80%" class="ta-c">

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'mt-clear-dept',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./clear-dept.component.scss'],
 })
 export class ClearDeptComponent implements OnInit {
+  @Input() isMobile: boolean = false;
+  @Input() baseURL: string = '';
   constructor() {}
 
   ngOnInit(): void {}

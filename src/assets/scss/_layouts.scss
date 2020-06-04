@@ -66,6 +66,12 @@
   .mt-media-cov-bg {
     background: mat-color($background, base-bg);
   }
+  // for contact us section
+  .mt-contact-bg {
+    background: rgba(105, 121, 248, 0.24);
+  }
+  .mt-contact-us-subtitle {
+  }
 
   @media screen and (min-width: 991px) {
     //  this is the custom style to be applied to hide the next and prev button on ngx swiper

@@ -9,31 +9,23 @@ const routes: Routes = [
     children: [
       {
         path: '',
+        pathMatch: 'full',
+        redirectTo: 'home',
+      },
+      {
+        path: 'home',
         loadChildren: () =>
           import('./Components/home/home.module').then((m) => m.HomeModule),
       },
       {
-        path: 'page-not-found',
-        pathMatch: 'full',
+        path: 'not-found',
         loadChildren: () =>
           import('./Components/not-found/not-found.module').then(
             (m) => m.NotFoundModule
           ),
       },
-      { path: '**', redirectTo: 'page-not-found' },
+      { path: '**', redirectTo: 'not-found' },
     ],
-  },
-  {
-    path: 'contact-us',
-    loadChildren: () =>
-      import('./Components/contact-us/contact-us.module').then(
-        (m) => m.ContactUsModule
-      ),
-  },
-  {
-    path: 'blogs',
-    loadChildren: () =>
-      import('./Components/blogs/blogs.module').then((m) => m.BlogsModule),
   },
 ];
 

@@ -1,7 +1,7 @@
 export const navData: any = [
   {
     name: 'Home',
-    link: '/',
+    link: '',
     class: '',
   },
   {

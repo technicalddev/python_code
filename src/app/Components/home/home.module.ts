@@ -1,16 +1,19 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 import { HomeRoutingModule } from './home-routing.module';
-import { HomeComponent } from './home/home.component';
+import { SwiperModule } from 'ngx-swiper-wrapper';
 import { AngularMaterialModule } from 'src/app/shared/_Modules/angular.material.module';
 import { SharedComponentsModule } from 'src/app/shared/_Components/shared.module';
+
+import { HomeComponent } from './home/home.component';
 import { InvestorsComponent } from './investors/investors.component';
 import { OfferingComponent } from './offering/offering.component';
-import { MediaCoverageModule } from '../media-coverage/media-coverage.module';
 import { HomeService } from './home.service';
 import { ClientsComponent } from './clients/clients.component';
 import { ClearDeptComponent } from './clear-dept/clear-dept.component';
+import { MediaCoverageComponent } from './media-coverage/media-coverage.component';
+import { ContactUsComponent } from './contact/contact-us.component';
+import { BlogsComponent } from './blogs/blogs.component';
 
 @NgModule({
   declarations: [
@@ -19,12 +22,15 @@ import { ClearDeptComponent } from './clear-dept/clear-dept.component';
     OfferingComponent,
     ClientsComponent,
     ClearDeptComponent,
+    MediaCoverageComponent,
+    ContactUsComponent,
+    BlogsComponent,
   ],
   imports: [
     HomeRoutingModule,
     AngularMaterialModule,
     SharedComponentsModule,
-    MediaCoverageModule,
+    SwiperModule,
   ],
   providers: [HomeService],
 })
