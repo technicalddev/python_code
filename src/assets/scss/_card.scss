@@ -1,47 +1,51 @@
 @import '~@angular/material/theming';
 
 @mixin cardStyle($theme) {
+  $config: mat-typography-config();
+
   $primary: map-get($theme, primary);
   $accent: map-get($theme, accent);
   $foreground: map-get($theme, foreground);
   $background: map-get($theme, background);
   $shadows: map-get($theme, shadows);
 
-  .mt-slider-list {
-    position: relative;
-    display: block;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-  }
-  .mt-cards-group {
-    position: relative;
-    top: 0;
-    left: 0;
-    display: block;
-    width: 100vw;
+  .moneytor-body {
+    .mt-slider-list {
+      position: relative;
+      display: block;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+    }
+    .mt-cards-group {
+      position: relative;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100vw;
+      .mt-card {
+        margin: 20px 40px;
+      }
+    }
     .mt-card {
-      margin: 20px 40px;
+      box-shadow: -1px 13px 20px 0 #f0f2f4;
+      border-radius: 5px;
+      background: mat-color($background, bg);
+      padding: 47px 48px;
     }
-  }
-  .mt-card {
-    box-shadow: -1px 13px 20px 0 #f0f2f4;
-    border-radius: 5px;
-    background: mat-color($background, bg);
-    padding: 47px 48px;
-  }
-  .mt-card-header {
-    margin-bottom: 25px;
-    .mt-card-title {
-      font-size: 18px;
-      font-weight: 500;
-      line-height: 1.6;
-    }
-    .mt-card-subtitle {
-      font-weight: normal;
-      font-size: 15px;
-      line-height: 1;
-      color: mat-color($foreground, secondary-text);
+    .mt-card-header {
+      margin-bottom: 25px;
+      .mt-card-title {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.6;
+      }
+      .mt-card-subtitle {
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 1;
+        color: mat-color($foreground, secondary-text);
+      }
     }
   }
 }

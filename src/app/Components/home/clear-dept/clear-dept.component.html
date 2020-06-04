@@ -1,8 +1,57 @@
 <div fxLayout="row" fxLayoutAlign="center center">
-  <div fxFlex="100%" fxLayoutAlign="center">
-    <mt-h1 class="txt-black">Want to clear your debt?</mt-h1>
-    <h4 class="title-small">
+  <div
+    fxFlex="60%"
+    fxFlex.lt-md="90%"
+    fxLayout="column"
+    fxLayoutAlign="center"
+    class="clear-dept-bg"
+  >
+    <mt-h1 class="txt-white ta-c">Want to clear your debt?</mt-h1>
+    <p class="mt-contact-us-subtitle txt-white ta-c">
       Please give us your details and we will get back to you
-    </h4>
+    </p>
+    <div
+      fxLayout="row"
+      fxLayout.lt-sm="column"
+      fxLayoutAlign="space-around baseline"
+    >
+      <div fxFlex="20%" fxFlex.lt-sm="100%">
+        <mt-input
+          label="Name"
+          placeholder="Enter your name"
+          (onChanges)="onChanges('name', $event)"
+          required="true"
+        >
+        </mt-input>
+      </div>
+      <div fxFlex="20%" fxFlex.lt-sm="100%">
+        <mt-input
+          label="Email"
+          placeholder="Enter your email"
+          (onChanges)="onChanges('email', $event)"
+          required="true"
+        >
+        </mt-input>
+      </div>
+      <div fxFlex="20%" fxFlex.lt-sm="100%">
+        <mt-input
+          label="Mobile"
+          placeholder="Enter your mobile number"
+          (onChanges)="onChanges('phone', $event)"
+          required="true"
+        >
+        </mt-input>
+      </div>
+      <div fxFlex="20%" fxFlex.lt-sm="100%">
+        <mt-btn
+          type="submit"
+          [loading]="submitting"
+          (onAction)="onProcessContact()"
+        >
+          {{ submitting ? 'Please Wait...' : 'Submit Details' }}
+          <span class="ic_next ml-10" *ngIf="!submitting"></span>
+        </mt-btn>
+      </div>
+    </div>
   </div>
 </div>

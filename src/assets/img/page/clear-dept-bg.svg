@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1110" height="300" viewBox="0 0 1110 300">
+    <defs>
+        <rect id="prefix__a" width="1110" height="300" x="0" y="0" rx="10"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <mask id="prefix__b" fill="#fff">
+            <use xlink:href="#prefix__a"/>
+        </mask>
+        <use fill="#3D1A66" xlink:href="#prefix__a"/>
+        <circle cx="900.5" cy="-37.5" r="129.5" fill="#FFF" mask="url(#prefix__b)" opacity=".063"/>
+        <circle cx="256.5" cy="338.5" r="129.5" fill="#FFF" mask="url(#prefix__b)" opacity=".063"/>
+        <circle cx="1008" cy="-18" r="80" fill="#FFF" mask="url(#prefix__b)" opacity=".063"/>
+        <circle cx="378" cy="330" r="80" fill="#FFF" mask="url(#prefix__b)" opacity=".063"/>
+        <circle cx="758.5" cy="-52.5" r="114.5" fill="#FFF" mask="url(#prefix__b)" opacity=".063"/>
+        <circle cx="101.5" cy="364.5" r="114.5" fill="#FFF" mask="url(#prefix__b)" opacity=".063"/>
+    </g>
+</svg>

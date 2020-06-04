@@ -18,7 +18,6 @@
 @import 'assets/scss/card';
 
 @import 'theme/fonts';
-@import '~swiper/css/swiper.min.css';
 
 // Typography
 $moneytor-typography: mat-typography-config(
@@ -72,5 +71,4 @@ $dark-theme: moneytor-dark-theme(
   @include angular-material-theme($dark-theme);
   @include custom-components-theme($dark-theme);
 }
-
 @include angular-material-typography($moneytor-typography);
