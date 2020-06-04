@@ -9,9 +9,17 @@ import { InvestorsComponent } from './investors/investors.component';
 import { OfferingComponent } from './offering/offering.component';
 import { MediaCoverageModule } from '../media-coverage/media-coverage.module';
 import { HomeService } from './home.service';
+import { ClientsComponent } from './clients/clients.component';
+import { ClearDeptComponent } from './clear-dept/clear-dept.component';
 
 @NgModule({
-  declarations: [HomeComponent, InvestorsComponent, OfferingComponent],
+  declarations: [
+    HomeComponent,
+    InvestorsComponent,
+    OfferingComponent,
+    ClientsComponent,
+    ClearDeptComponent,
+  ],
   imports: [
     HomeRoutingModule,
     AngularMaterialModule,

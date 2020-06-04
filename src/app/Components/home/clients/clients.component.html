@@ -1,0 +1,23 @@
+<div>
+  <div fxFlex="100%" fxLayoutAlign="center">
+    <mt-h1 class="txt-black">Our Clients</mt-h1>
+  </div>
+</div>
+
+<div fxLayout="column" fxLayoutAlign="space-around center">
+  <div fxFlex="55%" fxFlex.xs="100%" fxLayout="column" fxLayoutAlign="center">
+    <ng-container *ngFor="let client of clients">
+      <div fxLayout="row" fxLayout.lt-md="column" class="my-20">
+        <ng-container *ngFor="let cl of client.row">
+          <div fxFlex="20%">
+            <img
+              [src]="baseURL + 'clients/' + cl.src + '.png'"
+              [alt]="cl.name"
+              height="100"
+            />
+          </div>
+        </ng-container>
+      </div>
+    </ng-container>
+  </div>
+</div>

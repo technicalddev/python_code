@@ -15,4 +15,7 @@ export class HomeService {
   getOffersData(): Observable<any> {
     return this.http.get(`../../../assets/data/offersData.json`);
   }
+  getClientData(): Observable<any> {
+    return this.http.get(`../../../assets/data/ourClientsData.json`);
+  }
 }

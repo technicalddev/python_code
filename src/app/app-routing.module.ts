@@ -23,6 +23,18 @@ const routes: Routes = [
       { path: '**', redirectTo: 'page-not-found' },
     ],
   },
+  {
+    path: 'contact-us',
+    loadChildren: () =>
+      import('./Components/contact-us/contact-us.module').then(
+        (m) => m.ContactUsModule
+      ),
+  },
+  {
+    path: 'blogs',
+    loadChildren: () =>
+      import('./Components/blogs/blogs.module').then((m) => m.BlogsModule),
+  },
 ];
 
 @NgModule({
