@@ -171,5 +171,11 @@
     .swiper-button-next {
       display: none !important;
     }
+
+    // for footer section
+    .mt-footer-bg {
+      background: mat-color($background, voilet-dark);
+      color: mat-color($background, white);
+    }
   }
 }

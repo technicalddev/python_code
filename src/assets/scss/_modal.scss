@@ -1,0 +1,59 @@
+@import '~@angular/material/theming';
+
+@mixin modalStyle($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $foreground: map-get($theme, foreground);
+  $background: map-get($theme, background);
+  $shadows: map-get($theme, shadows);
+
+  .mt-modal {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    justify-content: space-around;
+    overflow: hidden;
+    z-index: 1266;
+    &.blur {
+      background: rgba(0, 0, 0, 0.3);
+    }
+    .sp {
+      flex: 1 1 auto;
+    }
+    .modal-container {
+      position: fixed;
+      max-width: 500px;
+      min-width: 500px;
+      left: 50%;
+      top: 70px;
+      transform: translate(-50%, 0%);
+      z-index: 1266;
+      .modal-content {
+        border-radius: 5px;
+        padding: 1rem;
+        box-shadow: mat-color($shadows, shadow);
+        border: 0;
+        background: mat-color($background, bg);
+        .modal-header {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          padding: 0 1rem;
+        }
+        .modal-body {
+          position: relative;
+          overflow-y: auto;
+          max-height: calc(100vh - 210px);
+        }
+        .modal-footer {
+          padding: 15px 0 0 0;
+          text-align: right;
+          border-top: 1px solid #e5e5e5;
+        }
+      }
+    }
+  }
+}

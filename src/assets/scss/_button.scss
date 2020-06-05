@@ -172,6 +172,9 @@
         &.success {
           color: mat-color($background, success);
         }
+        &.secondary {
+          color: mat-color($foreground, secondary-text);
+        }
       }
       &.icon-btn,
       &.icon {
