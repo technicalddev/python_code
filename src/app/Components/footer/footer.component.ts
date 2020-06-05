@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { footerData } from './footer.mock';
 import { FooterService } from './footer.service';
 
 @Component({
