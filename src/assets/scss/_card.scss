@@ -32,6 +32,12 @@
       border-radius: 5px;
       background: mat-color($background, bg);
       padding: 47px 48px;
+      &.no-padding {
+        padding: 0;
+        // .mt-card-header {
+        //   margin-bottom: 10px;
+        // }
+      }
     }
     .mt-card-header {
       margin-bottom: 25px;

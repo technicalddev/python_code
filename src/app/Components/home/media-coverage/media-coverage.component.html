@@ -8,7 +8,7 @@
   <div class="vertical-container" fxLayout="column" fxFlex="100%">
     <div class="content-container" fxLayout="column" fxFlex="auto">
       <swiper
-        #swiperContainer
+        #swiperEl
         *ngIf="show"
         class="swiper-container"
         [config]="config"
@@ -39,10 +39,10 @@
 </div>
 <div>
   <div fxFlex="100%" fxLayoutAlign="center">
-    <mt-btn class="circle large m-5" (onAction)="onNext(false)">
+    <mt-btn class="circle large m-5 mt-prev__btn">
       <span class="ic_arrow-left"></span>
     </mt-btn>
-    <mt-btn class="circle large m-5" (onAction)="onNext(true)">
+    <mt-btn class="circle large m-5 mt-next__btn">
       <span class="ic_arrow-right"></span>
     </mt-btn>
   </div>

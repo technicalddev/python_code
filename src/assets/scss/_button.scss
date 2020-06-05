@@ -29,6 +29,7 @@
       padding: 0rem 1.5rem;
       min-width: 50px;
       line-height: 32px;
+      cursor: pointer;
       &.small {
         padding: 0 8px;
         font-size: 12px;
@@ -234,6 +235,11 @@
       }
       &.no-border {
         border: 0;
+      }
+      &.swiper-button-disabled {
+        cursor: not-allowed;
+        background: mat-color($background, white);
+        color: mat-color($background, primary);
       }
     }
     .mt-dual-ring {

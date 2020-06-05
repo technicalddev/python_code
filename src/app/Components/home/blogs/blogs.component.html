@@ -1,5 +1,43 @@
 <div>
-  <div fxFlex="100%">
+  <div fxFlex="100%" fxLayoutAlign="center">
     <mt-h1 class="txt-black">Our Recent Post</mt-h1>
   </div>
+</div>
+
+<!-- ngx swipper -->
+<div class="box-container">
+  <div class="horizontal-container" fxLayout="column" fxFlex="100%">
+    <div class="content-container" fxLayout="column" fxFlex="auto">
+      <swiper
+        #swiperContainer
+        *ngIf="show"
+        class="swiper-container"
+        [config]="config"
+        [disabled]="false"
+        (indexChange)="onIndexChange($event)"
+        (swiperTransitionStart)="onSwiperEvent('transitionStart')"
+        (swiperTransitionEnd)="onSwiperEvent('transitionEnd')"
+        fxFlex="auto"
+      >
+        <div *ngFor="let slide of slides; let i = index" class="swiper-slide">
+          <div
+            class="mt-card no-padding"
+            matRipple
+            matRippleColor="rgba(142, 155, 250, 0.196)"
+          >
+            <div class="mt-card-header">
+              <img [src]="baseURL + 'blogs/' + 'blog1' + '.png'" width="100%" />
+            </div>
+            <div class="mt-card-body px-20">
+              “{{ slide.body }}
+              <a class="mt-btn link">learn more</a>
+            </div>
+          </div>
+        </div>
+      </swiper>
+    </div>
+  </div>
+</div>
+<div class="mt-pagination-wrapper">
+  <div class="mt-pagination"></div>
 </div>

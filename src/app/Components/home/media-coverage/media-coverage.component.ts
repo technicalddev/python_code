@@ -1,11 +1,9 @@
-import { Component, OnInit, ViewChild, Input, OnChanges } from '@angular/core';
+import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import {
-  SwiperComponent,
-  SwiperDirective,
   SwiperConfigInterface,
+  SwiperNavigationInterface,
 } from 'ngx-swiper-wrapper';
 
-import swiper from 'swiper';
 import { HomeService } from '../home.service';
 
 @Component({
@@ -16,12 +14,9 @@ import { HomeService } from '../home.service';
 export class MediaCoverageComponent implements OnInit, OnChanges {
   @Input() isMobile: boolean = false;
   @Input() baseURL: string = '';
+
   show: boolean = true;
-
   slides: any = [];
-
-  type: string = 'component';
-
   disabled: boolean = false;
   config: SwiperConfigInterface = {
     a11y: true,
@@ -29,11 +24,13 @@ export class MediaCoverageComponent implements OnInit, OnChanges {
     keyboard: true,
     centeredSlides: true,
     spaceBetween: 40,
+    loop: false,
   };
 
-  @ViewChild(SwiperComponent) componentRef: SwiperComponent;
-  @ViewChild(SwiperDirective) directiveRef: SwiperDirective;
-  @ViewChild('swiperContainer') swiper: swiper;
+  private navigation: SwiperNavigationInterface = {
+    nextEl: '.mt-next__btn',
+    prevEl: '.mt-prev__btn',
+  };
 
   constructor(private homeService: HomeService) {}
 
@@ -42,9 +39,8 @@ export class MediaCoverageComponent implements OnInit, OnChanges {
   }
   ngOnChanges() {
     const extraConfigs: SwiperConfigInterface = {
-      navigation: this.isMobile ? true : false,
+      navigation: this.navigation,
       slidesPerView: this.isMobile ? 1 : 4,
-      loop: this.isMobile ? false : true,
     };
     this.config = { ...this.config, ...extraConfigs };
   }
@@ -56,11 +52,6 @@ export class MediaCoverageComponent implements OnInit, OnChanges {
         this.slides = data;
       }
     });
-  }
-  onNext($event: boolean) {
-    if ($event) this.swiper.slideNext();
-    else if (!$event) this.swiper.slidePrev();
-    console.log('button clicked');
   }
   onIndexChange(index: number) {
     console.log('Swiper index: ', index);
