@@ -10,23 +10,6 @@
   $shadows: map-get($theme, shadows);
 
   .moneytor-body {
-    .mt-slider-list {
-      position: relative;
-      display: block;
-      overflow: hidden;
-      margin: 0;
-      padding: 0;
-    }
-    .mt-cards-group {
-      position: relative;
-      top: 0;
-      left: 0;
-      display: block;
-      width: 100vw;
-      .mt-card {
-        margin: 20px 40px;
-      }
-    }
     .mt-card {
       box-shadow: -1px 13px 20px 0 #f0f2f4;
       border-radius: 5px;
@@ -34,9 +17,12 @@
       padding: 47px 48px;
       &.no-padding {
         padding: 0;
-        // .mt-card-header {
-        //   margin-bottom: 10px;
-        // }
+        .mt-card-header {
+          margin-bottom: 10px;
+        }
+      }
+      &.full-height {
+        height: 100%;
       }
     }
     .mt-card-header {
@@ -52,6 +38,12 @@
         line-height: 1;
         color: mat-color($foreground, secondary-text);
       }
+    }
+    .mt-card-body {
+      color: mat-color($foreground, text);
+    }
+    .mt-card-footer {
+      display: flex;
     }
   }
 }

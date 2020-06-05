@@ -19,18 +19,24 @@
         (swiperTransitionEnd)="onSwiperEvent('transitionEnd')"
         fxFlex="auto"
       >
-        <div *ngFor="let slide of slides; let i = index" class="swiper-slide">
+        <div *ngFor="let blog of blogs; let i = index" class="swiper-slide">
           <div
-            class="mt-card no-padding"
+            class="mt-card no-padding full-height"
             matRipple
             matRippleColor="rgba(142, 155, 250, 0.196)"
+            (click)="gotToBlog(blog.link)"
           >
             <div class="mt-card-header">
-              <img [src]="baseURL + 'blogs/' + 'blog1' + '.png'" width="100%" />
+              <img [src]="baseURL + blog.src" width="100%" height="180" />
             </div>
             <div class="mt-card-body px-20">
-              “{{ slide.body }}
-              <a class="mt-btn link">learn more</a>
+              <mt-h2>{{ blog.title }}</mt-h2>
+              <div class="mt-card-footer">
+                <mt-body-large class="txt-secondary"
+                  >{{ 'by ' + blog.createdBy + ' | '
+                  }}{{ blog.time | date: 'dd MMM y' }}</mt-body-large
+                >
+              </div>
             </div>
           </div>
         </div>

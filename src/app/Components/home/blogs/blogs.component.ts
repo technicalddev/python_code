@@ -16,7 +16,7 @@ export class BlogsComponent implements OnInit, OnChanges {
   @Input() baseURL: string = '';
 
   show: boolean = true;
-  slides: any = [];
+  blogs: any = [];
   disabled: boolean = false;
   config: SwiperConfigInterface = {
     a11y: true,
@@ -48,18 +48,17 @@ export class BlogsComponent implements OnInit, OnChanges {
 
   ngOnChanges() {
     const extraConfigs: SwiperConfigInterface = {
-      slidesPerView: this.isMobile ? 1 : 5,
-      loop: this.isMobile ? false : true,
+      slidesPerView: this.isMobile ? 1 : 4,
       pagination: this.pagination,
     };
     this.config = { ...this.config, ...extraConfigs };
   }
 
   getMediaCoverage() {
-    this.homeService.getMediaCoverage().subscribe((res) => {
+    this.homeService.getBlogs().subscribe((res) => {
       const { data } = res;
       if (data && data.length > 0) {
-        this.slides = data;
+        this.blogs = data;
       }
     });
   }
@@ -70,5 +69,8 @@ export class BlogsComponent implements OnInit, OnChanges {
 
   onSwiperEvent(event: string): void {
     console.log('Swiper event: ', event);
+  }
+  gotToBlog(link: string) {
+    console.log('link', link);
   }
 }
