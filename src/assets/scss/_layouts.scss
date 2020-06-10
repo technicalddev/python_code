@@ -39,7 +39,7 @@
       line-height: 1.32;
       font-stretch: normal;
       font-style: normal;
-      letter-spacing: normal;
+      letter-spacing: 0.9px;
     }
     .title-large {
       font-size: 300%;
@@ -48,7 +48,7 @@
     }
     .title-small {
       font-size: 18px;
-      font-weight: 900;
+      font-weight: 600;
       color: mat-color($background, white);
     }
 
@@ -88,6 +88,9 @@
       box-sizing: border-box;
       width: 100%;
       min-height: 300px;
+      &.inv {
+        min-height: 130px;
+      }
     }
 
     .action-container,
@@ -150,7 +153,6 @@
       align-items: center;
       text-align: center;
       .mt-pagination {
-        background: #fff;
         display: flex;
         align-items: center;
         height: 55px;
@@ -176,6 +178,12 @@
     .mt-footer-bg {
       background: mat-color($background, voilet-dark);
       color: mat-color($background, white);
+    }
+
+    @media screen and (max-width: 959px) {
+      .title-large {
+        font-size: 40px;
+      }
     }
   }
 }

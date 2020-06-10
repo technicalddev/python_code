@@ -24,6 +24,10 @@
       &.full-height {
         height: 100%;
       }
+      &.img {
+        padding: 0;
+        // background: transparent;
+      }
     }
     .mt-card-header {
       margin-bottom: 25px;
@@ -38,6 +42,11 @@
         line-height: 1;
         color: mat-color($foreground, secondary-text);
       }
+    }
+    .mt-card-header-img {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
     }
     .mt-card-body {
       color: mat-color($foreground, text);

@@ -35,7 +35,7 @@ export class BlogsComponent implements OnInit, OnChanges {
   };
 
   private pagination: SwiperPaginationInterface = {
-    el: '.mt-pagination',
+    el: '.mt-blog-pg',
     clickable: true,
     hideOnClick: false,
   };

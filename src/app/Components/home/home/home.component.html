@@ -2,22 +2,48 @@
   <div
     class="block-container home-bg"
     fxLayout="row"
-    fxLayoutAlign="center center"
+    fxLayout.lt-sm="column"
+    fxLayoutAlign="space-around flex-start"
+    fxLayoutAlign.lt-sm="flex-start center"
   >
-    <div fxLayout="column" fxLayoutAlign="center center">
-      <h1 class="title-large ta-c" [innerHTML]="homeSection.title"></h1>
-      <h4 class="title-small" [innerHTML]="homeSection.subTitle"></h4>
-      <mt-btn class="large white">
-        Schedule a demo
-        <span class="ic_next ml-10"></span>
-      </mt-btn>
+    <div
+      fxLayout="row"
+      fxFlex="0 1 calc(50% - 32px)"
+      fxFlex.lt-sm="0 0 auto"
+      fxLayoutAlign="space-around center"
+      fxLayoutAlign.lt-sm="center center"
+    >
+      <div fxLayout="column" class="my-20" fxLayoutAlign.lt-sm="center center">
+        <h1 class="title-large" [innerHTML]="homeSection.title"></h1>
+        <h4 class="title-small" [innerHTML]="homeSection.subTitle"></h4>
+        <mt-btn class="large white mt-25">
+          Schedule a demo
+          <span class="ic_next ml-10"></span>
+        </mt-btn>
+      </div>
+    </div>
+    <div
+      fxLayout="row"
+      fxFlex="0 1 calc(50% - 32px)"
+      fxFlex.lt-sm="0 0 auto"
+      fxLayoutAlign="space-around center"
+      fxLayoutAlign.lt-sm="center center"
+    >
+      <div fxLayout="column" class="my-20" fxLayoutAlign.lt-sm="center center">
+        <img
+          [src]="baseURL + bg"
+          alt="Moneytor home screen image"
+          height="90%"
+          width="90%"
+        />
+      </div>
     </div>
   </div>
 
   <!-- second section -->
   <div class="block-container">
     <div fxLayout="row wrap" fxLayoutAlign="center center">
-      <div fxFlex="55%" fxFlex.xs="100%" fxFlex.sm="80%" class="ta-c">
+      <div fxFlex="60%" fxFlex.xs="100%" fxFlex.sm="80%" class="ta-c">
         <mt-h1>{{ secondSection.line1 }}</mt-h1>
       </div>
     </div>
