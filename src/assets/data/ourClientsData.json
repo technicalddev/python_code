@@ -4,27 +4,27 @@
       "row": [
         {
           "name": "Branch International",
-          "src": "branch-international",
+          "src": "../../../../assets/img/page/clients/branch-international.png",
           "link": ""
         },
         {
           "name": "NeoGrowth",
-          "src": "neogrowth",
+          "src": "../../../../assets/img/page/clients/neogrowth.png",
           "link": ""
         },
         {
           "name": "Zest Money",
-          "src": "zest-money",
+          "src": "../../../../assets/img/page/clients/zest-money.png",
           "link": ""
         },
         {
           "name": "PayU Money",
-          "src": "payu-money",
+          "src": "../../../../assets/img/page/clients/payu-money.png",
           "link": ""
         },
         {
           "name": "Muthoot Fincorp",
-          "src": "muthoot-fincorp",
+          "src": "../../../../assets/img/page/clients/muthoot-fincorp.png",
           "link": ""
         }
       ]
@@ -33,27 +33,27 @@
       "row": [
         {
           "name": "FlexiLoans",
-          "src": "flexi-loans",
+          "src": "../../../../assets/img/page/clients/flexi-loans.png",
           "link": ""
         },
         {
           "name": "CreditWise",
-          "src": "credit-wise",
+          "src": "../../../../assets/img/page/clients/credit-wise.png",
           "link": ""
         },
         {
           "name": "FairCent",
-          "src": "faircent",
+          "src": "../../../../assets/img/page/clients/faircent.png",
           "link": ""
         },
         {
           "name": "Rupeelend",
-          "src": "rupeelend",
+          "src": "../../../../assets/img/page/clients/rupeelend.png",
           "link": ""
         },
         {
           "name": "Early Salary",
-          "src": "early-salary",
+          "src": "../../../../assets/img/page/clients/early-salary.png",
           "link": ""
         }
       ]

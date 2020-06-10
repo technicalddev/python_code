@@ -3,21 +3,21 @@
     {
       "name": "500 Startups",
       "link": "https://500.co/",
-      "imgUrl": "500.png",
+      "imgUrl": "../../../../assets/img/page/500.png",
       "width": 274,
       "height": 120
     },
     {
       "name": "AngelList",
       "link": "https://angel.co/",
-      "imgUrl": "angel-list.png",
+      "imgUrl": "../../../../assets/img/page/angel-list.png",
       "width": 275,
       "height": 120
     },
     {
       "name": "Stanford Angels & Entrepreneurs",
       "link": "https://stanfordaande.com/",
-      "imgUrl": "stanford.png",
+      "imgUrl": "../../../../assets/img/page/stanford.png",
       "width": 369,
       "height": 120
     }

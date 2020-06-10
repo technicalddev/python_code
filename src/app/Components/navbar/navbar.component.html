@@ -14,7 +14,6 @@
         <ng-container *ngFor="let navItem of navItems">
           <a
             mat-list-item
-            [routerLink]="navItem.link"
             routerLinkActive="mt-nav-active"
             [ngClass]="navItem.class"
             (click)="navigateTo(navItem)"
@@ -48,10 +47,10 @@
           <ng-container *ngFor="let navItem of navItems">
             <a
               matRipple
-              [routerLink]="navItem.link"
               class="mt-toolbar-item"
               routerLinkActive="mt-nav-active"
               [ngClass]="navItem.class"
+              (click)="navigateTo(navItem)"
               >{{ navItem.name }}</a
             >
           </ng-container>

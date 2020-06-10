@@ -17,6 +17,7 @@
 @import 'assets/scss/layouts';
 @import 'assets/scss/card';
 @import 'assets/scss/modal';
+@import 'assets/scss/404';
 
 @import 'theme/fonts';
 @import '~swiper/css/swiper.min.css';
@@ -65,6 +66,7 @@ $dark-theme: moneytor-dark-theme(
   @include layoutStyle($theme);
   @include cardStyle($theme);
   @include modalStyle($theme);
+  @include pageNotFoundStyle($theme);
 }
 
 @include angular-material-theme($light-theme);

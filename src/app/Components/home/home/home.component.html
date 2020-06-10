@@ -1,5 +1,5 @@
 <section class="section">
-  <div class="home-bg">
+  <div class="home-bg" id="home">
     <div
       class="block-container"
       fxLayout="row"
@@ -40,7 +40,7 @@
           fxLayoutAlign.lt-sm="center center"
         >
           <img
-            [src]="baseURL + bg"
+            [src]="bg"
             alt="Moneytor home screen image"
             height="90%"
             width="90%"
@@ -61,7 +61,7 @@
   </div>
 
   <!-- second section -->
-  <div class="block-container">
+  <div class="block-container" id="about">
     <div fxLayout="row wrap" fxLayoutAlign="center center">
       <div fxFlex="65%" fxFlex.xs="100%" fxFlex.sm="80%" class="ta-c">
         <mt-h1>{{ secondSection.line1 }}</mt-h1>
@@ -75,7 +75,7 @@
   </div>
 
   <!-- our Investors Section -->
-  <div class="block-container mt-inv-bg">
+  <div class="block-container mt-inv-bg" id="investors">
     <mt-investors
       [isMobile]="mobileQuery.matches"
       [baseURL]="baseURL"
@@ -83,7 +83,7 @@
   </div>
 
   <!-- we are Offerings for Enterprises Section -->
-  <div class="block-container">
+  <div class="block-container" id="offers">
     <mt-offering
       [isMobile]="mobileQuery.matches"
       [baseURL]="baseURL"
@@ -91,7 +91,7 @@
   </div>
 
   <!-- for media coverage -->
-  <div class="block-container mt-media-cov-bg">
+  <div class="block-container mt-media-cov-bg" id="media">
     <mt-media-coverage
       [isMobile]="mobileQuery.matches"
       [baseURL]="baseURL"
@@ -99,7 +99,7 @@
   </div>
 
   <!-- our clients section -->
-  <div class="block-container">
+  <div class="block-container" id="clients">
     <mt-clients
       [isMobile]="mobileQuery.matches"
       [baseURL]="baseURL"
@@ -107,7 +107,7 @@
   </div>
 
   <!-- contact us section -->
-  <div class="block-container mt-contact-bg">
+  <div class="block-container mt-contact-bg" id="reachus">
     <mt-contact-us
       [isMobile]="mobileQuery.matches"
       [baseURL]="baseURL"
@@ -115,7 +115,7 @@
   </div>
 
   <!-- clear dept section -->
-  <div class="block-container">
+  <div class="block-container" id="clear_dept">
     <mt-clear-dept
       [isMobile]="mobileQuery.matches"
       [baseURL]="baseURL"
@@ -123,7 +123,7 @@
   </div>
 
   <!-- our Recent blogs section -->
-  <div class="block-container">
+  <div class="block-container" id="blogs">
     <mt-blogs [isMobile]="mobileQuery.matches" [baseURL]="baseURL"></mt-blogs>
   </div>
 </section>

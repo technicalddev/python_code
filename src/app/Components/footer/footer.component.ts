@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FooterService } from './footer.service';
+import { ScrollService } from 'src/app/shared/_Services/scroll.service';
 
 @Component({
   selector: 'mt-footer',
@@ -13,7 +14,10 @@ export class FooterComponent implements OnInit {
   showModal: boolean = false;
   modalData: any = {};
   modalBtns: any = [{ label: 'Ok', class: '', submit: true }];
-  constructor(private footerService: FooterService) {}
+  constructor(
+    private footerService: FooterService,
+    private scrollService: ScrollService
+  ) {}
 
   ngOnInit(): void {
     this.getFooterData();
@@ -30,7 +34,9 @@ export class FooterComponent implements OnInit {
   onLinksAction(links: any) {
     const { name, value, type } = links;
     console.log('val', value);
-
+    if (type === 'page') {
+      this.scrollService.scrollToElementById(value);
+    }
     if (type === 'email') {
       window.open(`mailto:${value}`, '_blank');
       return;

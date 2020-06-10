@@ -12,7 +12,7 @@
       },
       "img": {
         "name": "analysis",
-        "imgUrl": "analysis.svg",
+        "imgUrl": "../../../../assets/img/page/analysis.svg",
         "width": 274,
         "height": "100%"
       }
@@ -29,7 +29,7 @@
       },
       "img": {
         "name": "collections",
-        "imgUrl": "collections.svg",
+        "imgUrl": "../../../../assets/img/page/collections.svg",
         "width": 274,
         "height": "100%"
       }
@@ -46,7 +46,7 @@
       },
       "img": {
         "name": "liquidation",
-        "imgUrl": "liquidation.svg",
+        "imgUrl": "../../../../assets/img/page/liquidation.svg",
         "width": 274,
         "height": "100%"
       }

@@ -20,11 +20,7 @@
       >
         <ng-container *ngFor="let cl of client.row">
           <div fxFlex="18%">
-            <img
-              [src]="baseURL + 'clients/' + cl.src + '.png'"
-              [alt]="cl.name"
-              height="100"
-            />
+            <img [src]="cl.src" [alt]="cl.name" height="100" />
           </div>
         </ng-container>
       </div>
@@ -59,11 +55,7 @@
                 matRippleColor="rgba(142, 155, 250, 0.196)"
               >
                 <div class="mt-card-header-img">
-                  <img
-                    [src]="baseURL + 'clients/' + cl.src + '.png'"
-                    [alt]="cl.name"
-                    height="100"
-                  />
+                  <img [src]="cl.src" [alt]="cl.name" height="100" />
                 </div>
               </div>
             </div>

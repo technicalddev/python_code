@@ -6,27 +6,22 @@
   "quickLinks": [
     {
       "name": "About Us",
-      "value": "",
+      "value": "about",
       "type": "page"
     },
     {
       "name": "Offerings",
-      "value": "",
+      "value": "offers",
       "type": "page"
     },
     {
       "name": "Clients & Press",
-      "value": "",
-      "type": "page"
-    },
-    {
-      "name": "Plans",
-      "value": "",
+      "value": "clients",
       "type": "page"
     },
     {
       "name": "Blogs",
-      "value": "",
+      "value": "blogs",
       "type": "page"
     }
   ],
