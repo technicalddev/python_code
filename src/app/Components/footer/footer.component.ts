@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FooterService } from './footer.service';
+import { Router } from '@angular/router';
 import { ScrollService } from 'src/app/shared/_Services/scroll.service';
 
 @Component({
@@ -16,6 +17,7 @@ export class FooterComponent implements OnInit {
   modalBtns: any = [{ label: 'Ok', class: '', submit: true }];
   constructor(
     private footerService: FooterService,
+    private router: Router,
     private scrollService: ScrollService
   ) {}
 
@@ -35,6 +37,7 @@ export class FooterComponent implements OnInit {
     const { name, value, type } = links;
     console.log('val', value);
     if (type === 'page') {
+      this.router.navigate(['/']);
       this.scrollService.scrollToElementById(value);
     }
     if (type === 'email') {
