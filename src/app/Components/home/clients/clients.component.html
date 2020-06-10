@@ -4,12 +4,22 @@
   </div>
 </div>
 
-<div fxLayout="column" fxLayoutAlign="space-around center">
-  <div fxFlex="55%" fxFlex.xs="100%" fxLayout="column" fxLayoutAlign="center">
+<div
+  *ngIf="false"
+  fxLayout="column"
+  fxLayoutAlign="space-around center"
+  fxShow="false"
+>
+  <div fxFlex="70%" fxFlex.xs="100%" fxLayout="column" fxLayoutAlign="center">
     <ng-container *ngFor="let client of clients">
-      <div fxLayout="row" fxLayout.lt-md="column" class="my-20">
+      <div
+        fxLayout="row"
+        fxLayout.lt-md="column"
+        class="my-20"
+        fxLayoutAlign="space-around center"
+      >
         <ng-container *ngFor="let cl of client.row">
-          <div fxFlex="20%">
+          <div fxFlex="18%">
             <img
               [src]="baseURL + 'clients/' + cl.src + '.png'"
               [alt]="cl.name"
@@ -19,5 +29,52 @@
         </ng-container>
       </div>
     </ng-container>
+  </div>
+</div>
+
+<!-- ngx swipper -->
+<div>
+  <div class="box-container inv">
+    <div class="vertical-container" fxLayout="column" fxFlex="100%">
+      <div class="content-container" fxLayout="column" fxFlex="auto">
+        <swiper
+          #swiperEl
+          *ngIf="show"
+          class="swiper-container"
+          [config]="config"
+          [disabled]="false"
+          (indexChange)="onIndexChange($event)"
+          (swiperTransitionStart)="onSwiperEvent('transitionStart')"
+          (swiperTransitionEnd)="onSwiperEvent('transitionEnd')"
+          fxFlex="auto"
+        >
+          <ng-container *ngFor="let client of clients">
+            <div
+              *ngFor="let cl of client.row; let i = index"
+              class="swiper-slide"
+            >
+              <div
+                class="mt-card img"
+                matRipple
+                matRippleColor="rgba(142, 155, 250, 0.196)"
+              >
+                <div class="mt-card-header-img">
+                  <img
+                    [src]="baseURL + 'clients/' + cl.src + '.png'"
+                    [alt]="cl.name"
+                    height="100"
+                  />
+                </div>
+              </div>
+            </div>
+          </ng-container>
+        </swiper>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="mt-pagination-wrapper">
+      <div class="mt-pagination mt-client-pg"></div>
+    </div>
   </div>
 </div>

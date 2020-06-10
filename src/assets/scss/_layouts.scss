@@ -75,12 +75,13 @@
     }
     .mt-contact-us-subtitle {
       margin: 0 0 16px;
+      font-size: 17px;
     }
 
     // for clear dept
     .clear-dept-bg {
-      background-color: #3d1b65;
-      padding: 20px 40px;
+      // background-color: #3d1b65;
+      padding: 40px;
       border-radius: 5px;
     }
     // for ngx swipper
@@ -179,10 +180,31 @@
       background: mat-color($background, voilet-dark);
       color: mat-color($background, white);
     }
+    .full-width {
+      width: 100%;
+    }
+    .cicular-icon-home {
+      width: 22px;
+      height: 32px;
+      border-radius: 10px;
+      border: solid 1.5px mat-color($background, white);
+      .mt-line {
+        width: 2px;
+        height: 8px;
+        border-radius: 1.5px;
+        position: relative;
+        left: 50%;
+        top: 10px;
+        background-color: mat-color($background, white);
+      }
+    }
 
     @media screen and (max-width: 959px) {
       .title-large {
         font-size: 40px;
+      }
+      .clear-dept-bg {
+        padding: 40px 30px;
       }
     }
   }

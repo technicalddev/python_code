@@ -28,8 +28,8 @@
         "value": "getStarted"
       },
       "img": {
-        "name": "revenue",
-        "imgUrl": "revenue.svg",
+        "name": "collections",
+        "imgUrl": "collections.svg",
         "width": 274,
         "height": "100%"
       }

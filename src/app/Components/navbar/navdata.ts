@@ -9,11 +9,11 @@ export const navData: any = [
     link: '/about',
     class: '',
   },
-  {
-    name: 'Contact us',
-    link: '/contact',
-    class: '',
-  },
+  // {
+  //   name: 'Contact us',
+  //   link: '/contact',
+  //   class: '',
+  // },
   {
     name: 'Offering',
     link: '/offers',
@@ -29,18 +29,18 @@ export const navData: any = [
     link: '/clients',
     class: '',
   },
-  {
-    name: 'Plans',
-    link: '/plans',
-    class: '',
-  },
+  // {
+  //   name: 'Plans',
+  //   link: '/plans',
+  //   class: '',
+  // },
   {
     name: 'Reach out',
     link: '/reachus',
     class: '',
   },
   {
-    name: 'Demo',
+    name: 'Get started',
     link: '/demo',
     class: 'raised',
   },

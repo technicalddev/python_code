@@ -25,13 +25,14 @@ export class BlogsComponent implements OnInit, OnChanges {
     centeredSlides: true,
     spaceBetween: 40,
     navigation: true,
+    loop: true,
     // effect: 'coverflow',
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: true,
-      stopOnLastSlide: true,
-      waitForTransition: true,
-    },
+    // autoplay: {
+    //   delay: 3000,
+    //   disableOnInteraction: true,
+    //   stopOnLastSlide: true,
+    //   waitForTransition: true,
+    // },
   };
 
   private pagination: SwiperPaginationInterface = {

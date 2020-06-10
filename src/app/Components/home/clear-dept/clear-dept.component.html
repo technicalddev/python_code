@@ -10,11 +10,7 @@
     <p class="mt-contact-us-subtitle txt-white ta-c">
       Please give us your details and we will get back to you
     </p>
-    <div
-      fxLayout="row"
-      fxLayout.lt-sm="column"
-      fxLayoutAlign="space-around baseline"
-    >
+    <div fxLayout="row wrap" fxLayoutAlign="space-around baseline">
       <div fxFlex="20%" fxFlex.lt-sm="100%">
         <mt-input
           label="Name"
@@ -42,7 +38,12 @@
         >
         </mt-input>
       </div>
-      <div fxFlex="20%" fxFlex.lt-sm="100%">
+      <div
+        fxFlex="20%"
+        fxFlex.lt-sm="100%"
+        fxLayoutAlign.lt-sm="space-between center"
+        fxLayout.lt-sm="column"
+      >
         <mt-btn
           type="submit"
           [loading]="submitting"
