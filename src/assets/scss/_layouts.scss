@@ -199,6 +199,7 @@
         left: 50%;
         top: 10px;
         background-color: mat-color($background, white);
+        transform: translate(-50%, -50%);
       }
     }
     .default-imgBg {

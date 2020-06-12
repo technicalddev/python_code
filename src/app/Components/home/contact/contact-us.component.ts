@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ContactUsService } from './contact-us.service';
+import { HomeService } from '../home.service';
 @Component({
   selector: 'mt-contact-us',
   templateUrl: './contact-us.component.html',
@@ -10,29 +10,33 @@ export class ContactUsComponent implements OnInit {
   @Input() baseURL: string = '';
   postObj: any = {};
   submitting: boolean;
-  constructor() {}
 
-  ngOnInit(): void {
-    console.log('in ContactUsComponent ============');
-    const contactUsService = new ContactUsService();
-    const to = 'shashank.gandhi@moneytor.in';
-    const subject = 'Hello';
-    const text = 'Hello from gmailService';
-    const from = 'shashank.gandhi@moneytor.in';
-    contactUsService.sendMail(from, to, subject, text);
-    console.log('in ContactUsComponent ============ end ==============');
-  }
+  constructor(private homeService: HomeService) {}
+
+  ngOnInit(): void {}
 
   onChanges(model: any, value: any) {
     this.postObj[model] = value;
   }
   onProcessContact() {
     this.submitting = true;
-    const { firstName, companyName } = this.postObj;
+    const { firstName, lastName, companyName, message } = this.postObj;
     if (!firstName || !companyName) {
       this.submitting = false;
       return;
     }
-    console.log('final postObj', this.postObj);
+    const emailBody: any = {
+      Subject: `Want to Reach us ${companyName}`,
+      Body: `<b>Name: </b> ${firstName} ${lastName} <br>
+        <b>Company/Organization: </b> ${companyName} <br>
+        <b>Message: </b> ${message}`,
+    };
+    this.homeService.sendMail(emailBody).then((res) => {
+      const { resultShort } = res;
+      if (resultShort === 'success') {
+        this.postObj = {};
+      }
+      this.submitting = false;
+    });
   }
 }
