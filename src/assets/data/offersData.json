@@ -2,7 +2,7 @@
   "data": [
     {
       "title": "SaaS",
-      "description": "Moneytor's smart and self learning integrated debt collection platform digitises the entire debt collection process. Moneytor can operate independently, or integrate with an existing enterprise suite with multiple stakeholders",
+      "description": "Moneytor's smart and self learning integrated debt management platform digitises the entire debt collection process. Moneytor can operate independently, or integrate with an existing enterprise suite with multiple stakeholders",
       "reverse": false,
       "btn": {
         "name": "Schedule Demo",
@@ -36,7 +36,7 @@
     },
     {
       "title": "Debt Purchase",
-      "description": "With our experience in collections portfolio analysis, we offer portfolio liquidation services enabling lenders to release up tied capital and facilitate cashflows.",
+      "description": "With our data driven collections portfolio analysis, we offer portfolio liquidation services enabling lenders to release up tied capital and optimize cashflows.",
       "reverse": false,
       "btn": {
         "name": "Know More",
