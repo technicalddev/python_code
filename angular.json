@@ -168,5 +168,8 @@
       }
     }
   },
-  "defaultProject": "moneytor-in"
+  "defaultProject": "moneytor-in",
+  "cli": {
+    "analytics": "0c4e5f62-28ec-466e-a581-419f8fb18491"
+  }
 }
