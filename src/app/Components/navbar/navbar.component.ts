@@ -54,6 +54,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
   navigateTo(nav: any) {
     if (this.mobileQuery.matches) this.drawer.close();
     const { link } = nav;
+    this.router.navigate(['/']);
     this.scrollService.scrollToElementById(link);
   }
 }
