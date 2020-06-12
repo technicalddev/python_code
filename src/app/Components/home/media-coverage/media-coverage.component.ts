@@ -60,4 +60,8 @@ export class MediaCoverageComponent implements OnInit, OnChanges {
   onSwiperEvent(event: string): void {
     // console.log('Swiper event: ', event);
   }
+
+  learnMore(link: string) {
+    window.open(`${link}`, '_blank');
+  }
 }

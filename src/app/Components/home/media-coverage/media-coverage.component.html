@@ -4,7 +4,7 @@
   </div>
 </div>
 <!-- ngx swipper -->
-<div class="box-container">
+<div class="box-container mediaCov">
   <div class="vertical-container" fxLayout="column" fxFlex="100%">
     <div class="content-container" fxLayout="column" fxFlex="auto">
       <swiper
@@ -26,11 +26,19 @@
           >
             <div class="mt-card-header">
               <div class="mt-card-title txt-primary">
-                {{ i + 1 }} {{ slide.title }}
+                {{ slide.title }}
               </div>
-              <div class="mt-card-subtitle">{{ slide.subtitle }}</div>
+              <div class="mt-card-subtitle">{{ slide.date }}</div>
             </div>
             <div class="mt-card-body">“{{ slide.body }}</div>
+            <div class="mt-card-footer absolute">
+              <mt-btn
+                *ngIf="slide.link"
+                class="link"
+                (click)="learnMore(slide.link)"
+                >Learn more</mt-btn
+              >
+            </div>
           </div>
         </div>
       </swiper>
