@@ -67,7 +67,7 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   spaceBetween: 5,
   initialSlide: 0,
   centeredSlides: true,
-  mousewheel: false,
+  mousewheel: true,
   scrollbar: false,
 };
 @NgModule({
