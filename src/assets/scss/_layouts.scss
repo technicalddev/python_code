@@ -92,6 +92,9 @@
       &.inv {
         min-height: 130px;
       }
+      &.blogs {
+        min-height: 250px;
+      }
     }
 
     .action-container,
@@ -198,13 +201,23 @@
         background-color: mat-color($background, white);
       }
     }
-
+    .default-imgBg {
+      background-color: mat-color($background, voilet-light);
+    }
     @media screen and (max-width: 959px) {
       .title-large {
         font-size: 40px;
       }
       .clear-dept-bg {
         padding: 40px 30px;
+      }
+      .mt-modal {
+        .modal-container {
+          min-width: 100%;
+          left: 0%;
+          top: 0%;
+          transform: translate(0%, 0%);
+        }
       }
     }
   }

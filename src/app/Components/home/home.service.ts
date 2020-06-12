@@ -21,7 +21,6 @@ export class HomeService {
   getClientData(): Observable<any> {
     return this.http.get(`../../../assets/data/ourClientsData.json`);
   }
-
   getBlogs(): Observable<any> {
     return this.http.get(`../../../assets/data/blogsData.json`);
   }
