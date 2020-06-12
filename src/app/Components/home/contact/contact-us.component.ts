@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-
+import { HomeService } from '../home.service';
 @Component({
   selector: 'mt-contact-us',
   templateUrl: './contact-us.component.html',
@@ -10,7 +10,8 @@ export class ContactUsComponent implements OnInit {
   @Input() baseURL: string = '';
   postObj: any = {};
   submitting: boolean;
-  constructor() {}
+
+  constructor(private homeService: HomeService) {}
 
   ngOnInit(): void {}
 
@@ -19,11 +20,23 @@ export class ContactUsComponent implements OnInit {
   }
   onProcessContact() {
     this.submitting = true;
-    const { firstName, companyName } = this.postObj;
+    const { firstName, lastName, companyName, message } = this.postObj;
     if (!firstName || !companyName) {
       this.submitting = false;
       return;
     }
-    console.log('final postObj', this.postObj);
+    const emailBody: any = {
+      Subject: `Want to Reach us ${companyName}`,
+      Body: `<b>Name: </b> ${firstName} ${lastName} <br>
+        <b>Company/Organization: </b> ${companyName} <br>
+        <b>Message: </b> ${message}`,
+    };
+    this.homeService.sendMail(emailBody).then((res) => {
+      const { resultShort } = res;
+      if (resultShort === 'success') {
+        this.postObj = {};
+      }
+      this.submitting = false;
+    });
   }
 }

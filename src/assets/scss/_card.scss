@@ -11,6 +11,7 @@
 
   .moneytor-body {
     .mt-card {
+      cursor: pointer;
       box-shadow: -1px 13px 20px 0 #f0f2f4;
       border-radius: 5px;
       background: mat-color($background, bg);
@@ -47,12 +48,62 @@
       display: flex;
       align-items: center;
       justify-content: space-around;
+      &.bordered {
+        border: 1px solid mat-color($background, disabled);
+        border-radius: 6px;
+      }
     }
     .mt-card-body {
       color: mat-color($foreground, text);
     }
     .mt-card-footer {
       display: flex;
+      align-items: center;
+      &.absolute {
+        position: absolute;
+        bottom: 0;
+        width: calc(100% - 20px);
+        left: 0;
+        padding: 0 10px;
+      }
+      p {
+        margin: 0;
+      }
+    }
+
+    .mat-snack-bar-container {
+      background: mat-color($background, primary);
+      color: mat-color($background, white);
+      font-weight: 500;
+      box-shadow: mat-color($shadows, shadow);
+      &.error,
+      &.failed,
+      &.failure {
+        background: mat-color($background, error);
+      }
+      &.warning {
+        background: mat-color($background, warning);
+      }
+      &.success,
+      &.Success {
+        background: mat-color($background, success);
+      }
+      .mat-simple-snackbar {
+        font-size: 14px;
+        .mat-simple-snackbar-action {
+          color: mat-color($background, white);
+          font-weight: 600;
+          button {
+            max-height: 36px;
+            min-width: 0;
+            font-size: 13px;
+            padding: 0 10px;
+            line-height: 30px;
+            border-radius: 4px;
+            border: 1px solid mat-color($background, white);
+          }
+        }
+      }
     }
   }
 }

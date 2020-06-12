@@ -33,6 +33,7 @@
                 label="First name"
                 fxFlex.lt-sm="100%"
                 placeholder="Enter your first name"
+                [model]="postObj.firstName"
                 (onChanges)="onChanges('firstName', $event)"
                 required="true"
               >
@@ -42,6 +43,7 @@
                 fxFlex.lt-sm="100%"
                 label="Last name"
                 placeholder="Enter your last name"
+                [model]="postObj.lastName"
                 (onChanges)="onChanges('lastName', $event)"
               >
               </mt-input>
@@ -50,6 +52,7 @@
               <mt-input
                 label="Company name"
                 placeholder="Enter your company name"
+                [model]="postObj.companyName"
                 (onChanges)="onChanges('companyName', $event)"
                 required="true"
               >
@@ -59,7 +62,9 @@
               <mt-textarea
                 label="Additional comments"
                 placeholder="Type additional comments here"
+                [model]="postObj.message"
                 (onChanges)="onChanges('message', $event)"
+                required="true"
               >
               </mt-textarea>
             </div>
@@ -87,7 +92,7 @@
     >
       <div fxLayout="column" fxLayoutAlign.lt-sm="center center" class="my-10">
         <img
-          [src]="baseURL + 'contact-us.svg'"
+          [src]="baseURL + 'page/contact-us.svg'"
           alt="Moneytor Contact screen image"
           height="100%"
           width="100%"

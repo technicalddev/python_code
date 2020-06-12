@@ -26,6 +26,7 @@ export class BlogsComponent implements OnInit, OnChanges {
     spaceBetween: 40,
     navigation: true,
     loop: true,
+    initialSlide: 1,
     // effect: 'coverflow',
     // autoplay: {
     //   delay: 3000,
@@ -40,6 +41,7 @@ export class BlogsComponent implements OnInit, OnChanges {
     clickable: true,
     hideOnClick: false,
   };
+  imgErr: boolean = false;
 
   constructor(private homeService: HomeService) {}
 
@@ -65,13 +67,17 @@ export class BlogsComponent implements OnInit, OnChanges {
   }
 
   onIndexChange(index: number) {
-    console.log('Swiper index: ', index);
+    // console.log('Swiper index: ', index);
   }
 
   onSwiperEvent(event: string): void {
-    console.log('Swiper event: ', event);
+    // console.log('Swiper event: ', event);
   }
   gotToBlog(link: string) {
-    console.log('link', link);
+    window.open(`${link}`, '_blank');
+  }
+  updateUrl(event$: any) {
+    this.imgErr = true;
+    event$.target.src = `${this.baseURL}logo/new-logo.svg`;
   }
 }

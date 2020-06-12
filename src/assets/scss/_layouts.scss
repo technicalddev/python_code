@@ -90,7 +90,10 @@
       width: 100%;
       min-height: 300px;
       &.inv {
-        min-height: 130px;
+        min-height: 103px;
+      }
+      &.blogs {
+        min-height: 250px;
       }
     }
 
@@ -196,15 +199,26 @@
         left: 50%;
         top: 10px;
         background-color: mat-color($background, white);
+        transform: translate(-50%, -50%);
       }
     }
-
+    .default-imgBg {
+      background-color: mat-color($background, voilet-light);
+    }
     @media screen and (max-width: 959px) {
       .title-large {
         font-size: 40px;
       }
       .clear-dept-bg {
         padding: 40px 30px;
+      }
+      .mt-modal {
+        .modal-container {
+          min-width: 100%;
+          left: 0%;
+          top: 0%;
+          transform: translate(0%, 0%);
+        }
       }
     }
   }

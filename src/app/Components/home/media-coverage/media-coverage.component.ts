@@ -54,10 +54,10 @@ export class MediaCoverageComponent implements OnInit, OnChanges {
     });
   }
   onIndexChange(index: number) {
-    console.log('Swiper index: ', index);
+    // console.log('Swiper index: ', index);
   }
 
   onSwiperEvent(event: string): void {
-    console.log('Swiper event: ', event);
+    // console.log('Swiper event: ', event);
   }
 }

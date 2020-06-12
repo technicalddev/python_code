@@ -23,9 +23,10 @@ export class ClientsComponent implements OnInit, OnChanges {
     direction: 'horizontal',
     keyboard: true,
     centeredSlides: true,
-    spaceBetween: 40,
+    spaceBetween: 15,
     loop: false,
     navigation: true,
+    initialSlide: 2,
     // effect: 'coverflow',
     autoplay: {
       delay: 3000,
@@ -33,14 +34,17 @@ export class ClientsComponent implements OnInit, OnChanges {
       waitForTransition: true,
     },
     breakpoints: {
-      640: {
-        slidesPerView: 1,
-      },
-      768: {
+      400: {
         slidesPerView: 2,
       },
-      1627: {
+      768: {
+        slidesPerView: 3,
+      },
+      1024: {
         slidesPerView: 4,
+      },
+      1524: {
+        slidesPerView: 6,
       },
     },
   };

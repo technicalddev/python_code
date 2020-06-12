@@ -9,7 +9,7 @@ import { HomeService } from '../home.service';
 })
 export class HomeComponent implements OnInit, OnDestroy {
   mobileQuery: MediaQueryList;
-  baseURL: string = '../../../../assets/img/page/';
+  baseURL: string = '../../../../assets/img/';
   mobileQueryListener: () => void;
   homeSection: any = {};
   secondSection: any = {};
