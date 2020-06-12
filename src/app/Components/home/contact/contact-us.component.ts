@@ -14,12 +14,12 @@ export class ContactUsComponent implements OnInit {
 
   ngOnInit(): void {
     console.log('in ContactUsComponent ============');
-    let contactUsService = new ContactUsService();
-    let to = 'shashank.gandhi@moneytor.in';
-    let subject = 'Hello';
-    let text = 'Hello from gmailService';
-    let from = 'shashank.gandhi@moneytor.in';
-    // contactUsService.sendMail(from, to, subject, text);
+    const contactUsService = new ContactUsService();
+    const to = 'shashank.gandhi@moneytor.in';
+    const subject = 'Hello';
+    const text = 'Hello from gmailService';
+    const from = 'shashank.gandhi@moneytor.in';
+    contactUsService.sendMail(from, to, subject, text);
     console.log('in ContactUsComponent ============ end ==============');
   }
 
