@@ -58,15 +58,11 @@
             <div
               *ngFor="let cl of client.row; let i = index"
               class="swiper-slide"
+              matRipple
+              matRippleColor="rgba(142, 155, 250, 0.196)"
             >
-              <div
-                class="mt-card img"
-                matRipple
-                matRippleColor="rgba(142, 155, 250, 0.196)"
-              >
-                <div class="mt-card-header-img">
-                  <img [src]="cl.src" [alt]="cl.name" height="100" />
-                </div>
+              <div class="mt-card-header-img bordered">
+                <img [src]="cl.src" [alt]="cl.name" height="100" />
               </div>
             </div>
           </ng-container>

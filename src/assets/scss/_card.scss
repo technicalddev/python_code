@@ -48,6 +48,10 @@
       display: flex;
       align-items: center;
       justify-content: space-around;
+      &.bordered {
+        border: 1px solid mat-color($background, disabled);
+        border-radius: 6px;
+      }
     }
     .mt-card-body {
       color: mat-color($foreground, text);
