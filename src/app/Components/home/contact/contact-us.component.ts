@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-
+import { ContactUsService } from './contact-us.service';
 @Component({
   selector: 'mt-contact-us',
   templateUrl: './contact-us.component.html',
@@ -12,7 +12,16 @@ export class ContactUsComponent implements OnInit {
   submitting: boolean;
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log('in ContactUsComponent ============');
+    let contactUsService = new ContactUsService();
+    let to = 'shashank.gandhi@moneytor.in';
+    let subject = 'Hello';
+    let text = 'Hello from gmailService';
+    let from = 'shashank.gandhi@moneytor.in';
+    // contactUsService.sendMail(from, to, subject, text);
+    console.log('in ContactUsComponent ============ end ==============');
+  }
 
   onChanges(model: any, value: any) {
     this.postObj[model] = value;
