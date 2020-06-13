@@ -29,14 +29,18 @@
     .mt-card-header {
       margin-bottom: 10px;
       padding: 0 10px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
       .mt-card-title {
-        font-size: 18px;
+        font-size: 15px;
         font-weight: 500;
         line-height: 1.6;
       }
       .mt-card-subtitle {
         font-weight: normal;
-        font-size: 15px;
+        font-size: 13px;
         line-height: 1;
         color: mat-color($foreground, secondary-text);
       }

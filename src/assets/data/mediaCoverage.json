@@ -4,72 +4,96 @@
       "title": "ANI News",
       "date": "05 Oct 2019",
       "body": "Oracle on-boards first cohort of startups in Mumbai",
+      "imgUrl": "../../../../assets/img/page/media/aninews.png",
+      "height": 15,
       "link": "https://www.aninews.in/news/tech/internet/oracle-on-boards-first-cohort-of-startups-in-mumbai201710051619280001/"
     },
     {
       "title": "LiveMint",
       "date": "11 Jan 2018",
       "body": "Moneytor raises funds from 500 Startups, others",
+      "imgUrl": "../../../../assets/img/page/media/livemint.png",
+      "height": 20,
       "link": "https://www.livemint.com/Companies/eDP8xmZto7pKU6xO0UWpZO/Moneytor-raises-funds-from-500-Startups-others.html"
     },
     {
       "title": "Zee Business",
       "date": "08 Jun 2019",
       "body": "Moneytor: This startup strengthens lender-borrower relations",
+      "imgUrl": "../../../../assets/img/page/media/zeebusiness.png",
+      "height": 20,
       "link": "https://www.zeebiz.com/small-business/news-moneytor-this-startup-strengthens-lender-borrower-relations-101641"
     },
     {
       "title": "Business Wire India",
       "date": "29 Jan 2018",
       "body": "Fintech Valley Vizag's Accelerator Program Geared for a 'Fintectonic' Culture in Andhra Pradesh",
+      "imgUrl": "../../../../assets/img/page/media/businesswire.png",
+      "height": 20,
       "link": "https://www.businesswireindia.com/fintech-valley-vizags-accelerator-program-geared-for-a-fintectonic-culture-in-andhra-pradesh-56734.html"
     },
     {
       "title": "YourStory",
       "date": "16 Mar 2018",
       "body": "The eight participating startups - Moneytor, FingPay, Incremint, Gyandhan, TAQBit, Nanobi, Heckyl Technologies, and iProov",
+      "imgUrl": "../../../../assets/img/page/media/yourstory.png",
+      "height": 20,
       "link": "https://yourstory.com/2018/03/meet-eight-fintech-startups-vizag-betting/"
     },
     {
       "title": "VC Cirle",
       "date": "13 Oct 2017",
       "body": "Moneytor: Mumbai-based Moneytor leverages machine learning to improve default recovery rates, boosting efficiency of the stressed receivables market.",
+      "imgUrl": "../../../../assets/img/page/media/vccircle.png",
+      "height": 15,
       "link": "https://www.vccircle.com/fintech-valley-vizag-announces-first-batch-of-accelerator-programme/"
     },
     {
       "title": "Inc42",
       "date": "10 Jan 2018",
       "body": "Moneytor Raises Seed Funding From 500 Startups And Others",
+      "imgUrl": "../../../../assets/img/page/media/inc42.png",
+      "height": 15,
       "link": "https://inc42.com/buzz/moneytor-raises-seed-funding-500-startups-others/"
     },
     {
       "title": "EnTracker",
       "date": "11 Jan 2018",
       "body": "500 Startups, others back SaaS-based startup Moneytor",
+      "imgUrl": "../../../../assets/img/page/media/entracker.png",
+      "height": 15,
       "link": "https://entrackr.com/2018/01/500-startups-saas-moneytor/"
     },
     {
       "title": "Tracxn",
       "date": "16 Apr 2020",
       "body": "AI in Financial Services Startups in Mumbai",
+      "imgUrl": "../../../../assets/img/page/media/tracxn.png",
+      "height": 15,
       "link": "https://tracxn.com/explore/AI-in-Financial-Services-Startups-in-Mumbai"
     },
     {
       "title": "E27",
       "date": "10 Jan 2018",
       "body": "Lenders can automate their settlement processes with Moneytor’s AI-powered systems, based on a decision-making engine for every step in the collection process",
+      "imgUrl": "../../../../assets/img/page/media/e27.png",
+      "height": 15,
       "link": "https://e27.co/fintech-startup-moneytor-raises-funding-500-durians-citrus-founder-20180110/"
     },
     {
       "title": "Inc42",
       "date": "10 Jan 2018",
       "body": "Moneytor: Mumbai-based stressed receivables management startup Moneytor raised an undisclosed amount of Seed funding from 500 Startups and fintech accelerator ISME ACE.",
+      "imgUrl": "../../../../assets/img/page/media/inc42.png",
+      "height": 15,
       "link": "https://inc42.com/buzz/indian-startup-funding-033/"
     },
     {
       "title": "Your Story",
       "date": "15 Mar 2018",
       "body": "NASSCOM 10,000 Startups’ Code for the Next Billion second stage begins in full flow",
+      "imgUrl": "../../../../assets/img/page/media/yourstory.png",
+      "height": 20,
       "link": "http://yourstory99.rssing.com/chan-24879198/all_p746.html"
     }
   ]

@@ -26,10 +26,10 @@ export class ClientsComponent implements OnInit, OnChanges {
     spaceBetween: 15,
     loop: false,
     navigation: true,
-    initialSlide: 2,
+    initialSlide: 3,
     // effect: 'coverflow',
     autoplay: {
-      delay: 3000,
+      delay: 3500,
       disableOnInteraction: true,
       waitForTransition: true,
     },

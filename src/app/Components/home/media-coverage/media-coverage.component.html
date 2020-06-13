@@ -26,7 +26,16 @@
           >
             <div class="mt-card-header">
               <div class="mt-card-title txt-primary">
-                {{ slide.title }}
+                <ng-container *ngIf="!slide.imgUrl">
+                  {{ slide.title }}
+                </ng-container>
+                <img
+                  *ngIf="slide.imgUrl"
+                  [src]="slide.imgUrl"
+                  [height]="slide.height"
+                  (error)="updateUrl($event)"
+                  style="vertical-align: bottom;"
+                />
               </div>
               <div class="mt-card-subtitle">{{ slide.date }}</div>
             </div>
@@ -36,7 +45,7 @@
                 *ngIf="slide.link"
                 class="link"
                 (click)="learnMore(slide.link)"
-                >Learn more</mt-btn
+                >Learn more ></mt-btn
               >
             </div>
           </div>

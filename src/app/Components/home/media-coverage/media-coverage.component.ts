@@ -24,7 +24,8 @@ export class MediaCoverageComponent implements OnInit, OnChanges {
     keyboard: true,
     centeredSlides: true,
     spaceBetween: 40,
-    loop: false,
+    initialSlide: 2,
+    loop: true,
   };
 
   private navigation: SwiperNavigationInterface = {
@@ -63,5 +64,9 @@ export class MediaCoverageComponent implements OnInit, OnChanges {
 
   learnMore(link: string) {
     window.open(`${link}`, '_blank');
+  }
+
+  updateUrl(event$: any) {
+    event$.target.src = `${this.baseURL}logo/logo.svg`;
   }
 }
