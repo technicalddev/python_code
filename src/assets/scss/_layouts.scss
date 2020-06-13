@@ -95,6 +95,15 @@
       &.blogs {
         min-height: 250px;
       }
+      &.mediaCov {
+        min-height: 110px;
+        .mt-card {
+          .mt-card-body {
+            overflow: hidden;
+            max-height: calc(100% - 70px);
+          }
+        }
+      }
     }
 
     .action-container,
@@ -143,9 +152,9 @@
     swiper > .swiper.s-wrapper .swiper-wrapper .swiper-slide {
       overflow: hidden;
     }
-    .swiper-slide-active .mt-card {
-      background-color: rgba(142, 155, 250, 0.14);
-    }
+    // .swiper-slide-active .mt-card {
+    //   background-color: rgba(142, 155, 250, 0.14);
+    // }
     .swiper-container-horizontal > .swiper-pagination-bullets,
     .swiper-pagination-custom,
     .swiper-pagination-fraction {
