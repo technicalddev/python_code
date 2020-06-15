@@ -14,7 +14,7 @@ import { HomeService } from '../home.service';
 export class BlogsComponent implements OnInit, OnChanges {
   @Input() isMobile: boolean = false;
   @Input() baseURL: string = '';
-
+  imgErr: boolean = false;
   show: boolean = true;
   blogs: any = [];
   disabled: boolean = false;
@@ -52,7 +52,6 @@ export class BlogsComponent implements OnInit, OnChanges {
     clickable: true,
     hideOnClick: false,
   };
-  imgErr: boolean = false;
 
   constructor(private homeService: HomeService) {}
 

@@ -15,6 +15,8 @@ export class ClientsComponent implements OnInit, OnChanges {
   @Input() baseURL: string = '';
   investorsList: any = [];
 
+  clients: any = [];
+  loans: any = [];
   show: boolean = true;
   slides: any = [];
   disabled: boolean = false;
@@ -55,8 +57,6 @@ export class ClientsComponent implements OnInit, OnChanges {
     hideOnClick: false,
   };
 
-  clients: any = [];
-  loans: any = [];
   constructor(private homeService: HomeService) {}
 
   ngOnInit(): void {
