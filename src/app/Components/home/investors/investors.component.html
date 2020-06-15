@@ -1,11 +1,11 @@
 <div>
   <div fxFlex="100%" fxLayoutAlign="center">
-    <mt-h1 class="txt-black">Our Investors & Accelerators</mt-h1>
+    <mt-h1 class="txt-black ta-c">Our Investors & Accelerators</mt-h1>
   </div>
 </div>
 
 <!-- ngx swipper -->
-<div class="box-container inv">
+<div class="box-container investors">
   <div class="vertical-container" fxLayout="column" fxFlex="100%">
     <div class="content-container" fxLayout="column" fxFlex="auto">
       <swiper
@@ -25,12 +25,12 @@
           matRipple
           matRippleColor="rgba(142, 155, 250, 0.196)"
         >
-          <div class="mt-card-header-img bordered">
+          <div class="mt-card-header-img">
             <img
               [src]="investor.imgUrl"
               [alt]="investor.name"
-              height="100"
-              [width]="investor.width"
+              height="110"
+              width="274"
             />
           </div>
         </div>

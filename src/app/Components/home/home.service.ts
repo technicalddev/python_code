@@ -26,6 +26,9 @@ export class HomeService {
   getBlogs(): Observable<any> {
     return this.http.get(`../../../assets/data/blogsData.json`);
   }
+  getLoansData(): Observable<any> {
+    return this.http.get(`../../../assets/data/loansData.json`);
+  }
   sendMail(postObj: any): Promise<any> {
     let msg: any = {};
     const { Subject, Body } = postObj;

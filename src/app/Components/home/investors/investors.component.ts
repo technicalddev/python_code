@@ -23,19 +23,22 @@ export class InvestorsComponent implements OnInit, OnChanges {
     direction: 'horizontal',
     keyboard: true,
     centeredSlides: true,
-    spaceBetween: 40,
+    spaceBetween: 20,
     loop: false,
     navigation: true,
-    mousewheel: true,
+    initialSlide: 2,
     breakpoints: {
-      640: {
+      400: {
         slidesPerView: 1,
       },
       768: {
         slidesPerView: 2,
       },
-      1627: {
-        slidesPerView: 4,
+      1024: {
+        slidesPerView: 3,
+      },
+      1524: {
+        slidesPerView: 5,
       },
     },
   };

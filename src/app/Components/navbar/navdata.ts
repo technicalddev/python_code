@@ -42,6 +42,6 @@ export const navData: any = [
   {
     name: 'Get started',
     link: 'reachus',
-    class: 'raised',
+    class: 'raised raised-nav',
   },
 ];

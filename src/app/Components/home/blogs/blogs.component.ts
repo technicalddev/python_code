@@ -25,7 +25,7 @@ export class BlogsComponent implements OnInit, OnChanges {
     centeredSlides: true,
     spaceBetween: 40,
     navigation: true,
-    loop: true,
+    loop: false,
     initialSlide: 1,
     // effect: 'coverflow',
     // autoplay: {
@@ -34,6 +34,17 @@ export class BlogsComponent implements OnInit, OnChanges {
     //   stopOnLastSlide: true,
     //   waitForTransition: true,
     // },
+    breakpoints: {
+      400: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 4,
+      },
+    },
   };
 
   private pagination: SwiperPaginationInterface = {

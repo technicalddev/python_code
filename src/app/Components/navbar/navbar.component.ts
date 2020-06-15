@@ -22,6 +22,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
   mobileQuery: MediaQueryList;
   mobileQueryListener: () => void;
   navItems: any = [];
+  logo: string = 'logo_light';
   // tslint:disable
   constructor(
     private changeDetectorRef: ChangeDetectorRef,
@@ -45,8 +46,10 @@ export class NavbarComponent implements OnInit, OnDestroy {
   onScroll(event: any) {
     let element = document.querySelector('.mt-toolbar');
     if (window.pageYOffset > element.clientHeight) {
+      this.logo = 'logo_dark';
       element.classList.add('navbar-primary');
     } else {
+      this.logo = 'logo_light';
       element.classList.remove('navbar-primary');
     }
   }

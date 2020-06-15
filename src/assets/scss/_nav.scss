@@ -15,8 +15,6 @@
         'Avenir-LT-Std-Roman';
       .mat-drawer-container {
         background: mat-color($background, base-bg);
-        height: 100%;
-        overflow: hidden;
         .mat-drawer {
           width: 220px;
           position: fixed;
@@ -116,8 +114,16 @@
               padding-right: 5%;
             }
             &.navbar-primary {
-              background: mat-color($background, primary);
+              background: mat-color($background, white);
               box-shadow: mat-color($shadows, shadow1);
+              .mt-toolbar-item {
+                color: mat-color($foreground, text);
+                &.raised {
+                  background-color: mat-color($background, primary);
+                  color: mat-color($background, white);
+                  box-shadow: none;
+                }
+              }
             }
           }
         }

@@ -3,23 +3,37 @@
     {
       "name": "500 Startups",
       "link": "https://500.co/",
-      "imgUrl": "../../../../assets/img/page/500.png",
-      "width": 274,
-      "height": 120
+      "imgUrl": "../../../../assets/img/page/investors/500.png"
     },
     {
       "name": "AngelList",
       "link": "https://angel.co/",
-      "imgUrl": "../../../../assets/img/page/angel-list.png",
-      "width": 275,
-      "height": 120
+      "imgUrl": "../../../../assets/img/page/investors/angel-list.png"
     },
     {
       "name": "Stanford Angels & Entrepreneurs",
       "link": "https://stanfordaande.com/",
-      "imgUrl": "../../../../assets/img/page/stanford.png",
-      "width": 369,
-      "height": 120
+      "imgUrl": "../../../../assets/img/page/investors/stanford.png"
+    },
+    {
+      "name": "Oracle Startup Cloud Accelerator",
+      "link": "https://www.oracle.com/in/startup/",
+      "imgUrl": "../../../../assets/img/page/investors/oracle.png"
+    },
+    {
+      "name": "Zone Startups – India",
+      "link": "https://india.zonestartups.com/",
+      "imgUrl": "../../../../assets/img/page/investors/zone-startups.png"
+    },
+    {
+      "name": "Fintech Valley Vizag",
+      "link": "https://en.wikipedia.org/wiki/Fintech_Valley_Vizag",
+      "imgUrl": "../../../../assets/img/page/investors/fintech-valley-vizag.png"
+    },
+    {
+      "name": "10000 Startups",
+      "link": "http://10000startups.com/",
+      "imgUrl": "../../../../assets/img/page/investors/10000-startups.png"
     }
   ]
 }

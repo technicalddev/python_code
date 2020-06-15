@@ -35,7 +35,7 @@ export class ClientsComponent implements OnInit, OnChanges {
     },
     breakpoints: {
       400: {
-        slidesPerView: 2,
+        slidesPerView: 1,
       },
       768: {
         slidesPerView: 3,
@@ -56,10 +56,12 @@ export class ClientsComponent implements OnInit, OnChanges {
   };
 
   clients: any = [];
+  loans: any = [];
   constructor(private homeService: HomeService) {}
 
   ngOnInit(): void {
     this.getClients();
+    this.getLoansData();
   }
 
   ngOnChanges() {
@@ -74,6 +76,14 @@ export class ClientsComponent implements OnInit, OnChanges {
       const { data } = res;
       if (data && data.length > 0) {
         this.clients = data;
+      }
+    });
+  }
+  getLoansData() {
+    this.homeService.getLoansData().subscribe((res) => {
+      const { data } = res;
+      if (data && data.length > 0) {
+        this.loans = data;
       }
     });
   }
