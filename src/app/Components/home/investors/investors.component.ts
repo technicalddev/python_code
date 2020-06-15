@@ -26,18 +26,21 @@ export class InvestorsComponent implements OnInit, OnChanges {
     spaceBetween: 20,
     loop: false,
     navigation: true,
-    initialSlide: 2,
     breakpoints: {
       400: {
+        initialSlide: 0,
         slidesPerView: 1,
       },
       768: {
+        initialSlide: 1,
         slidesPerView: 2,
       },
       1024: {
+        initialSlide: 2,
         slidesPerView: 3,
       },
       1524: {
+        initialSlide: 2,
         slidesPerView: 5,
       },
     },

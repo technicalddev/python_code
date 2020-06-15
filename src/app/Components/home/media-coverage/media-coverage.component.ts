@@ -24,8 +24,21 @@ export class MediaCoverageComponent implements OnInit, OnChanges {
     keyboard: true,
     centeredSlides: true,
     spaceBetween: 40,
-    initialSlide: 2,
     loop: true,
+    breakpoints: {
+      400: {
+        initialSlide: 0,
+        slidesPerView: 1,
+      },
+      768: {
+        initialSlide: 1,
+        slidesPerView: 2,
+      },
+      1024: {
+        initialSlide: 2,
+        slidesPerView: 4,
+      },
+    },
   };
 
   private navigation: SwiperNavigationInterface = {

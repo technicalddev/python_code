@@ -26,7 +26,6 @@ export class BlogsComponent implements OnInit, OnChanges {
     spaceBetween: 40,
     navigation: true,
     loop: false,
-    initialSlide: 1,
     // effect: 'coverflow',
     // autoplay: {
     //   delay: 3000,
@@ -36,12 +35,15 @@ export class BlogsComponent implements OnInit, OnChanges {
     // },
     breakpoints: {
       400: {
+        initialSlide: 0,
         slidesPerView: 1,
       },
       768: {
+        initialSlide: 0,
         slidesPerView: 2,
       },
       1024: {
+        initialSlide: 1,
         slidesPerView: 4,
       },
     },
@@ -61,7 +63,6 @@ export class BlogsComponent implements OnInit, OnChanges {
 
   ngOnChanges() {
     const extraConfigs: SwiperConfigInterface = {
-      slidesPerView: this.isMobile ? 1 : 4,
       pagination: this.pagination,
     };
     this.config = { ...this.config, ...extraConfigs };

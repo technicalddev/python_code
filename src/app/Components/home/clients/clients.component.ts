@@ -28,7 +28,6 @@ export class ClientsComponent implements OnInit, OnChanges {
     spaceBetween: 15,
     loop: false,
     navigation: true,
-    initialSlide: 3,
     // effect: 'coverflow',
     autoplay: {
       delay: 3500,
@@ -37,15 +36,19 @@ export class ClientsComponent implements OnInit, OnChanges {
     },
     breakpoints: {
       400: {
+        initialSlide: 0,
         slidesPerView: 1,
       },
       768: {
+        initialSlide: 1,
         slidesPerView: 3,
       },
       1024: {
+        initialSlide: 2,
         slidesPerView: 4,
       },
       1524: {
+        initialSlide: 3,
         slidesPerView: 6,
       },
     },

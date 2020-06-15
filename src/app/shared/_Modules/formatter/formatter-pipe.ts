@@ -68,7 +68,7 @@ export class Formatter implements PipeTransform {
     // number formatter
     if (formatString === 'number' && value) {
       const decimalPipe = new DecimalPipe('en-IN');
-      return decimalPipe.transform(value, '1.2-2');
+      return decimalPipe.transform(value, '1.0');
     }
   }
 }
