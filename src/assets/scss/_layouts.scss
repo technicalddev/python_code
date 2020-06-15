@@ -198,6 +198,12 @@
     .mt-footer-bg {
       background: mat-color($background, voilet-dark);
       color: mat-color($background, white);
+      padding-bottom: 10px;
+    }
+    .footer-border {
+      height: 1px;
+      width: 100%;
+      background: mat-color($background, white);
     }
     .full-width {
       width: 100%;

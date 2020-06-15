@@ -4,19 +4,28 @@
   </div>
 </div>
 <div class="block-container" id="about">
-  <div fxLayout="row" fxLayoutAlign="space-around center" class="row-wrap">
-    <ng-container *ngFor="let item of loans">
-      <div fxLayout="column" class="ta-c mb-20">
-        <img [src]="item.imgUrl" [alt]="'img'" height="114" width="124" />
-        <mt-h3 class="txt-secondary">{{ item.count }}</mt-h3>
-        <mt-h4 class="txt-secondary">{{ item.title }}</mt-h4>
-      </div>
-    </ng-container>
-    <!-- <mt-body-large
+  <div fxLayout="row" fxLayoutAlign="space-around" class="row-wrap">
+    <div
+      fxFlex="80%"
+      fxFlex.lt-md="90%"
+      fxLayout="row"
+      fxLayoutAlign="space-around"
+    >
+      <ng-container *ngFor="let item of loans">
+        <div fxLayout="column" class="ta-c mb-20">
+          <img [src]="item.imgUrl" [alt]="'img'" height="114" width="124" />
+          <mt-h2 class="txt-secondary">{{
+            item.count | formatter: 'number'
+          }}</mt-h2>
+          <mt-h4 class="txt-secondary">{{ item.title }}</mt-h4>
+        </div>
+      </ng-container>
+      <!-- <mt-body-large
         >3000000 accounts 2000000 borrowers 100000000 customer touch events
         500000 customer payments products - vehicle loans personal loans salary
         loans virtual cards</mt-body-large
       > -->
+    </div>
   </div>
 </div>
 <div

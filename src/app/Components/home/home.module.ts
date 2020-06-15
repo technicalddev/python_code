@@ -14,6 +14,7 @@ import { ClearDeptComponent } from './clear-dept/clear-dept.component';
 import { MediaCoverageComponent } from './media-coverage/media-coverage.component';
 import { ContactUsComponent } from './contact/contact-us.component';
 import { BlogsComponent } from './blogs/blogs.component';
+import { FormatterModule } from 'src/app/shared/_Modules/formatter/formatter.module';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { BlogsComponent } from './blogs/blogs.component';
     AngularMaterialModule,
     SharedComponentsModule,
     SwiperModule,
+    FormatterModule,
   ],
   providers: [HomeService],
 })

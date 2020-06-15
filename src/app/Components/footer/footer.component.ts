@@ -12,6 +12,7 @@ export class FooterComponent implements OnInit {
   logoSection: any = {};
   quickLinks: any = [];
   companyLinks: any = [];
+  socialLinks: any = [];
   showModal: boolean = false;
   modalData: any = {};
   modalBtns: any = [{ label: 'Ok', class: '', submit: true }];
@@ -26,10 +27,11 @@ export class FooterComponent implements OnInit {
   }
   getFooterData() {
     this.footerService.getFooterData().subscribe((res) => {
-      const { logoSection, quickLinks, companyLinks } = res;
+      const { logoSection, quickLinks, companyLinks, socialLinks } = res;
       this.logoSection = logoSection;
       this.quickLinks = quickLinks;
       this.companyLinks = companyLinks;
+      this.socialLinks = socialLinks;
     });
   }
 
@@ -68,5 +70,8 @@ export class FooterComponent implements OnInit {
   onModalAction($event: boolean) {
     this.showModal = false;
     return;
+  }
+  accessSocialLinks(link: string) {
+    window.open(`${link}`, '_blank');
   }
 }

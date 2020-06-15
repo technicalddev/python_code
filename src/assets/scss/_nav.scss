@@ -84,6 +84,7 @@
             box-shadow: none;
             background: mat-color($background, transparent);
             .mt-toolbar-item {
+              cursor: pointer;
               color: mat-color($background, white);
               font-size: 14px;
               margin: 0 0.5rem;
@@ -108,6 +109,11 @@
                 border-radius: 3px;
                 color: mat-color($background, primary);
                 padding: 11px 22px;
+                &:hover {
+                  &:before {
+                    background: none;
+                  }
+                }
               }
             }
             .nav-item-container {
@@ -118,6 +124,12 @@
               box-shadow: mat-color($shadows, shadow1);
               .mt-toolbar-item {
                 color: mat-color($foreground, text);
+                &:hover,
+                &.mt-nav-active {
+                  &:before {
+                    background: mat-color($background, primary);
+                  }
+                }
                 &.raised {
                   background-color: mat-color($background, primary);
                   color: mat-color($background, white);
