@@ -21,7 +21,7 @@
         >
           <h1 class="title-large" [innerHTML]="homeSection.title"></h1>
           <h4 class="title-small" [innerHTML]="homeSection.subTitle"></h4>
-          <mt-btn class="large white mt-25">
+          <mt-btn class="large white mt-25" (onAction)="getStarted()">
             Get started
             <span class="ic_next ml-10"></span>
           </mt-btn>

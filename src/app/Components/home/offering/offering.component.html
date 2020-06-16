@@ -25,9 +25,11 @@
         <div fxFlex="48%" fxFlex.xs="100%">
           <mt-h1 class="txt-primary">{{ offer.title }}</mt-h1>
           <mt-body-large>{{ offer.description }}</mt-body-large>
-          <mt-btn class="{{ offer.btn.class }} my-20">{{
-            offer.btn.name
-          }}</mt-btn>
+          <mt-btn
+            class="{{ offer.btn.class }} my-20"
+            (onAction)="buttonAction()"
+            >{{ offer.btn.name }}</mt-btn
+          >
         </div>
       </div>
     </ng-container>
