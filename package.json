@@ -9,7 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "dev:ssr": "ng run moneytor-in:serve-ssr",
-    "serve:ssr": "node dist/moneytor-in/server/main.js",
+    "serve:ssr": "node dist/server/main.js",
     "build:ssr": "ng build --prod && ng run moneytor-in:server:production",
     "prerender": "ng run moneytor-in:prerender"
   },
