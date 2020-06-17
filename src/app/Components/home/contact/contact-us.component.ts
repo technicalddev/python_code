@@ -20,8 +20,8 @@ export class ContactUsComponent implements OnInit {
   }
   onProcessContact() {
     this.submitting = true;
-    const { firstName, lastName, companyName, message } = this.postObj;
-    if (!firstName || !companyName) {
+    const { firstName, lastName, companyName, message, email } = this.postObj;
+    if (!firstName || !companyName || !lastName || !email) {
       this.submitting = false;
       return;
     }
@@ -29,6 +29,7 @@ export class ContactUsComponent implements OnInit {
       Subject: `Want to Reach us ${companyName}`,
       Body: `<b>Name: </b> ${firstName} ${lastName} <br>
         <b>Company/Organization: </b> ${companyName} <br>
+        <b>Email: </b> ${email}
         <b>Message: </b> ${message}`,
     };
     this.homeService.sendMail(emailBody).then((res) => {

@@ -10,17 +10,22 @@
       "type": "page"
     },
     {
-      "name": "Offerings",
-      "value": "offers",
+      "name": "Solutions",
+      "value": "solutions",
       "type": "page"
     },
     {
-      "name": "Clients & Press",
+      "name": "Clients",
       "value": "clients",
       "type": "page"
     },
     {
-      "name": "Blogs",
+      "name": "Media",
+      "value": "media",
+      "type": "page"
+    },
+    {
+      "name": "Blog",
       "value": "blogs",
       "type": "page"
     }

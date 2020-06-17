@@ -32,7 +32,7 @@
               <mt-input
                 label="First name"
                 fxFlex.lt-sm="100%"
-                placeholder="Enter your first name"
+                placeholder="Enter first name"
                 [model]="postObj.firstName"
                 (onChanges)="onChanges('firstName', $event)"
                 required="true"
@@ -42,16 +42,29 @@
               <mt-input
                 fxFlex.lt-sm="100%"
                 label="Last name"
-                placeholder="Enter your last name"
+                placeholder="Enter last name"
                 [model]="postObj.lastName"
                 (onChanges)="onChanges('lastName', $event)"
+                required="true"
+              >
+              </mt-input>
+            </div>
+            <div>
+              <mt-input
+                label="Email"
+                placeholder="Enter email"
+                [model]="postObj.email"
+                (onChanges)="onChanges('email', $event)"
+                type="email"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                required="true"
               >
               </mt-input>
             </div>
             <div>
               <mt-input
                 label="Company name"
-                placeholder="Enter your company name"
+                placeholder="Enter company name"
                 [model]="postObj.companyName"
                 (onChanges)="onChanges('companyName', $event)"
                 required="true"
