@@ -21,7 +21,7 @@ echo "**** ng build finished"
 cd $SCRIPTDIR/../dist/moneytor-in/browser
 
 # Copy the build files to AWS S3 
-aws s3 sync ../src s3://moneytor.in
+aws s3 sync ./ s3://moneytor.in
 
 # Invalidate the Cache from AWS CloudFront
 aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
