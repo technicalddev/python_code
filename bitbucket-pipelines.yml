@@ -15,7 +15,7 @@ options:
 
 pipelines:
   custom:   # These builds will only be triggered manually
-    Deploy-staging.moneytor.in:
+    Deploy-moneytor.in:
      - step:
         name: Build and deploy
         script:
