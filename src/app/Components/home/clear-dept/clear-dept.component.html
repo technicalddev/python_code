@@ -1,6 +1,6 @@
 <div fxLayout="row" fxLayoutAlign="center center">
   <div
-    fxFlex="60%"
+    fxFlex="70%"
     fxFlex.lt-md="90%"
     fxLayout="column"
     fxLayoutAlign="center"
@@ -10,15 +10,13 @@
     <p class="mt-contact-us-subtitle txt-white ta-c">
       Please give us your details and we will get back to you
     </p>
-    <div
-      fxLayout="row"
-      fxLayout.lt-sm="column"
-      fxLayoutAlign="space-around baseline"
-    >
+    <div fxLayout="row wrap" fxLayoutAlign="space-around baseline">
       <div fxFlex="20%" fxFlex.lt-sm="100%">
         <mt-input
+          class="clear-dept"
           label="Name"
-          placeholder="Enter your name"
+          placeholder="Enter full name"
+          [model]="postObj.name"
           (onChanges)="onChanges('name', $event)"
           required="true"
         >
@@ -26,8 +24,10 @@
       </div>
       <div fxFlex="20%" fxFlex.lt-sm="100%">
         <mt-input
+          class="clear-dept"
           label="Email"
-          placeholder="Enter your email"
+          placeholder="Enter email"
+          [model]="postObj.email"
           (onChanges)="onChanges('email', $event)"
           required="true"
         >
@@ -35,14 +35,21 @@
       </div>
       <div fxFlex="20%" fxFlex.lt-sm="100%">
         <mt-input
+          class="clear-dept"
           label="Mobile"
-          placeholder="Enter your mobile number"
+          placeholder="Enter mobile number"
+          [model]="postObj.phone"
           (onChanges)="onChanges('phone', $event)"
           required="true"
         >
         </mt-input>
       </div>
-      <div fxFlex="20%" fxFlex.lt-sm="100%">
+      <div
+        fxFlex="20%"
+        fxFlex.lt-sm="100%"
+        fxLayoutAlign.lt-sm="space-between center"
+        fxLayout.lt-sm="column"
+      >
         <mt-btn
           type="submit"
           [loading]="submitting"

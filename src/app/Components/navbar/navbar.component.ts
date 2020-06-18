@@ -9,6 +9,8 @@ import {
 import { MediaMatcher } from '@angular/cdk/layout';
 import { navData } from './navdata';
 import { MatSidenav } from '@angular/material/sidenav';
+import { Router } from '@angular/router';
+import { ScrollService } from 'src/app/shared/_Services/scroll.service';
 
 @Component({
   selector: 'app-navbar',
@@ -20,10 +22,13 @@ export class NavbarComponent implements OnInit, OnDestroy {
   mobileQuery: MediaQueryList;
   mobileQueryListener: () => void;
   navItems: any = [];
+  logo: string = 'logo_light';
   // tslint:disable
   constructor(
     private changeDetectorRef: ChangeDetectorRef,
-    private media: MediaMatcher
+    private media: MediaMatcher,
+    private router: Router,
+    private scrollService: ScrollService
   ) {
     this.mobileQuery = this.media.matchMedia('(max-width: 1110px)');
     this.mobileQueryListener = () => this.changeDetectorRef.detectChanges();
@@ -41,15 +46,18 @@ export class NavbarComponent implements OnInit, OnDestroy {
   onScroll(event: any) {
     let element = document.querySelector('.mt-toolbar');
     if (window.pageYOffset > element.clientHeight) {
-      // element.setAttribute('color', 'primary')
+      this.logo = 'logo_dark';
       element.classList.add('navbar-primary');
     } else {
+      this.logo = 'logo_light';
       element.classList.remove('navbar-primary');
     }
   }
   // to close side nave on mobile
   navigateTo(nav: any) {
-    window.scroll(0, 0);
     if (this.mobileQuery.matches) this.drawer.close();
+    const { link } = nav;
+    this.router.navigate(['/']);
+    this.scrollService.scrollToElementById(link);
   }
 }

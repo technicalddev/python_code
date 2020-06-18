@@ -1,0 +1,84 @@
+@import '~@angular/material/theming';
+
+@mixin pageNotFoundStyle($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $foreground: map-get($theme, foreground);
+  $background: map-get($theme, background);
+  $shadows: map-get($theme, shadows);
+
+  $max-width: 410px;
+  .mt-page-not-found {
+    position: relative;
+    height: calc(100vh - 100px);
+    .notfound {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      max-width: $max-width;
+      width: 100%;
+      text-align: center;
+      .notfound-404 {
+        height: 140px;
+        position: relative;
+        z-index: -1;
+        h1 {
+          font-size: 120px;
+          margin: 0px;
+          font-weight: 900;
+          position: absolute;
+          left: 50%;
+          -webkit-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+          -webkit-text-fill-color: mat-color($background, error);
+          background-size: cover;
+          background-position: center;
+        }
+      }
+      h2 {
+        color: mat-color($foreground, text);
+        font-size: 24px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-top: 0;
+      }
+      p {
+        color: mat-color($foreground, text);
+        font-size: 14px;
+        font-weight: 400;
+        margin-bottom: 20px;
+        margin-top: 0px;
+      }
+      a {
+        font-size: 14px;
+        text-decoration: none;
+        text-transform: uppercase;
+        background: mat-color($background, primary);
+        display: inline-block;
+        padding: 15px 30px;
+        border-radius: 3px;
+        color: mat-color($foreground, base);
+        font-weight: 700;
+        -webkit-box-shadow: 0px 4px 15px -5px mat-color($background, primary);
+        box-shadow: 0px 4px 15px -5px mat-color($background, primary);
+      }
+    }
+    @media only screen and (max-width: 767px) {
+      .notfound {
+        p {
+          padding: 0 1rem;
+        }
+        .notfound-404 {
+          height: 142px;
+          h1 {
+            font-size: 112px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -7,8 +7,10 @@
 # Only exists if Bazel was run
 /bazel-out
 
-# dependencies
+# client dependencies
 /node_modules
+# move all angular stuff inside a client folder
+/client/node_modules
 
 # profiling files
 chrome-profiler-events*.json
@@ -49,3 +51,4 @@ Thumbs.db
 #server
 */package-lock.json
 */node_modules
+/runCommands

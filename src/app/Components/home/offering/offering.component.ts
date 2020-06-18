@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { HomeService } from '../home.service';
+import { ScrollService } from 'src/app/shared/_Services/scroll.service';
 
 @Component({
   selector: 'mt-offering',
@@ -10,7 +11,10 @@ export class OfferingComponent implements OnInit {
   @Input() isMobile: boolean = false;
   @Input() baseURL: string = '';
   offers: any = [];
-  constructor(private homeService: HomeService) {}
+  constructor(
+    private homeService: HomeService,
+    private scrollService: ScrollService
+  ) {}
 
   ngOnInit(): void {
     this.getOffersData();
@@ -22,5 +26,8 @@ export class OfferingComponent implements OnInit {
         this.offers = data;
       }
     });
+  }
+  buttonAction() {
+    this.scrollService.scrollToElementById('reachus');
   }
 }

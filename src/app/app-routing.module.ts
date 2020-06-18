@@ -7,13 +7,13 @@ const routes: Routes = [
     path: '',
     component: NavbarComponent,
     children: [
+      // {
+      //   path: '',
+      //   pathMatch: 'full',
+      //   redirectTo: 'home',
+      // },
       {
         path: '',
-        pathMatch: 'full',
-        redirectTo: 'home',
-      },
-      {
-        path: 'home',
         loadChildren: () =>
           import('./Components/home/home.module').then((m) => m.HomeModule),
       },

@@ -39,7 +39,7 @@
       line-height: 1.32;
       font-stretch: normal;
       font-style: normal;
-      letter-spacing: normal;
+      letter-spacing: 0.9px;
     }
     .title-large {
       font-size: 300%;
@@ -48,7 +48,7 @@
     }
     .title-small {
       font-size: 18px;
-      font-weight: 900;
+      font-weight: 600;
       color: mat-color($background, white);
     }
 
@@ -75,12 +75,13 @@
     }
     .mt-contact-us-subtitle {
       margin: 0 0 16px;
+      font-size: 17px;
     }
 
     // for clear dept
     .clear-dept-bg {
-      background-color: #3d1b65;
-      padding: 20px 40px;
+      // background-color: #3d1b65;
+      padding: 40px;
       border-radius: 5px;
     }
     // for ngx swipper
@@ -88,6 +89,28 @@
       box-sizing: border-box;
       width: 100%;
       min-height: 300px;
+      &.clients {
+        min-height: 103px;
+      }
+      &.investors {
+        min-height: 123px;
+      }
+      &.mediaCov {
+        min-height: 110px;
+        .mt-card {
+          .mt-card-body {
+            overflow: hidden;
+            max-height: calc(100% - 70px);
+          }
+        }
+      }
+      &.blogs {
+        min-height: 250px;
+        .mt-card-body {
+          overflow: hidden;
+          max-height: calc(100% - 70px);
+        }
+      }
     }
 
     .action-container,
@@ -136,9 +159,9 @@
     swiper > .swiper.s-wrapper .swiper-wrapper .swiper-slide {
       overflow: hidden;
     }
-    .swiper-slide-active .mt-card {
-      background-color: rgba(142, 155, 250, 0.14);
-    }
+    // .swiper-slide-active .mt-card {
+    //   background-color: rgba(142, 155, 250, 0.14);
+    // }
     .swiper-container-horizontal > .swiper-pagination-bullets,
     .swiper-pagination-custom,
     .swiper-pagination-fraction {
@@ -150,7 +173,6 @@
       align-items: center;
       text-align: center;
       .mt-pagination {
-        background: #fff;
         display: flex;
         align-items: center;
         height: 55px;
@@ -176,6 +198,56 @@
     .mt-footer-bg {
       background: mat-color($background, voilet-dark);
       color: mat-color($background, white);
+      padding-bottom: 10px;
+    }
+    .footer-border {
+      height: 1px;
+      width: 100%;
+      background: mat-color($background, white);
+    }
+    .full-width {
+      width: 100%;
+    }
+    .cicular-icon-home {
+      width: 22px;
+      height: 32px;
+      border-radius: 10px;
+      border: solid 1.5px mat-color($background, white);
+      .mt-line {
+        width: 2px;
+        height: 8px;
+        border-radius: 1.5px;
+        position: relative;
+        left: 50%;
+        top: 10px;
+        background-color: mat-color($background, white);
+        transform: translate(-50%, -50%);
+      }
+    }
+    .default-imgBg {
+      background-color: mat-color($background, voilet-light);
+    }
+    .justify-center {
+      justify-content: space-around;
+    }
+    .row-wrap {
+      flex-wrap: wrap;
+    }
+    @media screen and (max-width: 959px) {
+      .title-large {
+        font-size: 40px;
+      }
+      .clear-dept-bg {
+        padding: 40px 30px;
+      }
+      .mt-modal {
+        .modal-container {
+          min-width: 100%;
+          left: 0%;
+          top: 0%;
+          transform: translate(0%, 0%);
+        }
+      }
     }
   }
 }

@@ -2,7 +2,7 @@
   <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutAlign="space-around">
     <div fxLayout="column" fxFLex="30%" fxFlex.lt-md="33%" fxFlex.lt-sm="90%">
       <img
-        src="../../../assets/img/logo/logo-new@3x.png"
+        src="../../../assets/img/logo/logo_light.svg"
         alt="moneytor.in"
         width="256px"
         height="39px"
@@ -14,7 +14,7 @@
     <div fxLayout="column" fxFLex="30%" fxFlex.lt-md="33%" fxFlex.lt-sm="90%">
       <mt-h3>Quick Links</mt-h3>
       <ng-container *ngFor="let item of quickLinks">
-        <mt-body-large>
+        <mt-body-large class="mb-0">
           <a class="mt-btn link secondary" (click)="onLinksAction(item)">{{
             item.name
           }}</a>
@@ -24,7 +24,7 @@
     <div fxLayout="column" fxFLex="30%" fxFlex.lt-md="33%" fxFlex.lt-sm="90%">
       <mt-h3>Company</mt-h3>
       <ng-container *ngFor="let item of companyLinks">
-        <mt-body-large>
+        <mt-body-large class="mb-0">
           <a class="mt-btn link secondary" (click)="onLinksAction(item)">{{
             item.name
           }}</a>
@@ -32,15 +32,41 @@
       </ng-container>
     </div>
   </div>
-</div>
+  <div>
+    <div fxLayout="row" fxLayoutAlign="space-around center">
+      <div fxFlex="80%">
+        <div class="footer-border mb-10"></div>
+        <div fxLayout="row" fxLayoutAlign="space-between">
+          <div fxLayout="column">
+            <mt-body-large class="txt-secondary"
+              >© Copyright 2020 Moneytor Inc. All rights
+              reserved.</mt-body-large
+            >
+          </div>
+          <div fxLayout="column">
+            <div fxLayout="row">
+              <ng-container *ngFor="let item of socialLinks">
+                <mt-btn
+                  class="icon white mr-10"
+                  (onAction)="accessSocialLinks(item.link)"
+                >
+                  <span [ngClass]="item.icon"></span>
+                </mt-btn>
+              </ng-container>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<ng-container *ngIf="showModal">
-  <mt-modal
-    [title]="modalData.header"
-    [buttons]="modalBtns"
-    (onAction)="onModalAction($event)"
-  >
-    <div [innerHTML]="modalData.body"></div>
-    <!-- {{modalData.body}} -->
-  </mt-modal>
-</ng-container>
+  <ng-container *ngIf="showModal">
+    <mt-modal
+      [title]="modalData.header"
+      [buttons]="modalBtns"
+      (onAction)="onModalAction($event)"
+    >
+      <div class="p-15" [innerHTML]="modalData.body"></div>
+    </mt-modal>
+  </ng-container>
+</div>

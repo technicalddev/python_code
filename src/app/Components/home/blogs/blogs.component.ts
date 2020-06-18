@@ -14,7 +14,7 @@ import { HomeService } from '../home.service';
 export class BlogsComponent implements OnInit, OnChanges {
   @Input() isMobile: boolean = false;
   @Input() baseURL: string = '';
-
+  imgErr: boolean = false;
   show: boolean = true;
   blogs: any = [];
   disabled: boolean = false;
@@ -25,17 +25,32 @@ export class BlogsComponent implements OnInit, OnChanges {
     centeredSlides: true,
     spaceBetween: 40,
     navigation: true,
+    loop: false,
     // effect: 'coverflow',
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: true,
-      stopOnLastSlide: true,
-      waitForTransition: true,
+    // autoplay: {
+    //   delay: 3000,
+    //   disableOnInteraction: true,
+    //   stopOnLastSlide: true,
+    //   waitForTransition: true,
+    // },
+    breakpoints: {
+      400: {
+        initialSlide: 0,
+        slidesPerView: 1,
+      },
+      768: {
+        initialSlide: 0,
+        slidesPerView: 2,
+      },
+      1024: {
+        initialSlide: 1,
+        slidesPerView: 4,
+      },
     },
   };
 
   private pagination: SwiperPaginationInterface = {
-    el: '.mt-pagination',
+    el: '.mt-blog-pg',
     clickable: true,
     hideOnClick: false,
   };
@@ -48,7 +63,6 @@ export class BlogsComponent implements OnInit, OnChanges {
 
   ngOnChanges() {
     const extraConfigs: SwiperConfigInterface = {
-      slidesPerView: this.isMobile ? 1 : 4,
       pagination: this.pagination,
     };
     this.config = { ...this.config, ...extraConfigs };
@@ -64,13 +78,17 @@ export class BlogsComponent implements OnInit, OnChanges {
   }
 
   onIndexChange(index: number) {
-    console.log('Swiper index: ', index);
+    // console.log('Swiper index: ', index);
   }
 
   onSwiperEvent(event: string): void {
-    console.log('Swiper event: ', event);
+    // console.log('Swiper event: ', event);
   }
   gotToBlog(link: string) {
-    console.log('link', link);
+    window.open(`${link}`, '_blank');
+  }
+  updateUrl(event$: any) {
+    this.imgErr = true;
+    event$.target.src = `${this.baseURL}logo/new-logo.svg`;
   }
 }

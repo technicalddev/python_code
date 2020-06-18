@@ -1,62 +1,49 @@
 {
   "data": [
     {
-      "row": [
-        {
-          "name": "Branch International",
-          "src": "branch-international",
-          "link": ""
-        },
-        {
-          "name": "NeoGrowth",
-          "src": "neogrowth",
-          "link": ""
-        },
-        {
-          "name": "Zest Money",
-          "src": "zest-money",
-          "link": ""
-        },
-        {
-          "name": "PayU Money",
-          "src": "payu-money",
-          "link": ""
-        },
-        {
-          "name": "Muthoot Fincorp",
-          "src": "muthoot-fincorp",
-          "link": ""
-        }
-      ]
+      "name": "NeoGrowth",
+      "src": "../../../../assets/img/page/clients/neogrowth.png",
+      "link": ""
     },
     {
-      "row": [
-        {
-          "name": "FlexiLoans",
-          "src": "flexi-loans",
-          "link": ""
-        },
-        {
-          "name": "CreditWise",
-          "src": "credit-wise",
-          "link": ""
-        },
-        {
-          "name": "FairCent",
-          "src": "faircent",
-          "link": ""
-        },
-        {
-          "name": "Rupeelend",
-          "src": "rupeelend",
-          "link": ""
-        },
-        {
-          "name": "Early Salary",
-          "src": "early-salary",
-          "link": ""
-        }
-      ]
+      "name": "Zest Money",
+      "src": "../../../../assets/img/page/clients/zest-money.png",
+      "link": ""
+    },
+    {
+      "name": "PayU Money",
+      "src": "../../../../assets/img/page/clients/payu-money.png",
+      "link": ""
+    },
+    {
+      "name": "Muthoot Fincorp",
+      "src": "../../../../assets/img/page/clients/muthoot-fincorp.png",
+      "link": ""
+    },
+    {
+      "name": "FlexiLoans",
+      "src": "../../../../assets/img/page/clients/flexi-loans.png",
+      "link": ""
+    },
+    {
+      "name": "CreditWise",
+      "src": "../../../../assets/img/page/clients/credit-wise.png",
+      "link": ""
+    },
+    {
+      "name": "FairCent",
+      "src": "../../../../assets/img/page/clients/faircent.png",
+      "link": ""
+    },
+    {
+      "name": "Rupeelend",
+      "src": "../../../../assets/img/page/clients/rupeelend.png",
+      "link": ""
+    },
+    {
+      "name": "Early Salary",
+      "src": "../../../../assets/img/page/clients/early-salary.png",
+      "link": ""
     }
   ]
 }

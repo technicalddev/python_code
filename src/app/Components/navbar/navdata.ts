@@ -1,47 +1,37 @@
 export const navData: any = [
   {
     name: 'Home',
-    link: '',
+    link: 'home',
     class: '',
   },
   {
     name: 'About us',
-    link: '/about',
+    link: 'about',
     class: '',
   },
   {
-    name: 'Contact us',
-    link: '/contact',
-    class: '',
-  },
-  {
-    name: 'Offering',
-    link: '/offers',
-    class: '',
-  },
-  {
-    name: 'Blogs',
-    link: '/blogs',
+    name: 'Solutions',
+    link: 'solutions',
     class: '',
   },
   {
     name: 'Clients',
-    link: '/clients',
-    class: '',
-  },
-  {
-    name: 'Plans',
-    link: '/plans',
+    link: 'clients',
     class: '',
   },
   {
     name: 'Reach out',
-    link: '/reachus',
+    link: 'reachus',
     class: '',
   },
   {
-    name: 'Demo',
-    link: '/demo',
-    class: 'raised',
+    name: 'Blog',
+    link: 'blogs',
+    class: '',
+  },
+  {
+    name: 'Get started',
+    link: 'reachus',
+    class: 'raised raised-nav',
   },
 ];

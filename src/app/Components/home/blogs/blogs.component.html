@@ -1,11 +1,11 @@
 <div>
   <div fxFlex="100%" fxLayoutAlign="center">
-    <mt-h1 class="txt-black">Our Recent Post</mt-h1>
+    <mt-h1 class="txt-black ta-c">Our Recent Post</mt-h1>
   </div>
 </div>
 
 <!-- ngx swipper -->
-<div class="box-container">
+<div class="box-container blogs">
   <div class="horizontal-container" fxLayout="column" fxFlex="100%">
     <div class="content-container" fxLayout="column" fxFlex="auto">
       <swiper
@@ -27,11 +27,17 @@
             (click)="gotToBlog(blog.link)"
           >
             <div class="mt-card-header">
-              <img [src]="baseURL + blog.src" width="100%" height="180" />
+              <img
+                [src]="blog.src"
+                (error)="updateUrl($event)"
+                width="100%"
+                height="100"
+                [ngClass]="imgErr ? 'default-imgBg' : ''"
+              />
             </div>
             <div class="mt-card-body px-20">
               <mt-h2>{{ blog.title }}</mt-h2>
-              <div class="mt-card-footer">
+              <div class="mt-card-footer absolute">
                 <mt-body-large class="txt-secondary"
                   >{{ 'by ' + blog.createdBy + ' | '
                   }}{{ blog.time | date: 'dd MMM y' }}</mt-body-large
@@ -45,5 +51,5 @@
   </div>
 </div>
 <div class="mt-pagination-wrapper">
-  <div class="mt-pagination"></div>
+  <div class="mt-pagination mt-blog-pg"></div>
 </div>

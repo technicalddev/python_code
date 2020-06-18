@@ -24,7 +24,21 @@ export class MediaCoverageComponent implements OnInit, OnChanges {
     keyboard: true,
     centeredSlides: true,
     spaceBetween: 40,
-    loop: false,
+    loop: true,
+    breakpoints: {
+      400: {
+        initialSlide: 0,
+        slidesPerView: 1,
+      },
+      768: {
+        initialSlide: 1,
+        slidesPerView: 2,
+      },
+      1024: {
+        initialSlide: 2,
+        slidesPerView: 4,
+      },
+    },
   };
 
   private navigation: SwiperNavigationInterface = {
@@ -54,10 +68,18 @@ export class MediaCoverageComponent implements OnInit, OnChanges {
     });
   }
   onIndexChange(index: number) {
-    console.log('Swiper index: ', index);
+    // console.log('Swiper index: ', index);
   }
 
   onSwiperEvent(event: string): void {
-    console.log('Swiper event: ', event);
+    // console.log('Swiper event: ', event);
+  }
+
+  learnMore(link: string) {
+    window.open(`${link}`, '_blank');
+  }
+
+  updateUrl(event$: any) {
+    event$.target.src = `${this.baseURL}logo/logo.svg`;
   }
 }

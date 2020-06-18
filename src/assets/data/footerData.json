@@ -6,39 +6,39 @@
   "quickLinks": [
     {
       "name": "About Us",
-      "value": "",
+      "value": "about",
       "type": "page"
     },
     {
-      "name": "Offerings",
-      "value": "",
+      "name": "Solutions",
+      "value": "solutions",
       "type": "page"
     },
     {
-      "name": "Clients & Press",
-      "value": "",
+      "name": "Clients",
+      "value": "clients",
       "type": "page"
     },
     {
-      "name": "Plans",
-      "value": "",
+      "name": "Media",
+      "value": "media",
       "type": "page"
     },
     {
-      "name": "Blogs",
-      "value": "",
+      "name": "Blog",
+      "value": "blogs",
       "type": "page"
     }
   ],
   "companyLinks": [
     {
-      "name": "enquiry@moneytor.in",
-      "value": "enquiry@moneytor.in",
+      "name": "contact@moneytor.in",
+      "value": "contact@moneytor.in",
       "type": "email"
     },
     {
-      "name": "+919833867531",
-      "value": "9833867531",
+      "name": "+919833827207",
+      "value": "+919833827207",
       "type": "phone"
     },
     {
@@ -49,12 +49,29 @@
     {
       "name": "Privacy Policy",
       "value": "Moneytor's smart and self learning integrated debt collection platform digitises the entire debt collection process. <br> Moneytor can operate independently, or integrate with an existing enterprise suite with multiple stakeholders, <br> Moneytor's digital first collection offering enables lenders to communicate with their borrowers through multiple modes and in multiple languages. <br>With our experience in collections portfolio analysis, we offer portfolio liquidation services enabling lenders to release up tied capital and facilitate cashflows.",
-      "type": "modal"
+      "type": ""
     },
     {
       "name": "Terms of Service",
       "value": "Moneytor's smart and self learning integrated debt collection platform digitises the entire debt collection process. <br> Moneytor can operate independently, or integrate with an existing enterprise suite with multiple stakeholders, <br> Moneytor's digital first collection offering enables lenders to communicate with their borrowers through multiple modes and in multiple languages. <br>With our experience in collections portfolio analysis, we offer portfolio liquidation services enabling lenders to release up tied capital and facilitate cashflows.",
-      "type": "modal"
+      "type": ""
+    }
+  ],
+  "socialLinks": [
+    {
+      "name": "Twitter",
+      "link": "https://twitter.com/MoneytorNPA",
+      "icon": "ic_twitter"
+    },
+    {
+      "name": "Facebook",
+      "link": "https://www.facebook.com/moneytor.in/",
+      "icon": "ic_fb"
+    },
+    {
+      "name": "Linkedin",
+      "link": "https://in.linkedin.com/company/moneytornpa",
+      "icon": "ic_linkedin"
     }
   ]
 }

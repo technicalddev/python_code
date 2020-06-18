@@ -65,7 +65,6 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
   threshold: 50,
   spaceBetween: 5,
-  initialSlide: 0,
   centeredSlides: true,
   mousewheel: false,
   scrollbar: false,

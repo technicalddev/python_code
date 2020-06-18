@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FooterService } from './footer.service';
+import { Router } from '@angular/router';
+import { ScrollService } from 'src/app/shared/_Services/scroll.service';
 
 @Component({
   selector: 'mt-footer',
@@ -10,27 +12,36 @@ export class FooterComponent implements OnInit {
   logoSection: any = {};
   quickLinks: any = [];
   companyLinks: any = [];
+  socialLinks: any = [];
   showModal: boolean = false;
   modalData: any = {};
   modalBtns: any = [{ label: 'Ok', class: '', submit: true }];
-  constructor(private footerService: FooterService) {}
+  constructor(
+    private footerService: FooterService,
+    private router: Router,
+    private scrollService: ScrollService
+  ) {}
 
   ngOnInit(): void {
     this.getFooterData();
   }
   getFooterData() {
     this.footerService.getFooterData().subscribe((res) => {
-      const { logoSection, quickLinks, companyLinks } = res;
+      const { logoSection, quickLinks, companyLinks, socialLinks } = res;
       this.logoSection = logoSection;
       this.quickLinks = quickLinks;
       this.companyLinks = companyLinks;
+      this.socialLinks = socialLinks;
     });
   }
 
   onLinksAction(links: any) {
     const { name, value, type } = links;
     console.log('val', value);
-
+    if (type === 'page') {
+      this.router.navigate(['/']);
+      this.scrollService.scrollToElementById(value);
+    }
     if (type === 'email') {
       window.open(`mailto:${value}`, '_blank');
       return;
@@ -59,5 +70,8 @@ export class FooterComponent implements OnInit {
   onModalAction($event: boolean) {
     this.showModal = false;
     return;
+  }
+  accessSocialLinks(link: string) {
+    window.open(`${link}`, '_blank');
   }
 }

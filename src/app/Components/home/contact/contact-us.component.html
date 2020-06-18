@@ -2,71 +2,115 @@
   <div
     fxLayout="row"
     fxLayout.lt-md="column"
-    fxFlex="60%"
-    fxFlex.lt-md="80%"
-    fxFlex.lt-sm="90%"
+    fxLayoutAlign="space-around center"
+    fxLayoutAlign.lt-md="center center"
+    fxFlex.gt-sm="75%"
+    fxFlex.lt-sm="80%"
   >
-    <div fxLayout="column" fxFlex="45%">
-      <mt-h1 class="txt-black">Reach out to us</mt-h1>
-      <p class="mt-contact-us-subtitle">
-        To schedule a product demo , or to know more about our other services,
-        please fill in your contact details, and we will get in touch with you
-        at the earliest
-      </p>
+    <div
+      fxLayout="row"
+      fxFlex="0 1 calc(40% - 32px)"
+      fxFlex.lt-sm="90%"
+      fxLayoutAlign="space-around center"
+      fxLayoutAlign.lt-sm="center center"
+    >
+      <div
+        fxLayout="column"
+        fxLayoutAlign.lt-sm="center center"
+        [ngClass.lt-sm]="'ta-c'"
+      >
+        <mt-h1 class="txt-black">Reach out to us</mt-h1>
+        <p class="mt-contact-us-subtitle">
+          To schedule a product demo , or to know more about our other services,
+          please fill in your contact details, and we will get in touch with you
+          at the earliest
+        </p>
 
-      <div>
-        <form #contactForm="ngForm" (ngSubmit)="onProcessContact()">
-          <div>
-            <mt-input
-              label="First name"
-              placeholder="Enter your first name"
-              (onChanges)="onChanges('firstName', $event)"
-              required="true"
+        <div class="full-width">
+          <form #contactForm="ngForm" (ngSubmit)="onProcessContact()">
+            <div fxLayout="row wrap" fxLayoutAlign="space-between center">
+              <mt-input
+                label="First name"
+                fxFlex.lt-sm="100%"
+                placeholder="Enter first name"
+                [model]="postObj.firstName"
+                (onChanges)="onChanges('firstName', $event)"
+                required="true"
+              >
+              </mt-input>
+
+              <mt-input
+                fxFlex.lt-sm="100%"
+                label="Last name"
+                placeholder="Enter last name"
+                [model]="postObj.lastName"
+                (onChanges)="onChanges('lastName', $event)"
+                required="true"
+              >
+              </mt-input>
+            </div>
+            <div>
+              <mt-input
+                label="Email"
+                placeholder="Enter email"
+                [model]="postObj.email"
+                (onChanges)="onChanges('email', $event)"
+                type="email"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                required="true"
+              >
+              </mt-input>
+            </div>
+            <div>
+              <mt-input
+                label="Company name"
+                placeholder="Enter company name"
+                [model]="postObj.companyName"
+                (onChanges)="onChanges('companyName', $event)"
+                required="true"
+              >
+              </mt-input>
+            </div>
+            <div>
+              <mt-textarea
+                label="Additional comments"
+                placeholder="Type additional comments here"
+                [model]="postObj.message"
+                (onChanges)="onChanges('message', $event)"
+                required="true"
+              >
+              </mt-textarea>
+            </div>
+            <div
+              fxLayoutAlign.lt-sm="space-between center"
+              fxLayout.lt-sm="column"
             >
-            </mt-input>
-          </div>
-          <div>
-            <mt-input
-              label="Last name"
-              placeholder="Enter your last name"
-              (onChanges)="onChanges('lastName', $event)"
-            >
-            </mt-input>
-          </div>
-          <div>
-            <mt-input
-              label="Company name"
-              placeholder="Enter your company name"
-              (onChanges)="onChanges('companyName', $event)"
-              required="true"
-            >
-            </mt-input>
-          </div>
-          <div>
-            <mt-textarea
-              label="Additional comments"
-              placeholder="Type additional comments here"
-              (onChanges)="onChanges('message', $event)"
-            >
-            </mt-textarea>
-          </div>
-          <div>
-            <mt-btn class="large" type="submit" [loading]="submitting"
-              >{{ submitting ? 'Please Wait...' : 'Submit' }}
-              <span class="ic_next ml-10" *ngIf="!submitting"></span>
-            </mt-btn>
-          </div>
-        </form>
+              <mt-btn [class]="'large'" type="submit" [loading]="submitting"
+                >{{ submitting ? 'Please Wait...' : 'Submit' }}
+                <span class="ic_next ml-10" *ngIf="!submitting"></span>
+              </mt-btn>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
-    <div fxLayout="column" fxFlex="50%" fxLayoutAlign="end end">
-      <div class=""></div>
-      <img
-        [src]="baseURL + 'contact-us.svg'"
-        alt="Moneytor Contact screen image"
-        height="100%"
-        width="85%"
-      />
+    <div
+      fxShow="false"
+      fxShow.gt-sm
+      fxLayout="row"
+      fxFlex="0 1 calc(50% - 32px)"
+      fxFlex.lt-sm="0 0 auto"
+      fxLayoutAlign="space-around center"
+      fxLayoutAlign.lt-sm="center center"
+    >
+      <div fxLayout="column" fxLayoutAlign.lt-sm="center center" class="my-10">
+        <img
+          [src]="baseURL + 'page/contact-us.svg'"
+          alt="Moneytor Contact screen image"
+          height="100%"
+          width="100%"
+        />
+      </div>
     </div>
   </div>
 </div>
