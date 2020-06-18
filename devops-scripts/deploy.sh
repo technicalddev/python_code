@@ -18,7 +18,7 @@ npm install                 # Install dependencies
 node --max-old-space-size=4096 ./node_modules/.bin/ng build --prod --no-progress
 echo "**** ng build finished"
 
-cd $SCRIPTDIR/../dist/client/browser
+cd $SCRIPTDIR/../dist/client/
 
 
 # Copy the build files to AWS S3 
@@ -26,3 +26,5 @@ AWS_ACCESS_KEY_ID=$S3_AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY=$S3_AWS_SECRET_ACC
 
 # Invalidate the Cache from AWS CloudFront
 AWS_ACCESS_KEY_ID=$S3_AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY=$S3_AWS_SECRET_ACCESS_KEY aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
+
+echo "**** Deployed"
