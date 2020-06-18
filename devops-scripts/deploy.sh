@@ -18,7 +18,7 @@ npm install                 # Install dependencies
 node --max-old-space-size=4096 ./node_modules/.bin/ng build --prod --no-progress
 echo "**** ng build finished"
 
-cd $SCRIPTDIR/../dist/moneytor-in/browser
+cd $SCRIPTDIR/../dist/client/browser
 
 
 # Copy the build files to AWS S3 
