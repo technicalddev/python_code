@@ -15,7 +15,7 @@ SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cd $SCRIPTDIR/../
 
 npm install                 # Install dependencies
-ng build --prod --no-progress
+node --max-old-space-size=4096 ./node_modules/.bin/ng build --prod --no-progress
 echo "**** ng build finished"
 
 cd $SCRIPTDIR/../dist/moneytor-in/browser
