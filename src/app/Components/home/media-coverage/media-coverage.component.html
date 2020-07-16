@@ -4,61 +4,114 @@
   </div>
 </div>
 <!-- ngx swipper -->
-
-<div class="box-container">
-  <div
-    fxLayout="row wrap"
-    fxLayoutGap="20px"
-    fxLayoutAlign="space-evenly"
-    fxLayout.md="row wrap"
-    fxFlex="100%"
-  >
+<ng-container *ngIf="!isMobile">
+  <div class="box-container">
     <div
-      *ngFor="let slide of slides; let i = index"
-      class="items"
-      fxFlex="20%"
-      fxFlex.sm="30%"
+      fxLayout="row wrap"
+      fxLayoutGap="20px"
+      fxLayoutAlign="space-evenly"
+      fxLayout.md="row wrap"
+      fxFlex="100%"
     >
       <div
-        class="mt-card full-height"
-        matRipple
-        matRippleColor="rgba(142, 155, 250, 0.196)"
+        *ngFor="let slide of slides; let i = index"
+        class="items"
+        fxFlex="20%"
+        fxFlex.sm="30%"
       >
-        <div class="mt-card-header">
-          <div class="mt-card-title txt-primary">
-            <ng-container *ngIf="!slide.imgUrl">
-              {{ slide.title }}
-            </ng-container>
-            <img
-              *ngIf="slide.imgUrl"
-              [src]="slide.imgUrl"
-              [height]="slide.height"
-              (error)="updateUrl($event)"
-              style="vertical-align: bottom;"
-            />
+        <div
+          class="mt-card full-height"
+          matRipple
+          matRippleColor="rgba(142, 155, 250, 0.196)"
+        >
+          <div class="mt-card-header">
+            <div class="mt-card-title txt-primary">
+              <ng-container *ngIf="!slide.imgUrl">
+                {{ slide.title }}
+              </ng-container>
+              <img
+                *ngIf="slide.imgUrl"
+                [src]="slide.imgUrl"
+                [height]="slide.height"
+                (error)="updateUrl($event)"
+                style="vertical-align: bottom;"
+              />
+            </div>
+            <div class="mt-card-subtitle">{{ slide.date }}</div>
           </div>
-          <div class="mt-card-subtitle">{{ slide.date }}</div>
-        </div>
-        <div class="mt-card-body">“{{ slide.body }}</div>
-        <div class="mt-card-footer absolute">
-          <mt-btn
-            *ngIf="slide.link"
-            class="link"
-            (click)="learnMore(slide.link)"
-            >Learn more ></mt-btn
-          >
+          <div class="mt-card-body">“{{ slide.body }}</div>
+          <div class="mt-card-footer absolute">
+            <mt-btn
+              *ngIf="slide.link"
+              class="link"
+              (click)="learnMore(slide.link)"
+              >Learn more ></mt-btn
+            >
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-<!-- <div>
-    <div fxFlex="100%" fxLayoutAlign="center" class="my-20">
-        <mt-btn class="circle large m-5 mt-prev__btn">
-            <span class="ic_arrow-left"></span>
-        </mt-btn>
-        <mt-btn class="circle large m-5 mt-next__btn">
-            <span class="ic_arrow-right"></span>
-        </mt-btn>
+</ng-container>
+<ng-container *ngIf="isMobile">
+  <div class="box-container mediaCov">
+    <div class="vertical-container" fxLayout="column" fxFlex="100%">
+      <div class="content-container" fxLayout="column" fxFlex="auto">
+        <swiper
+          #swiperEl
+          *ngIf="show"
+          class="swiper-container"
+          [config]="config"
+          [disabled]="false"
+          (indexChange)="onIndexChange($event)"
+          (swiperTransitionStart)="onSwiperEvent('transitionStart')"
+          (swiperTransitionEnd)="onSwiperEvent('transitionEnd')"
+          fxFlex="auto"
+        >
+          <div *ngFor="let slide of slides; let i = index" class="swiper-slide">
+            <div
+              class="mt-card full-height"
+              matRipple
+              matRippleColor="rgba(142, 155, 250, 0.196)"
+            >
+              <div class="mt-card-header">
+                <div class="mt-card-title txt-primary">
+                  <ng-container *ngIf="!slide.imgUrl">
+                    {{ slide.title }}
+                  </ng-container>
+                  <img
+                    *ngIf="slide.imgUrl"
+                    [src]="slide.imgUrl"
+                    [height]="slide.height"
+                    (error)="updateUrl($event)"
+                    style="vertical-align: bottom;"
+                  />
+                </div>
+                <div class="mt-card-subtitle">{{ slide.date }}</div>
+              </div>
+              <div class="mt-card-body">“{{ slide.body }}</div>
+              <div class="mt-card-footer absolute">
+                <mt-btn
+                  *ngIf="slide.link"
+                  class="link"
+                  (click)="learnMore(slide.link)"
+                  >Learn more ></mt-btn
+                >
+              </div>
+            </div>
+          </div>
+        </swiper>
+      </div>
     </div>
-</div> -->
+  </div>
+  <div>
+    <div fxFlex="100%" fxLayoutAlign="center" class="my-20">
+      <mt-btn class="circle large m-5 mt-prev__btn">
+        <span class="ic_arrow-left"></span>
+      </mt-btn>
+      <mt-btn class="circle large m-5 mt-next__btn">
+        <span class="ic_arrow-right"></span>
+      </mt-btn>
+    </div>
+  </div>
+</ng-container>

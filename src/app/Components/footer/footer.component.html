@@ -1,11 +1,16 @@
 <div class="block-container mt-footer-bg">
-  <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutAlign="space-around">
+  <div
+    class="links"
+    fxLayout="row"
+    fxLayout.lt-sm="column"
+    fxLayoutAlign="space-around"
+  >
     <div
       class="logo"
       fxLayout="column"
       fxFLex="30%"
       fxFlex.lt-md="33%"
-      fxFlex.lt-sm="90%"
+      fxFlex.sm="90%"
     >
       <img
         src="../../../assets/img/logo/logo_light.svg"
@@ -13,7 +18,7 @@
         width="200px"
         height="39px"
       />
-      <mt-body-large class="txt-secondary my-10"
+      <mt-body-large fxHide.sm="true" class="txt-secondary my-10"
         >Moneytor Helps You Collect More</mt-body-large
       >
     </div>
@@ -40,7 +45,7 @@
   </div>
   <div>
     <div fxLayout="row" fxLayoutAlign="space-around center">
-      <div fxFlex="80%">
+      <div fxFlex="80%" fxFlex.xs="95%">
         <div class="footer-border mb-10"></div>
         <div fxLayout="row" fxLayoutAlign="space-between">
           <div fxLayout="column">
