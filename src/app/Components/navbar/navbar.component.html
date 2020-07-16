@@ -35,12 +35,8 @@
         >
           <span class="ic_burger"></span>
         </mt-btn>
-        <a>
-          <img
-            src="../../../assets/img/logo/{{ logo }}.svg"
-            class="logo"
-            height="40"
-          />
+        <a [ngClass]="mobileQuery.matches ? 'mobile-logo-align' : ''">
+          <img src="../../../assets/img/logo/{{ logo }}.svg" height="40" />
         </a>
         <span class="spacer"></span>
         <div
