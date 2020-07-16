@@ -7,30 +7,10 @@
   padding-bottom: 20px;
 }
 
-#about {
-  padding-top: 101px;
-  .h1 {
-    font-size: 32px;
-    font-weight: 900;
-  }
-  .mt-body {
-    font-size: 16px;
-    font-weight: 500;
-  }
-}
-
 @media screen and (max-width: 959px) {
   .home-bg {
     background: #5845d8;
     min-height: calc(100vh - 150px);
     padding-top: 100px;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .mt-body {
-    width: 80%;
-    margin: 20px auto 0;
-    text-align: center;
   }
 }

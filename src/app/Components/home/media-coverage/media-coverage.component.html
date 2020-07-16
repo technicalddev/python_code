@@ -17,7 +17,7 @@
         *ngFor="let slide of slides; let i = index"
         class="items"
         fxFlex="20%"
-        fxFlex.sm="30%"
+        fxFlex.md="30%"
       >
         <div
           class="mt-card full-height"
@@ -91,10 +91,7 @@
               </div>
               <div class="mt-card-body">“{{ slide.body }}</div>
               <div class="mt-card-footer absolute">
-                <mt-btn
-                  *ngIf="slide.link"
-                  class="link"
-                  (click)="learnMore(slide.link)"
+                <mt-btn class="link" (click)="learnMore(slide.link)"
                   >Learn more ></mt-btn
                 >
               </div>
