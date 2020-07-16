@@ -243,5 +243,11 @@
         font: 500 14px/2 Avenir-LT-Std-Book;
       }
     }
+
+    @media screen and(max-width: 599px) {
+      .cicular-icon-home {
+        display: none;
+      }
+    }
   }
 }
