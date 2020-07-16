@@ -234,5 +234,14 @@
         }
       }
     }
+    @media screen and (max-width: 768px) {
+      .mat-h1 {
+        font: 900 20px/1.21 Avenir-LT-Std-Book;
+        padding-top: 0;
+      }
+      .mat-body {
+        font: 500 14px/2 Avenir-LT-Std-Book;
+      }
+    }
   }
 }

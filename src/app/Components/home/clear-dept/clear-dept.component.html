@@ -14,8 +14,11 @@
       class="input"
       fxLayout="row wrap"
       fxLayoutAlign="space-around baseline"
+      fx.Layout.sm="column"
+      fxLayoutGap.sm="50px"
+      fxLayoutAlign.sm="center center"
     >
-      <div fxFlex="30%" fxFlex.lt-sm="100%">
+      <div fxFlex="30%" fxFlex.sm="100%%" fxFlex.lt-sm="100%">
         <mt-input
           class="clear-dept"
           label="Name"
@@ -23,8 +26,7 @@
           [model]="postObj.name"
           (onChanges)="onChanges('name', $event)"
           required="true"
-        >
-        </mt-input>
+        ></mt-input>
       </div>
       <div fxFlex="30%" fxFlex.lt-sm="100%">
         <mt-input
@@ -34,12 +36,12 @@
           [model]="postObj.phone"
           (onChanges)="onChanges('phone', $event)"
           required="true"
-        >
-        </mt-input>
+        ></mt-input>
       </div>
       <div
         fxFlex="30%"
         fxFlex.lt-sm="100%"
+        fxFlex.sm="100%"
         fxLayoutAlign.lt-sm="space-between center"
         fxLayout.lt-sm="column"
       >

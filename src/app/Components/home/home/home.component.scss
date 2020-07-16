@@ -1,6 +1,6 @@
 .home-bg {
   background: url('../../../../assets/img/page/bg.png') no-repeat;
-  background-position: 120%;
+  background-position: top;
   min-height: calc(783px + 132px);
   background-size: cover;
   padding-top: 160px;
@@ -24,5 +24,13 @@
     background: #5845d8;
     min-height: calc(100vh - 150px);
     padding-top: 100px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .mt-body {
+    width: 80%;
+    margin: 20px auto 0;
+    text-align: center;
   }
 }
