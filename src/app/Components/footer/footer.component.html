@@ -4,6 +4,7 @@
     fxLayout="row"
     fxLayout.lt-sm="row wrap"
     fxLayoutAlign="space-around"
+    fxlayoutAlign.lt-sm="space-between"
   >
     <div
       class="logo"
@@ -45,9 +46,14 @@
   </div>
   <div>
     <div fxLayout="row" fxLayoutAlign="space-around center">
-      <div fxFlex="80%" fxFlex.lt-md="95%" fxFlex.xs="95%">
+      <div fxFlex="80%" fxFlex.lt-md="95%" fxFlex.lt-sm="90%">
         <div class="footer-border mb-10"></div>
-        <div fxLayout="row" fxLayoutAlign="space-between">
+        <div
+          fxLayout="row"
+          fxLayout.lt-sm="row wrap-reverse"
+          fxLayoutAlign.lt-sm="center center"
+          fxLayoutAlign="space-between"
+        >
           <div fxLayout="column">
             <mt-body-large class="txt-secondary"
               >© Copyright 2020 Moneytor Inc. All rights reserved.
