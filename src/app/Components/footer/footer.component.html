@@ -2,7 +2,7 @@
   <div
     class="links"
     fxLayout="row"
-    fxLayout.lt-sm="column"
+    fxLayout.lt-sm="row wrap"
     fxLayoutAlign="space-around"
   >
     <div
@@ -10,7 +10,7 @@
       fxLayout="column"
       fxFLex="30%"
       fxFlex.lt-md="33%"
-      fxFlex.sm="90%"
+      fxFlex.lt-sm="100%"
     >
       <img
         src="../../../assets/img/logo/logo_light.svg"
@@ -18,17 +18,11 @@
         width="200px"
         height="39px"
       />
-      <mt-body-large fxHide.sm="true" class="txt-secondary my-10"
+      <mt-body-large class="txt-secondary my-10"
         >Moneytor Helps You Collect More</mt-body-large
       >
     </div>
-    <div
-      fxLayout="column"
-      fxFLex="30%"
-      fx
-      fxFlex.lt-md="33%"
-      fxFlex.lt-sm="90%"
-    >
+    <div fxLayout="column" fxFLex="30%" fxFlex.lt-md="33%" fxFlex.lt-sm="40%">
       <mt-h3>Quick Links</mt-h3>
       <ng-container *ngFor="let item of quickLinks">
         <mt-body-large class="mb-0">
@@ -38,7 +32,7 @@
         </mt-body-large>
       </ng-container>
     </div>
-    <div fxLayout="column" fxFLex="30%" fxFlex.lt-md="33%" fxFlex.lt-sm="90%">
+    <div fxLayout="column" fxFLex="30%" fxFlex.lt-md="33%" fxFlex.lt-sm="40%">
       <mt-h3>Company</mt-h3>
       <ng-container *ngFor="let item of companyLinks">
         <mt-body-large class="mb-0">
@@ -51,7 +45,7 @@
   </div>
   <div>
     <div fxLayout="row" fxLayoutAlign="space-around center">
-      <div fxFlex="80%" fxFlex.xs="95%">
+      <div fxFlex="80%" fxFlex.lt-md="95%" fxFlex.xs="95%">
         <div class="footer-border mb-10"></div>
         <div fxLayout="row" fxLayoutAlign="space-between">
           <div fxLayout="column">
