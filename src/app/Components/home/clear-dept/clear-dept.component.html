@@ -10,47 +10,60 @@
     <p class="mt-contact-us-subtitle txt-white ta-c">
       Please give us your details and we will get back to you
     </p>
-    <div
-      fxLayout="row wrap"
-      fxLayoutAlign="space-around baseline"
-      fxLayout.sm="column"
-      fxLayoutAlign.sm="center center"
-    >
-      <div fxFlex="25%" fxFlex.md="35%" fxFlex.lt-md="100%" fxFlex.lt-sm="100%">
-        <mt-input
-          class="clear-dept"
-          label="Name"
-          placeholder="Enter full name"
-          [model]="postObj.name"
-          (onChanges)="onChanges('name', $event)"
-          required="true"
-        ></mt-input>
-      </div>
-      <div fxFlex="25%" fxFlex.md="35%" fxFlex.lt-md="100%" fxFlex.lt-sm="100%">
-        <mt-input
-          class="clear-dept"
-          label="Mobile"
-          placeholder="Enter mobile number"
-          [model]="postObj.phone"
-          (onChanges)="onChanges('phone', $event)"
-          required="true"
-        ></mt-input>
-      </div>
+    <div fxLayout="row" fxLayoutAlign="space-around">
       <div
-        fxFlex="30%"
-        fxFlex.md="25%"
-        fxFlex.lt-md="100%"
-        fxLayoutAlign.lt-sm="space-between center"
-        fxLayout.lt-sm="column"
+        fxLayout="row"
+        fxLayout.sm="column"
+        fxLayoutAlign="space-around baseline"
+        fxLayoutAlign.sm="center center"
+        fxLayoutGap="10px"
       >
-        <mt-btn
-          type="submit"
-          [loading]="submitting"
-          (onAction)="onProcessContact()"
+        <div
+          fxFlex="40%"
+          fxFlex.md="35%"
+          fxFlex.lt-md="100%"
+          fxFlex.lt-sm="100%"
         >
-          {{ submitting ? 'Please Wait...' : 'Submit Details' }}
-          <span class="ic_next ml-10" *ngIf="!submitting"></span>
-        </mt-btn>
+          <mt-input
+            class="clear-dept"
+            label="Name"
+            placeholder="Enter full name"
+            [model]="postObj.name"
+            (onChanges)="onChanges('name', $event)"
+            required="true"
+          ></mt-input>
+        </div>
+        <div
+          fxFlex="40%"
+          fxFlex.md="35%"
+          fxFlex.lt-md="100%"
+          fxFlex.lt-sm="100%"
+        >
+          <mt-input
+            class="clear-dept"
+            label="Mobile"
+            placeholder="Enter mobile number"
+            [model]="postObj.phone"
+            (onChanges)="onChanges('phone', $event)"
+            required="true"
+          ></mt-input>
+        </div>
+        <div
+          fxFlex="20%"
+          fxFlex.md="25%"
+          fxFlex.lt-md="100%"
+          fxLayoutAlign.lt-sm="space-between center"
+          fxLayout.lt-sm="column"
+        >
+          <mt-btn
+            type="submit"
+            [loading]="submitting"
+            (onAction)="onProcessContact()"
+          >
+            {{ submitting ? 'Please Wait...' : 'Submit Details' }}
+            <span class="ic_next ml-10" *ngIf="!submitting"></span>
+          </mt-btn>
+        </div>
       </div>
     </div>
   </div>
