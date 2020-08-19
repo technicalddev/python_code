@@ -26,9 +26,9 @@
       background-color: mat-color($background, primary);
       border: 1px solid;
       border-color: mat-color($background, primary);
-      padding: 0rem 1.5rem;
+      padding: 0rem auto;
       min-width: 50px;
-      line-height: 32px;
+      line-height: 34px;
       cursor: pointer;
       &.small {
         padding: 0 8px;
@@ -269,5 +269,11 @@
         transform: rotate(360deg);
       }
     }
+
+    // @media screen and(max-width: 599px) {
+    //   .mt-btn.mat-button {
+    //     padding: 0 auto;
+    //   }
+    // }
   }
 }

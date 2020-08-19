@@ -29,7 +29,7 @@ export class ContactUsComponent implements OnInit {
       Subject: `Want to Reach us ${companyName}`,
       Body: `<b>Name: </b> ${firstName} ${lastName} <br>
         <b>Company/Organization: </b> ${companyName} <br>
-        <b>Email: </b> ${email}
+        <b>Email: </b> ${email} <br>
         <b>Message: </b> ${message}`,
     };
     this.homeService.sendMail(emailBody).then((res) => {

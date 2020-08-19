@@ -19,9 +19,21 @@
           class="my-20"
           fxLayoutAlign.lt-sm="center center"
         >
-          <h1 class="title-large" [innerHTML]="homeSection.title"></h1>
-          <h4 class="title-small" [innerHTML]="homeSection.subTitle"></h4>
-          <mt-btn class="large white mt-25" (onAction)="getStarted()">
+          <h1
+            class="title-large"
+            fxFlexOrder.sx="1"
+            [innerHTML]="homeSection.title"
+          ></h1>
+          <h4
+            class="title-small"
+            fxFlexOrder.sx="2"
+            [innerHTML]="homeSection.subTitle"
+          ></h4>
+          <mt-btn
+            class="large white mt-25"
+            fxFlexOrder.sx="4"
+            (onAction)="getStarted()"
+          >
             Get started
             <span class="ic_next ml-10"></span>
           </mt-btn>
@@ -30,6 +42,7 @@
       <div
         fxLayout="row"
         fxFlex="0 1 calc(50% - 32px)"
+        fxFlexOrder.sx="3"
         fxFlex.lt-sm="0 0 auto"
         fxLayoutAlign="space-around center"
         fxLayoutAlign.lt-sm="center center"
@@ -62,12 +75,12 @@
 
   <!-- second section -->
   <div class="block-container animated fadeInUp slow" id="about">
-    <div fxLayout="row wrap" fxLayoutAlign="center center">
+    <div class="h1" fxLayout="row wrap" fxLayoutAlign="center center">
       <div fxFlex="65%" fxFlex.xs="100%" fxFlex.sm="80%" class="ta-c">
         <mt-h1>{{ secondSection.line1 }}</mt-h1>
       </div>
     </div>
-    <div fxLayout="row wrap" fxLayoutAlign="center center">
+    <div fxLayout="row wrap" class="mt-body" fxLayoutAlign="center center">
       <div fxFlex="50%" fxFlex.xs="100%" fxFlex.sm="70%" class="ta-c">
         <mt-body-large>{{ secondSection.line2 }}</mt-body-large>
       </div>

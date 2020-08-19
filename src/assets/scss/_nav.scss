@@ -1,14 +1,11 @@
 @import '~@angular/material/theming';
-
 @mixin navBarStyle($theme) {
   $config: mat-typography-config();
-
   $primary: map-get($theme, primary);
   $accent: map-get($theme, accent);
   $foreground: map-get($theme, foreground);
   $background: map-get($theme, background);
   $shadows: map-get($theme, shadows);
-
   .moneytor-body {
     .mt-container {
       font-family: 'Avenir', 'Avenir-LT-Std-Light', 'Avenir-LT-Std-Book',
@@ -54,7 +51,6 @@
               }
             }
           }
-
           .logo-container {
             height: 64px;
             display: flex;
@@ -153,6 +149,12 @@
       //     }
       //   }
       // }
+      .mobile-logo-align {
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        width: 100%;
+      }
     }
   }
 }

@@ -1,14 +1,11 @@
 @import '~@angular/material/theming';
-
 @mixin layoutStyle($theme) {
   $config: mat-typography-config();
-
   $primary: map-get($theme, primary);
   $accent: map-get($theme, accent);
   $foreground: map-get($theme, foreground);
   $background: map-get($theme, background);
   $shadows: map-get($theme, shadows);
-
   .moneytor-body {
     .section {
       background: mat-color($background, bg);
@@ -23,7 +20,6 @@
       box-shadow: mat-color($shadows, shadow1);
       color: mat-color($background, primary);
     }
-
     .blocks {
       box-shadow: mat-color($shadows, shadow);
       opacity: 0.9;
@@ -51,20 +47,16 @@
       font-weight: 600;
       color: mat-color($background, white);
     }
-
     .flexRow {
       display: flex;
     }
-
     .container {
       max-width: 85%;
     }
-
     // for investors section
     .mt-inv-bg {
       background: mat-color($background, blue-gray);
     }
-
     // for media coverage section
     .mt-media-cov-bg {
       background: mat-color($background, base-bg);
@@ -77,7 +69,6 @@
       margin: 0 0 16px;
       font-size: 17px;
     }
-
     // for clear dept
     .clear-dept-bg {
       // background-color: #3d1b65;
@@ -96,7 +87,7 @@
         min-height: 123px;
       }
       &.mediaCov {
-        min-height: 110px;
+        min-height: 155px;
         .mt-card {
           .mt-card-body {
             overflow: hidden;
@@ -105,29 +96,27 @@
         }
       }
       &.blogs {
-        min-height: 250px;
+        min-height: 300px;
+        padding-top: 50px;
+        // padding: 0 100px;
         .mt-card-body {
           overflow: hidden;
           max-height: calc(100% - 70px);
         }
       }
     }
-
     .action-container,
     .content-container {
       position: relative;
       overflow: auto;
     }
-
     .action-container {
       padding: 16px;
     }
-
     .vertical-container,
     .horizontal-container {
       min-height: 0 !important;
     }
-
     .action-button {
       box-sizing: border-box;
       width: calc(100% - 16px);
@@ -136,19 +125,16 @@
       margin: 8px;
       border: 1px solid #555;
       border-radius: 4px;
-
       cursor: pointer;
       font-size: 14px;
       font-weight: bold;
       line-height: 14px;
       text-align: center;
     }
-
     .action-button:hover {
       color: #fff;
       background-color: #555;
     }
-
     .swiper-container {
       position: absolute;
       top: 0;
@@ -180,8 +166,8 @@
         span.swiper-pagination-bullet {
           outline: none;
           margin-right: 5px;
-          width: 16px;
-          height: 16px;
+          width: 8px;
+          height: 8px;
           &.swiper-pagination-bullet-active {
             background: mat-color($background, primary);
           }
@@ -193,7 +179,6 @@
     .swiper-button-next {
       display: none !important;
     }
-
     // for footer section
     .mt-footer-bg {
       background: mat-color($background, voilet-dark);
@@ -247,6 +232,21 @@
           top: 0%;
           transform: translate(0%, 0%);
         }
+      }
+    }
+    @media screen and (max-width: 768px) {
+      .mat-h1 {
+        font: 900 20px/1.21 Avenir-LT-Std-Book;
+        padding-top: 0;
+      }
+      .mat-body {
+        font: 500 14px/2 Avenir-LT-Std-Book;
+      }
+    }
+
+    @media screen and(max-width: 599px) {
+      .cicular-icon-home {
+        display: none;
       }
     }
   }
