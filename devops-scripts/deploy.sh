@@ -20,6 +20,8 @@ echo "**** ng build finished"
 
 cd $SCRIPTDIR/../dist/client/
 
+# Delete old files and folders
+AWS_ACCESS_KEY_ID=$S3_AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY=$S3_AWS_SECRET_ACCESS_KEY aws s3 rm s3://moneytor.in/ --recursive --exclude "client-logos/*" --exclude "resources/*"
 
 # Copy the build files to AWS S3 
 AWS_ACCESS_KEY_ID=$S3_AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY=$S3_AWS_SECRET_ACCESS_KEY aws s3 sync ./ s3://moneytor.in
