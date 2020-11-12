@@ -7,7 +7,7 @@
 <!-- ngx swipper -->
 <div class="box-container blogs">
   <div class="horizontal-container" fxLayout="column" fxFlex="100%">
-    <div class="content-container" fxLayout="column" fxFlex="auto">
+    <div class="content-container px-40" fxLayout="column" fxFlex="auto">
       <swiper
         #swiperContainer
         *ngIf="show"
@@ -25,6 +25,8 @@
             matRipple
             matRippleColor="rgba(142, 155, 250, 0.196)"
             (click)="gotToBlog(blog.link)"
+            fxFlex="100%"
+            fxFlex.xs="100%"
           >
             <div class="mt-card-header">
               <img
