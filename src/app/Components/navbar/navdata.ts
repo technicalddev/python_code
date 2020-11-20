@@ -30,7 +30,7 @@ export const navData: any = [
     class: '',
   },
   {
-    name: 'Get started',
+    name: 'Demo',
     link: 'reachus',
     class: 'raised raised-nav',
   },

@@ -5,7 +5,10 @@
   },
   "secondSection": {
     "line1": "Communicate and engage with your borrowers, generate actionable insights, optimise efforts, and collect more",
-    "line2": "Moneytor is a Debt Management Technology company which offers solutions across Debt Management, Collections, and Distressed Debt Purchase to lenders, and aids them in the collection and liquidation efforts of their consumer loan portfolios, all the while fostering happy borrower experiences."
+
+    "line2": "Moneytor is a Debt Management Technology company which offers solutions across Debt Management, Collections, and Distressed Debt Purchase to lenders,",
+    "line3": "and aids them in the collection and liquidation efforts of their consumer loan portfolios,",
+    "line4": "all the while fostering happy borrower experiences."
   },
   "backgroundImg": "../../../../assets/img/page/home-1.svg"
 }

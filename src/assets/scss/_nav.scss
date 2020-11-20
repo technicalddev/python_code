@@ -75,6 +75,7 @@
             padding: 0 16px;
             width: 100%;
             flex-direction: row;
+            justify-content: space-around;
             align-items: center;
             white-space: nowrap;
             box-shadow: none;
@@ -85,7 +86,7 @@
               font-size: 14px;
               margin: 0 0.5rem;
               text-decoration: none;
-              padding: 11px;
+              padding: 15px 20px;
               transition: 0.5s all;
               &:hover,
               &.mt-nav-active {
@@ -93,7 +94,7 @@
                   content: '';
                   transition: 0.5s all;
                   position: absolute;
-                  height: 3px;
+                  height: 1px;
                   background: mat-color($background, white);
                   width: 100%;
                   top: 0;
@@ -104,7 +105,7 @@
               &.raised {
                 border-radius: 3px;
                 color: mat-color($background, primary);
-                padding: 11px 22px;
+                padding: 15px 22px;
                 &:hover {
                   &:before {
                     background: none;

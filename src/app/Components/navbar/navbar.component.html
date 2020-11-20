@@ -48,15 +48,16 @@
           class="nav-item-container"
           *ngIf="!mobileQuery.matches"
         >
-          <ng-container *ngFor="let navItem of navItems">
+          <ng-container class="" *ngFor="let navItem of navItems">
             <a
               matRipple
               class="mt-toolbar-item"
               routerLinkActive="mt-nav-active"
               [ngClass]="navItem.class"
               (click)="navigateTo(navItem)"
-              >{{ navItem.name }}</a
             >
+              {{ navItem.name }}
+            </a>
           </ng-container>
         </div>
       </mat-toolbar>
