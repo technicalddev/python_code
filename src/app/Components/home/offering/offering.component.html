@@ -13,20 +13,27 @@
         fxLayoutAlign="space-around center"
         class="my-20"
       >
-        <div fxFlex="40%" fxFlex.xs="100%">
+        <div fxFlex="30%" fxFlex.xs="100%">
           <img
             [src]="offer.img.imgUrl"
             [alt]="offer.img.name + offer.img.height"
-            height="100%"
+            height="50%"
             width="100%"
           />
         </div>
 
-        <div fxFlex="48%" fxFlex.xs="100%">
+        <div
+          class="offering-content"
+          fxLayout="column"
+          fxFlex="38%"
+          fxFlex.xs="100%"
+        >
           <mt-h1 class="txt-primary">{{ offer.title }}</mt-h1>
-          <mt-body-large>{{ offer.description }}</mt-body-large>
+          <mt-body-large class="desc" fxFlex="40%">{{
+            offer.description
+          }}</mt-body-large>
           <mt-btn
-            class="{{ offer.btn.class }} my-20"
+            class="{{ offer.btn.class }} my-20 h-25"
             (onAction)="buttonAction()"
             >{{ offer.btn.name }}</mt-btn
           >

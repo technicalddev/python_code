@@ -1,10 +1,15 @@
-<div>
+<div class="our-journey">
   <div fxFlex="100%" fxLayoutAlign="center">
     <mt-h1 class="txt-black ta-c">Our Journey</mt-h1>
   </div>
 </div>
 <div class="block-container">
-  <div fxLayout="row" fxLayoutAlign="space-around" class="row-wrap">
+  <div
+    fxLayout="row"
+    fxFlex="80%"
+    fxLayoutAlign="space-around"
+    class="row-wrap journey"
+  >
     <ng-container *ngFor="let item of loans">
       <div
         fxLayout="column"
@@ -13,10 +18,10 @@
         fxLayoutAlign="center center"
       >
         <img [src]="item.imgUrl" [alt]="'img'" height="113" width="124" />
-        <mt-h2 class="txt-secondary mt-10">{{
+        <mt-h2 class="mt-10 fnt-30">{{
           item.count | formatter: 'number'
         }}</mt-h2>
-        <mt-h4 class="txt-secondary">{{ item.title }}</mt-h4>
+        <mt-h4 class="txt-secondary loan-num">{{ item.title }}</mt-h4>
       </div>
     </ng-container>
     <!-- <mt-body-large

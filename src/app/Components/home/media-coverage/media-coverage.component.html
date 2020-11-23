@@ -10,12 +10,14 @@
       fxLayout="row wrap"
       fxLayoutAlign="space-evenly"
       fxLayout.md="row wrap"
-      fxFlex="100%"
+      fxFlex="80%"
+      class="coverage"
     >
       <div
         *ngFor="let slide of slides; let i = index"
         class="items mr-20 my-10"
         fxFlex="20%"
+        fxLayoutAling="space-between"
         fxFlex.md="30%"
       >
         <div
@@ -53,6 +55,8 @@
     </div>
   </div>
 </ng-container>
+
+<!-- For Mobile Screen -->
 <ng-container *ngIf="isMobile">
   <div class="box-container mediaCov">
     <div class="vertical-container" fxLayout="column" fxFlex="100%">

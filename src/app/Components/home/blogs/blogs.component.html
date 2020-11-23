@@ -33,11 +33,11 @@
                 [src]="blog.src"
                 (error)="updateUrl($event)"
                 width="100%"
-                height="100"
+                height="100%"
                 [ngClass]="imgErr ? 'default-imgBg' : ''"
               />
             </div>
-            <div class="mt-card-body px-20">
+            <div class="mt-card-body">
               <mt-h2>{{ blog.title }}</mt-h2>
               <div class="mt-card-footer absolute">
                 <mt-body-large class="txt-secondary"

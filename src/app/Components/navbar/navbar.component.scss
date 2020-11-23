@@ -8,6 +8,12 @@
   }
 }
 
+@media screen and (max-width: 1024px) {
+  .px-100 {
+    padding-top: 0px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .px-100 {
     margin: 0px;

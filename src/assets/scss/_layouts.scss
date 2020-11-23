@@ -199,20 +199,6 @@
       border-radius: 10px;
       border: solid 1.5px mat-color($background, white);
       position: relative;
-      animation: scollable 1s linear;
-      animation-iteration-count: infinite;
-
-      @keyframes scollable {
-        0% {
-          top: 0px;
-        }
-        50% {
-          top: 20px;
-        }
-        100% {
-          top: 40px;
-        }
-      }
 
       .mt-line {
         width: 2px;
@@ -223,6 +209,20 @@
         top: 10px;
         background-color: mat-color($background, white);
         transform: translate(-50%, -50%);
+        animation: scollable 1s linear;
+        animation-iteration-count: infinite;
+
+        @keyframes scollable {
+          0% {
+            top: 8px;
+          }
+          50% {
+            top: 15px;
+          }
+          100% {
+            top: 22px;
+          }
+        }
       }
     }
     .default-imgBg {

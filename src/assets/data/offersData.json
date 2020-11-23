@@ -5,7 +5,7 @@
       "description": "Moneytor's smart and self learning integrated debt management platform digitises the entire debt collection process. Moneytor can operate independently, or integrate with an existing enterprise suite with multiple stakeholders",
       "reverse": false,
       "btn": {
-        "name": "Schedule a Demo",
+        "name": "Schedule Demo",
         "class": "outline",
         "link": "scheduleDemo",
         "value": "scheduleDemo"
@@ -14,7 +14,7 @@
         "name": "analysis",
         "imgUrl": "../../../../assets/img/page/analysis.svg",
         "width": 274,
-        "height": "100%"
+        "height": 255
       }
     },
     {
@@ -31,7 +31,7 @@
         "name": "collections",
         "imgUrl": "../../../../assets/img/page/collections.svg",
         "width": 274,
-        "height": "100%"
+        "height": 255
       }
     },
     {
@@ -48,7 +48,7 @@
         "name": "liquidation",
         "imgUrl": "../../../../assets/img/page/liquidation.svg",
         "width": 274,
-        "height": "100%"
+        "height": 255
       }
     }
   ]

@@ -1,0 +1,16 @@
+.journey {
+  width: 100%;
+  margin: 30px auto;
+  .loan-num {
+    font-size: 18px;
+    font-weight: 500;
+    padding-top: 5px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .our-journey,
+  .journey {
+    display: none;
+  }
+}

@@ -1,6 +1,6 @@
 .home-bg {
   background: url('../../../../assets/img/page/bg.png') no-repeat;
-  background-position: left;
+  background-position: top;
   min-height: calc(783px + 132px);
   background-size: cover;
   padding-top: 140px;
@@ -8,7 +8,7 @@
 }
 
 .h1 {
-  padding-top: 80px;
+  padding-top: 70px;
 }
 
 @media screen and (max-width: 1440px) {
@@ -28,5 +28,30 @@
     background: #5845d8;
     min-height: calc(100vh - 150px);
     padding-top: 100px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .title-large {
+    font-size: 30px;
+  }
+  .title-small {
+    font-size: 16px;
+  }
+
+  .large {
+    font-size: 14px;
+    margin-top: 2px;
+    padding: 2px;
+  }
+
+  .my-20 {
+    height: 150%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .title-small {
+    font-size: 8px;
   }
 }
