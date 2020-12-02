@@ -8,9 +8,9 @@
   }
 }
 
-@media screen and (max-width: 768px) {
-  .our-journey,
-  .journey {
-    display: none;
+@media screen and (max-width: 425px) {
+  .clients {
+    width: 80%;
+    margin: 0 auto;
   }
 }

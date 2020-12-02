@@ -4,11 +4,19 @@
 }
 
 @media screen and (max-width: 768px) {
+  .isMobile {
+    display: none;
+  }
+
   .offering-content {
     align-items: center;
   }
 
   .txt-primary {
     padding-top: 35px;
+  }
+
+  .mt-pagination-wrapper {
+    width: 100%;
   }
 }
