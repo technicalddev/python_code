@@ -8,9 +8,24 @@
   }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
   .clients {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
+  }
+
+  .clients-logo {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .clients {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .clients-logo {
+    width: 100%;
   }
 }
