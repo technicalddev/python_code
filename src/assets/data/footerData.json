@@ -37,8 +37,8 @@
       "type": "email"
     },
     {
-      "name": "+919136026767 | +917777037122 ",
-      "value": "+917777037122 | +917777037122",
+      "name": "+918655831531",
+      "value": "+918655831531",
       "type": "phone"
     },
     {
@@ -46,6 +46,14 @@
       "value": "Bootstart Cowork Colaba Mumbai",
       "type": "map"
     }
+  ],
+  "companyBranches": [
+    "Mumbai",
+    "Pune",
+    "Assam",
+    "Visakhapatnam",
+    "Pondicherry",
+    "Mangalore"
   ],
   "socialLinks": [
     {

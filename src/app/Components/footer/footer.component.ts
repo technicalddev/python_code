@@ -13,6 +13,7 @@ export class FooterComponent implements OnInit {
   quickLinks: any = [];
   companyLinks: any = [];
   socialLinks: any = [];
+  companyBranches: any = [];
   showModal: boolean = false;
   modalData: any = {};
   modalBtns: any = [{ label: 'Ok', class: '', submit: true }];
@@ -27,11 +28,18 @@ export class FooterComponent implements OnInit {
   }
   getFooterData() {
     this.footerService.getFooterData().subscribe((res) => {
-      const { logoSection, quickLinks, companyLinks, socialLinks } = res;
+      const {
+        logoSection,
+        quickLinks,
+        companyLinks,
+        socialLinks,
+        companyBranches,
+      } = res;
       this.logoSection = logoSection;
       this.quickLinks = quickLinks;
       this.companyLinks = companyLinks;
       this.socialLinks = socialLinks;
+      this.companyBranches = companyBranches;
     });
   }
 

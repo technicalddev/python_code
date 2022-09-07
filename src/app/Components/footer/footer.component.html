@@ -2,7 +2,7 @@
   <div
     class="links"
     fxLayout="row wrap"
-    fxLayoutAlign="space-around"
+    fxLayoutAlign="space-between"
     fxlayoutAlign.lt-sm="space-between"
   >
     <div
@@ -42,10 +42,22 @@
         </mt-body-large>
       </ng-container>
     </div>
+    <div>
+      <mt-h3 class="pt-10">Our Branches</mt-h3>
+      <div fxLayout="column">
+        <ng-container *ngFor="let item of companyBranches">
+          <mt-body-medium class="mb-0">
+            <div class="txt-secondary">
+              {{ item }}
+            </div>
+          </mt-body-medium>
+        </ng-container>
+      </div>
+    </div>
   </div>
   <div>
     <div fxLayout="row" fxLayoutAlign="space-around center">
-      <div fxFlex="80%" fxFlex.md="95%" fxFlex.xs=" 90%">
+      <div fxFlex="85%" fxFlex.md="95%" fxFlex.xs=" 90%">
         <div class="footer-border mb-10"></div>
         <div
           fxLayout="row"
