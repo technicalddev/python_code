@@ -1,15 +1,23 @@
 .logo {
-  padding-right: 150px;
+  // padding-right: 150px;
+}
+
+.links {
+  width: 80%;
+  margin: 0px auto;
 }
 
 @media only screen and(max-width: 959px) {
   .logo {
     padding-left: 5%;
   }
+  .links {
+    width: 100%;
+  }
 }
 
 @media only screen and(max-width: 768px) {
   .links {
-    margin-left: 10px;
+    padding: 0px 10px;
   }
 }
