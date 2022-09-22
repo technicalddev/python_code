@@ -23,7 +23,7 @@
       >
     </div>
     <div fxLayout="column" fxFLex="30%" fxFlex.lt-md="20%" fxFlex.lt-sm="40%">
-      <mt-h3>Quick Links</mt-h3>
+      <mt-h3>{{ 'QuickLinks' | translate }}</mt-h3>
       <ng-container *ngFor="let item of quickLinks">
         <mt-body-large class="mb-0">
           <a class="mt-btn link secondary" (click)="onLinksAction(item)">{{
@@ -33,7 +33,7 @@
       </ng-container>
     </div>
     <div fxLayout="column" fxFLex="30%" fxFlex.lt-md="25%" fxFlex.lt-sm="40%">
-      <mt-h3>Company</mt-h3>
+      <mt-h3>{{ 'Company' | translate }}</mt-h3>
       <ng-container *ngFor="let item of companyLinks">
         <mt-body-large class="mb-0">
           <a class="mt-btn link secondary" (click)="onLinksAction(item)">{{
@@ -43,7 +43,7 @@
       </ng-container>
     </div>
     <div>
-      <mt-h3 class="pt-10">Our Branches</mt-h3>
+      <mt-h3 class="pt-10">{{ 'OurBranches' | translate }}</mt-h3>
       <div fxLayout="column">
         <ng-container *ngFor="let item of companyBranches">
           <mt-body-medium class="mb-0">

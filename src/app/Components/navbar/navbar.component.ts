@@ -11,6 +11,7 @@ import { navData } from './navdata';
 import { MatSidenav } from '@angular/material/sidenav';
 import { Router } from '@angular/router';
 import { ScrollService } from 'src/app/shared/_Services/scroll.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-navbar',
@@ -28,11 +29,22 @@ export class NavbarComponent implements OnInit, OnDestroy {
     private changeDetectorRef: ChangeDetectorRef,
     private media: MediaMatcher,
     private router: Router,
-    private scrollService: ScrollService
+    private scrollService: ScrollService,
+    private translateService: TranslateService
   ) {
     this.mobileQuery = this.media.matchMedia('(max-width: 1110px)');
     this.mobileQueryListener = () => this.changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this.mobileQueryListener);
+
+    // Using saved language from previous visit for translation
+    try {
+      const language = localStorage.getItem('language');
+      if (language) {
+        this.translateService.use(language);
+      } else {
+        this.translateService.use('en');
+      }
+    } catch (e) {}
   }
 
   ngOnInit(): void {
@@ -60,4 +72,20 @@ export class NavbarComponent implements OnInit, OnDestroy {
     this.router.navigate(['/']);
     this.scrollService.scrollToElementById(link);
   }
+
+  // Function for changing the language
+  changeLanguage(lang: string) {
+    this.translateService.use(lang);
+    localStorage.setItem('language', lang);
+    console.log(lang);
+  }
+
+  languages: any = [
+    { name: 'English', unicode: 'en' },
+    { name: 'हिंदी', unicode: 'hn' },
+    { name: 'বাঙ্গালী', unicode: 'bn' },
+    { name: 'தமிழ்', unicode: 'tm' },
+    { name: 'తెలుగు', unicode: 'tl' },
+    { name: 'ಕನ್ನಡ', unicode: 'kn' },
+  ];
 }

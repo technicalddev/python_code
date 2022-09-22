@@ -1,6 +1,6 @@
 <div fxLayout="row" fxLayoutAlign="space-around center">
   <div fxFlex="100%" fxLayoutAlign="center">
-    <mt-h1 class="txt-black ta-c">Our Offerings</mt-h1>
+    <mt-h1 class="txt-black ta-c">{{ 'Offerings' | translate }}</mt-h1>
   </div>
 </div>
 <div class="isMobile" *ngIf="!isMobile" fxLayoutAlign="center">
@@ -28,7 +28,7 @@
           fxFlex="38%"
           fxFlex.xs="100%"
         >
-          <mt-h1 class="txt-primary">{{ offer.title }}</mt-h1>
+          <mt-h1 class="txt-primary">{{ offer.title | translate }}</mt-h1>
           <mt-body-large class="desc" fxFlex="40%">{{
             offer.description
           }}</mt-body-large>

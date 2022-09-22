@@ -16,6 +16,8 @@ import { ContactUsComponent } from './contact/contact-us.component';
 import { BlogsComponent } from './blogs/blogs.component';
 import { FormatterModule } from 'src/app/shared/_Modules/formatter/formatter.module';
 
+import { TranslateModule } from '@ngx-translate/core';
+
 @NgModule({
   declarations: [
     HomeComponent,
@@ -33,6 +35,7 @@ import { FormatterModule } from 'src/app/shared/_Modules/formatter/formatter.mod
     SharedComponentsModule,
     SwiperModule,
     FormatterModule,
+    TranslateModule,
   ],
   providers: [HomeService],
 })

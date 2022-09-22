@@ -56,9 +56,29 @@
               [ngClass]="navItem.class"
               (click)="navigateTo(navItem)"
             >
-              {{ navItem.name }}
+              {{ navItem.name | translate }}
             </a>
           </ng-container>
+          <button
+            mat-menu-item
+            [matMenuTriggerFor]="languageBox"
+            style="width: fit-content; display: flex; align-items: center;"
+          >
+            <img src="../../../assets/icons/translate.png" width="40px" />
+            <!-- {{ 'Change Language' | translate }} -->
+          </button>
+          <mat-menu #languageBox="matMenu">
+            <ng-container *ngFor="let language of languages">
+              <button
+                mat-menu-item
+                class="nobg"
+                color="primary"
+                (click)="changeLanguage(language.unicode)"
+              >
+                {{ language.name }}
+              </button>
+            </ng-container>
+          </mat-menu>
         </div>
       </mat-toolbar>
       <div class="mt-page-wrapper">
