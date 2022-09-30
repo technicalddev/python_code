@@ -87,5 +87,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
     { name: 'தமிழ்', unicode: 'tm' },
     { name: 'తెలుగు', unicode: 'tl' },
     { name: 'ಕನ್ನಡ', unicode: 'kn' },
+    { name: 'मराठी', unicode: 'ma' },
+    { name: 'ગુજરાતી', unicode: 'gu' },
   ];
 }
