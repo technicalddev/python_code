@@ -1,0 +1,126 @@
+<!-- <div class="testimonial-content">
+  <div>
+    <div fxFlex="100%" fxLayoutAlign="center">
+      <mt-h1 class="txt-black ta-c">
+        <mt-h1 class="txt-black ta-c">What customers are saying</mt-h1></mt-h1
+      >
+    </div>
+  </div> -->
+<!-- ngx swipper -->
+<!-- <div class="box-container blogs">
+    <div class="horizontal-container" fxLayout="column" fxFlex="100%">
+      <div class="content-container px-40" fxLayout="column" fxFlex="auto">
+        <swiper
+          #swiperContainer
+          class="swiper-container customSwiper"
+          *ngIf="show"
+          class="swiper-container"
+          [config]="config"
+          [disabled]="false"
+          fxFlex="auto"
+        >
+          <div *ngFor="let testimony of testimonials; let i = index">
+            <div class="testimonials no-padding full-height" matRipple>
+              <div style="display: flex; flex-direction: column; align-items: center;">
+                <img
+                  class="client-image"
+                  [src]="testimony.clientImg"
+                  alt=""
+                  width="72px"
+                  height="72px"
+                  style="border-radius: 50%;"
+                />
+                <div class="mt-20" style="display: flex;">
+                  <p class="clientName" style="margin-right: 5px;">{{ testimony.clientName }}</p>
+                  <p class="clientCity">{{ testimony.clientCity }}</p>
+                </div>
+              </div>
+              <div  fxLayout="row" fxLayoutGap="30px">
+                <div>
+                  <p class="statement fnt-16" style="text-align: center;" fxLayout="row wrap">
+                    {{ testimony.statement }}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </swiper>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="mt-pagination-wrapper dots-left"
+    style="position: relative; z-index: 1;"
+  >
+    <div class="mt-testimonial-dot mt-pagination"></div>
+  </div>
+</div> -->
+<div class="testimonial-content">
+  <div>
+    <div fxFlex="100%" fxLayoutAlign="center">
+      <mt-h1 class="txt-black ta-c">
+        <mt-h1 class="txt-black ta-c">What customers are saying</mt-h1></mt-h1
+      >
+    </div>
+  </div>
+  <!-- ngx swipper -->
+  <div class="box-container blogs">
+    <div class="horizontal-container" fxLayout="column" fxFlex="100%">
+      <div class="content-container px-40" fxLayout="column" fxFlex="auto">
+        <swiper
+          #swiperContainer
+          class="swiper-container customSwiper"
+          [config]="config"
+          [disabled]="false"
+          fxFlex="auto"
+        >
+          <div *ngFor="let testimony of testimonials; let i = index">
+            <div class="testimonials no-padding full-height" matRipple>
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                "
+              >
+                <img
+                  class="client-image"
+                  [src]="testimony.clientImg"
+                  alt=""
+                  width="72px"
+                  height="72px"
+                  style="border-radius: 50%;"
+                />
+                <div class="mt-20" style="display: flex;">
+                  <p class="clientName" style="margin-right: 5px;">
+                    {{ testimony.clientName }}
+                  </p>
+                  <p class="clientCity">{{ testimony.clientCity }}</p>
+                </div>
+              </div>
+              <div fxLayout="row" fxLayoutGap="30px">
+                <div>
+                  <p
+                    class="statement fnt-16"
+                    style="text-align: center;"
+                    fxLayout="row wrap"
+                  >
+                    {{ testimony.statement }}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </swiper>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="mt-pagination-wrapper dots-left"
+    style="position: relative; z-index: 1;"
+  >
+    <div class="mt-testimonial-dot mt-pagination"></div>
+  </div>
+</div>

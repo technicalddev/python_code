@@ -15,7 +15,7 @@ import { MediaCoverageComponent } from './media-coverage/media-coverage.componen
 import { ContactUsComponent } from './contact/contact-us.component';
 import { BlogsComponent } from './blogs/blogs.component';
 import { FormatterModule } from 'src/app/shared/_Modules/formatter/formatter.module';
-
+import { Blogs2Component } from './testimonials/testimonials.component';
 import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
@@ -28,6 +28,7 @@ import { TranslateModule } from '@ngx-translate/core';
     MediaCoverageComponent,
     ContactUsComponent,
     BlogsComponent,
+    Blogs2Component,
   ],
   imports: [
     HomeRoutingModule,
