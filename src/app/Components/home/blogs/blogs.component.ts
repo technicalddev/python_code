@@ -5,6 +5,7 @@ import {
 } from 'ngx-swiper-wrapper';
 
 import { HomeService } from '../home.service';
+import * as moment from 'moment';
 
 @Component({
   selector: 'mt-blogs',
@@ -68,11 +69,23 @@ export class BlogsComponent implements OnInit, OnChanges {
     this.config = { ...this.config, ...extraConfigs };
   }
 
+  // getMediaCoverage() {
+  //   this.homeService.getBlogs().subscribe((res) => {
+  //     const { data } = res;
+  //     if (data && data.length > 0) {
+  //       this.blogs = data;
+  //     }
+  //   });
+  // }
   getMediaCoverage() {
     this.homeService.getBlogs().subscribe((res) => {
       const { data } = res;
       if (data && data.length > 0) {
         this.blogs = data;
+        this.blogs.map((m) => {
+          m.time1 = moment(m.time, 'DD MMMM YYYY').toDate();
+        });
+        this.blogs.sort((a, b) => b.time1 - a.time1);
       }
     });
   }
