@@ -80,6 +80,20 @@
                   <span [ngClass]="item.icon"></span>
                 </mt-btn>
               </ng-container>
+              <ng-container>
+                <mt-btn
+                  class="icon white mr-10"
+                  (onAction)="
+                    accessSocialLinks('https://t.ly/telegram/moneytorhelp')
+                  "
+                >
+                  <span
+                    ><img
+                      class="ic_telegram"
+                      src="../../../assets/img/icon/telegram.png"
+                  /></span>
+                </mt-btn>
+              </ng-container>
             </div>
           </div>
         </div>
