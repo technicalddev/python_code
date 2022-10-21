@@ -58,18 +58,28 @@
   "socialLinks": [
     {
       "name": "Twitter",
-      "link": "https://twitter.com/MoneytorNPA",
+      "link": "https://t.ly/twitter/moneytor",
       "icon": "ic_twitter"
     },
     {
       "name": "Facebook",
-      "link": "https://www.facebook.com/moneytor.in/",
+      "link": "https://t.ly/facebook/moneytor",
       "icon": "ic_fb"
     },
     {
       "name": "Linkedin",
-      "link": "https://in.linkedin.com/company/moneytornpa",
+      "link": "https://t.ly/linkedIn/moneytor",
       "icon": "ic_linkedin"
+    },
+    {
+      "name": "Instagram",
+      "link": "https://t.ly/instagram/moneytor",
+      "icon": "ic_instagram"
+    },
+    {
+      "name": "Telegram",
+      "link": "https://t.ly/telegram/moneytorhelp",
+      "icon": "ic_telegram"
     }
   ]
 }
