@@ -1,14 +1,15 @@
 {
   "homeSection": {
-    "title": "Transforming Debt <br>Management",
+    "title": "resolve your debts, the moneytor way",
     "subTitle": "Resolve  •  Repay  •  Revive "
   },
   "secondSection": {
-    "line1": "Communicate and engage with borrowers, generate actionable insights, optimise efforts, and collect more",
+    "line1": "owing money can be stressful.",
 
-    "line2": "Moneytor is a Debt Management Technology company which offers solutions across Debt Management, Collections, and Distressed Debt Purchase to lenders,",
-    "line3": "and aids them in the collection and liquidation efforts of their consumer loan portfolios,",
-    "line4": "all the while fostering happy borrower experiences."
+    "line2": "Debt free life starts by wisely eliminating your debts.",
+    "line3": "With our easy-to-use platform, you can choose the repayment plan that works best for you, and we'll do everything we can to get your debts paid off as quickly and painlessly as possible.",
+    "line4": "We negotiate the deepest reductions and terms for our clients, and serve with integrity every step of the way to make sure you're on track.",
+    "line5": "So if you're struggling with debt, know that there's a light at the end of the tunnel."
   },
   "backgroundImg": "../../../../assets/img/page/home-1.svg"
 }
