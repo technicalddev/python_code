@@ -26,6 +26,11 @@ export class InvestorsComponent implements OnInit, OnChanges {
     spaceBetween: 20,
     loop: false,
     navigation: true,
+    autoplay: {
+      delay: 3500,
+      disableOnInteraction: true,
+      waitForTransition: true,
+    },
     breakpoints: {
       400: {
         initialSlide: 0,
