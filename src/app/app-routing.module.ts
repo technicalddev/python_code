@@ -18,6 +18,13 @@ const routes: Routes = [
           import('./Components/home/home.module').then((m) => m.HomeModule),
       },
       {
+        path: 'privacy-policy',
+        loadChildren: () =>
+          import('./Components/privacy-policy/privacy-policy.module').then(
+            (m) => m.PrivacyPolicyModule
+          ),
+      },
+      {
         path: 'not-found',
         loadChildren: () =>
           import('./Components/not-found/not-found.module').then(

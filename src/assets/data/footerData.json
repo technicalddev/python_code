@@ -5,6 +5,11 @@
   },
   "quickLinks": [
     {
+      "name": "Privacy Policy",
+      "value": "privacyPolicy",
+      "type": "privacyPolicyPage"
+    },
+    {
       "name": "About Us",
       "value": "about",
       "type": "page"

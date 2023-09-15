@@ -65,6 +65,14 @@ export class FooterComponent implements OnInit {
       );
       return;
     }
+    if (type === 'privacyPolicyPage') {
+      // this.router.navigate(['/privacy-policy']);
+      const url = this.router.serializeUrl(
+        this.router.createUrlTree(['/privacy-policy'])
+      );
+      window.open(url, '_blank');
+    }
+
     if (type === 'modal') {
       this.modalData = {
         header: name,
