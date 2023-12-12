@@ -2,9 +2,9 @@
 
 .mt-privacy-policy {
   position: relative;
-  height: calc(100vh - -1008px);
+  height: calc(800px - (-1008px));
   line-height: 23px;
-  background: #bccddd;
+  // background: #bccddd;
   .privacyPolicy {
     position: absolute;
     left: 50%;
@@ -15,8 +15,8 @@
     //   max-width: $max-width;
     width: 80%;
     .privacyContent {
-      height: 140px;
-      position: relative;
+      // height: 140px;
+      position: absolute;
       z-index: -1;
       .cardHeader {
         h3 {

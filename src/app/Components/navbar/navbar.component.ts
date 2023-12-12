@@ -9,7 +9,7 @@ import {
 import { MediaMatcher } from '@angular/cdk/layout';
 import { navData } from './navdata';
 import { MatSidenav } from '@angular/material/sidenav';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { ScrollService } from 'src/app/shared/_Services/scroll.service';
 import { TranslateService } from '@ngx-translate/core';
 
@@ -30,7 +30,8 @@ export class NavbarComponent implements OnInit, OnDestroy {
     private media: MediaMatcher,
     private router: Router,
     private scrollService: ScrollService,
-    private translateService: TranslateService
+    private translateService: TranslateService,
+    private route: ActivatedRoute
   ) {
     this.mobileQuery = this.media.matchMedia('(max-width: 1110px)');
     this.mobileQueryListener = () => this.changeDetectorRef.detectChanges();
@@ -49,6 +50,14 @@ export class NavbarComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.navItems = navData;
+    console.log('router', this.route.snapshot);
+    let element = document.querySelector('.mt-toolbar');
+    console.log('elementttt', element);
+
+    if (this.router.url == '/privacy-policy') {
+      this.logo = 'logo_dark';
+      element.classList.add('navbar-primary');
+    }
   }
   ngOnDestroy(): void {
     this.mobileQuery.removeListener(this.mobileQueryListener);
@@ -57,12 +66,15 @@ export class NavbarComponent implements OnInit, OnDestroy {
   @HostListener('window:scroll', ['$event'])
   onScroll(event: any) {
     let element = document.querySelector('.mt-toolbar');
-    if (window.pageYOffset > element.clientHeight) {
-      this.logo = 'logo_dark';
-      element.classList.add('navbar-primary');
-    } else {
+    if (
+      window.pageYOffset < element.clientHeight &&
+      this.router.url !== '/privacy-policy'
+    ) {
       this.logo = 'logo_light';
       element.classList.remove('navbar-primary');
+    } else {
+      this.logo = 'logo_dark';
+      element.classList.add('navbar-primary');
     }
   }
   // to close side nave on mobile

@@ -34,4 +34,11 @@ export const clientTestimonials = [
     clientName: 'Hardikbhai Beladiya, ',
     clientCity: 'Mumbai',
   },
+  {
+    statement:
+      '“I will Give five star rating to moneytor.I really say thanks to Aditya sir financial advisor. Thanks for support moneytor.”',
+    clientImg: '../../../../assets/img/client2.png',
+    clientName: 'Ravindra Thakare, ',
+    clientCity: 'Dhule',
+  },
 ];
