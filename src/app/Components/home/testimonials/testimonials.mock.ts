@@ -1,6 +1,13 @@
 export const clientTestimonials = [
   {
     statement:
+      '“I will Give five star rating to moneytor.I really say thanks to Aditya sir financial advisor. Thanks for support moneytor.”',
+    clientImg: '../../../../assets/img/client5.png',
+    clientName: 'Ravindra Thakare, ',
+    clientCity: 'Dhule',
+  },
+  {
+    statement:
       '“I am honoured to have be proud of the fact that you have the power to rise above any situation and deliver the best results no matter the circumstances. Excellent work”',
     clientImg: '../../../../assets/img/clientImage1.jpg',
     clientName: 'Arbeen Bhatra,',
@@ -33,12 +40,5 @@ export const clientTestimonials = [
     clientImg: '../../../../assets/img/client5.png',
     clientName: 'Hardikbhai Beladiya, ',
     clientCity: 'Mumbai',
-  },
-  {
-    statement:
-      '“I will Give five star rating to moneytor.I really say thanks to Aditya sir financial advisor. Thanks for support moneytor.”',
-    clientImg: '../../../../assets/img/client2.png',
-    clientName: 'Ravindra Thakare, ',
-    clientCity: 'Dhule',
   },
 ];
