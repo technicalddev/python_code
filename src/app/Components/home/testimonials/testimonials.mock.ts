@@ -3,14 +3,14 @@ export const clientTestimonials = [
     statement:
       '“The Complete interaction to repay the debt, which has done by your executive by name Riya it was very good.”',
     clientImg: '../../../../assets/img/client4.png',
-    clientName: 'Shivaprasad Patne ',
+    clientName: 'Shivaprasad Patne, ',
     clientCity: 'Nashik',
   },
   {
     statement:
       '“I will Give five star rating to moneytor.I really say thanks to Aditya sir financial advisor. Thanks for support moneytor.”',
     clientImg: '../../../../assets/img/client5.png',
-    clientName: 'Ravindra Thakare ',
+    clientName: 'Ravindra Thakare, ',
     clientCity: 'Dhule',
   },
   {
@@ -18,7 +18,7 @@ export const clientTestimonials = [
       '“I am honoured to have be proud of the fact that you have the power to rise above any situation and deliver the best results no matter the circumstances. Excellent work”',
     clientImg: '../../../../assets/img/clientImage1.jpg',
     clientName: 'Arbeen Bhatra,',
-    clientCity: 'Nabarangpur,Odisha',
+    clientCity: 'Odisha',
   },
   {
     statement:
