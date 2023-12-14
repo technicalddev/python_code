@@ -4,7 +4,7 @@ export const clientTestimonials = [
       '“The Complete interaction to repay the debt, which has done by your executive by name Riya it was very good.”',
     clientImg: '../../../../assets/img/client4.png',
     clientName: 'Shivaprasad Patne ',
-    clientCity: 'GANESHNAGAR,NASHIK',
+    clientCity: 'Nashik',
   },
   {
     statement:
