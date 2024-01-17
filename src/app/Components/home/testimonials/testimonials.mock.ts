@@ -1,6 +1,13 @@
 export const clientTestimonials = [
   {
     statement:
+      '“Hi team,Very good working by mr sammir, He ans me good ,And positive feedback giving me. “',
+    clientImg: '../../../../assets/img/clientImage1.jpg',
+    clientName: 'Boni Solanki,',
+    clientCity: 'Gujarat',
+  },
+  {
+    statement:
       "“I am happy to share my feedback for Tejaswi. One of my mobikwik load was stuck from the last 18 months. I told her the whole scenario and she calmly heard and fully cooperated me. Because of her I'm able to settle my loan amount.I'm very satisfied with her work and really appreciate her. She is polite, gentle and her customer support services are excellent.Thanks to her again for the wonderful work.“",
     clientImg: '../../../../assets/img/client2.png',
     clientName: 'Junaid Alam,',
