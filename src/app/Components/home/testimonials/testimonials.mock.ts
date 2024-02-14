@@ -1,6 +1,13 @@
 export const clientTestimonials = [
   {
     statement:
+      '“I had 32000 thousand loan in my robo cash loan app. The overdue went up but Moneytor contacted me and settled my loan of 32000 by paying me only 9600. gave.. Thanks Moneytor. “',
+    clientImg: '../../../../assets/img/client5.png',
+    clientName: 'Pravin bhati,',
+    clientCity: 'Gujarat',
+  },
+  {
+    statement:
       '“Hi team,Very good working by mr sammir, He ans me good ,And positive feedback giving me. “',
     clientImg: '../../../../assets/img/clientImage1.jpg',
     clientName: 'Boni Solanki,',
