@@ -1,6 +1,13 @@
 export const clientTestimonials = [
   {
     statement:
+      "“I wanted to express my gratitude for Bobby's exceptional assistance in settling my loan with Navi through EMIs. Bobby's friendly and helpful demeanor made the process much smoother. His professionalism, clear communication, and proactive approach were truly commendable.\nPlease convey my thanks to Bobby and the Moneytor team for their outstanding service.“",
+    clientImg: '../../../../assets/img/client3.png',
+    clientName: 'Bhavesh Jha,',
+    clientCity: 'Mumbai',
+  },
+  {
+    statement:
       '“I had 32000 thousand loan in my robo cash loan app. The overdue went up but Moneytor contacted me and settled my loan of 32000 by paying me only 9600. gave.. Thanks Moneytor. “',
     clientImg: '../../../../assets/img/client5.png',
     clientName: 'Pravin bhati,',
