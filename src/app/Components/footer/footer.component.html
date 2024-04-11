@@ -35,10 +35,15 @@
     <div fxLayout="column" fxFLex="30%" fxFlex.lt-md="25%" fxFlex.lt-sm="40%">
       <mt-h3>{{ 'Company' | translate }}</mt-h3>
       <ng-container *ngFor="let item of companyLinks">
-        <mt-body-large class="mb-0">
-          <a class="mt-btn link secondary" (click)="onLinksAction(item)">{{
-            item.name
-          }}</a>
+        <mt-body-large class="mb-0 socialIconsDiv">
+          <span class="socialIcons">
+            <img [src]="item.icon" alt="item.name" />
+          </span>
+          <a
+            class="mt-btn link secondary pl-10"
+            (click)="onLinksAction(item)"
+            >{{ item.name }}</a
+          >
         </mt-body-large>
       </ng-container>
     </div>

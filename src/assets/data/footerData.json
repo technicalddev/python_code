@@ -39,17 +39,26 @@
     {
       "name": "contact@moneytor.in",
       "value": "contact@moneytor.in",
-      "type": "email"
+      "type": "email",
+      "icon": "../../../../assets/icons/mail.svg"
+    },
+    {
+      "name": "+91 9987676717 ",
+      "value": "+91 9987676717 ",
+      "type": "phone",
+      "icon": "../../../../assets/icons/call.svg"
     },
     {
       "name": "+91 8655831539 ",
       "value": "+91 8655831539 ",
-      "type": "phone"
+      "type": "whatsapp",
+      "icon": "../../../../assets/icons/whatsapp.svg"
     },
     {
       "name": "Bootstart Cowork, Colaba, Mumbai",
       "value": "Bootstart Cowork Colaba Mumbai",
-      "type": "map"
+      "type": "map",
+      "icon": "../../../../assets/icons/location.svg"
     }
   ],
   "companyBranches": [
