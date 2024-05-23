@@ -12,6 +12,7 @@ import {
   styleUrls: ['./offering.component.scss'],
 })
 export class OfferingComponent implements OnInit, OnChanges {
+  // Public instance fields
   @Input() isMobile: boolean = false;
   @Input() baseURL: string = '';
   offers: any = [];
@@ -19,6 +20,7 @@ export class OfferingComponent implements OnInit, OnChanges {
   newData: any = []; // Define newData property to hold the JSON data
   showMore: boolean = false;
 
+  // Configurations
   config: SwiperConfigInterface = {
     a11y: true,
     direction: 'horizontal',
@@ -42,21 +44,20 @@ export class OfferingComponent implements OnInit, OnChanges {
     },
   };
 
-  buttonAction() {
-    this.scrollService.scrollToElementById('reachus');
-  }
-
+  // Private instance fields
   private pagination: SwiperPaginationInterface = {
     el: '.mt-inv-pg',
     clickable: true,
     hideOnClick: false,
   };
 
+  // Constructor
   constructor(
     private homeService: HomeService,
     private scrollService: ScrollService
   ) {}
 
+  // Lifecycle hook
   ngOnInit(): void {
     this.getOffersData();
     this.newData = [
@@ -75,6 +76,7 @@ export class OfferingComponent implements OnInit, OnChanges {
     ];
   }
 
+  // Lifecycle hook
   ngOnChanges() {
     const extraConfigs: SwiperConfigInterface = {
       pagination: this.pagination,
@@ -83,28 +85,33 @@ export class OfferingComponent implements OnInit, OnChanges {
     this.config = { ...this.config, ...extraConfigs };
   }
 
-  getOffersData() {
+  // Public instance method
+  buttonAction() {
+    this.scrollService.scrollToElementById('reachus');
+  }
+
+  // Public instance method
+  toggleShowMore() {
+    this.showMore = !this.showMore;
+  }
+
+  // Public instance method
+  onIndexChange(index: number) {
+    // console.log('Swiper index: ', index);
+  }
+
+  // Public instance method
+  onSwiperEvent(event: string): void {
+    // console.log('Swiper event: ', event);
+  }
+
+  // Private instance method
+  private getOffersData() {
     this.homeService.getOffersData().subscribe((res) => {
       const { data } = res;
       if (data && data.length > 0) {
         this.offers = data;
       }
     });
-  }
-
-  // buttonAction() {
-  //   this.scrollService.scrollToElementById('reachus');
-  // }
-
-  toggleShowMore() {
-    this.showMore = !this.showMore;
-  }
-
-  onIndexChange(index: number) {
-    // console.log('Swiper index: ', index);
-  }
-
-  onSwiperEvent(event: string): void {
-    // console.log('Swiper event: ', event);
   }
 }
