@@ -23,17 +23,10 @@ export class BlogsComponent implements OnInit, OnChanges {
     a11y: true,
     direction: 'horizontal',
     keyboard: true,
-    centeredSlides: true,
-    spaceBetween: 40,
+    centeredSlides: false,
+    spaceBetween: 0,
     navigation: true,
     loop: false,
-    // effect: 'coverflow',
-    // autoplay: {
-    //   delay: 3000,
-    //   disableOnInteraction: true,
-    //   stopOnLastSlide: true,
-    //   waitForTransition: true,
-    // },
     breakpoints: {
       400: {
         initialSlide: 0,
@@ -44,7 +37,7 @@ export class BlogsComponent implements OnInit, OnChanges {
         slidesPerView: 2,
       },
       1024: {
-        initialSlide: 1,
+        initialSlide: 0,
         slidesPerView: 4,
       },
     },
@@ -69,14 +62,6 @@ export class BlogsComponent implements OnInit, OnChanges {
     this.config = { ...this.config, ...extraConfigs };
   }
 
-  // getMediaCoverage() {
-  //   this.homeService.getBlogs().subscribe((res) => {
-  //     const { data } = res;
-  //     if (data && data.length > 0) {
-  //       this.blogs = data;
-  //     }
-  //   });
-  // }
   getMediaCoverage() {
     this.homeService.getBlogs().subscribe((res) => {
       const { data } = res;
@@ -90,16 +75,14 @@ export class BlogsComponent implements OnInit, OnChanges {
     });
   }
 
-  onIndexChange(index: number) {
-    // console.log('Swiper index: ', index);
-  }
+  onIndexChange(index: number) {}
 
-  onSwiperEvent(event: string): void {
-    // console.log('Swiper event: ', event);
-  }
+  onSwiperEvent(event: string): void {}
+
   gotToBlog(link: string) {
     window.open(`${link}`, '_blank');
   }
+
   updateUrl(event$: any) {
     this.imgErr = true;
     event$.target.src = `${this.baseURL}logo/new-logo.svg`;

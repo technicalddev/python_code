@@ -1,52 +1,82 @@
 {
   "data": [
     {
-      "title": "SaaS",
-      "description": "Moneytor's smart and self learning integrated debt management platform digitises the entire debt collection process. Moneytor can operate independently, or integrate with an existing enterprise suite with multiple stakeholders",
-      "reverse": false,
-      "btn": {
-        "name": "Schedule Demo",
-        "class": "outline",
-        "link": "scheduleDemo",
-        "value": "scheduleDemo"
-      },
+      "description": "Content Management with Rich Analytics",
       "img": {
         "name": "analysis",
-        "imgUrl": "../../../../assets/img/page/analysis.svg",
+        "imgUrl": "../../../../assets/img/Powtoon_GIF_11.gif",
         "width": 274,
         "height": 255
       }
     },
     {
-      "title": "Collections",
-      "description": "Moneytor's digital first collection offering enables lenders to communicate with their borrowers through multiple modes and in multiple languages.",
-      "reverse": true,
-      "btn": {
-        "name": "Get Started",
-        "class": "outline",
-        "link": "getStarted",
-        "value": "getStarted"
-      },
+      "description": "Multi-level Decisioning",
       "img": {
-        "name": "collections",
-        "imgUrl": "../../../../assets/img/page/collections.svg",
+        "name": "analysis",
+        "imgUrl": "../../../../assets/img/Powtoon_GIF_17.gif",
         "width": 274,
         "height": 255
       }
     },
     {
-      "title": "Debt Purchase",
-      "description": "With our data driven collections portfolio analysis, we offer portfolio liquidation services enabling lenders to release up tied capital and optimize cashflows.",
-      "reverse": false,
-      "btn": {
-        "name": "Know More",
-        "class": "outline",
-        "link": "knowMore",
-        "value": "knowMore"
-      },
+      "description": "Multichannel communication",
       "img": {
-        "name": "liquidation",
-        "imgUrl": "../../../../assets/img/page/liquidation.svg",
+        "name": "analysis",
+        "imgUrl": "../../../../assets/img/Powtoon_GIF_13.gif",
+        "width": 274,
+        "height": 255
+      }
+    },
+    {
+      "description": "Collection Agent - Defaulter Interaction Dashboard",
+      "img": {
+        "name": "analysis",
+        "imgUrl": "../../../../assets/img/Powtoon_GIF_15.gif",
+        "width": 274,
+        "height": 255
+      }
+    },
+    {
+      "description": "Multi-lingual",
+      "img": {
+        "name": "analysis",
+        "imgUrl": "../../../../assets/img/Powtoon_GIF_16.gif",
+        "width": 274,
+        "height": 255
+      }
+    },
+    {
+      "description": "Automated intelligent response",
+      "img": {
+        "name": "analysis",
+        "imgUrl": "../../../../assets/img/Powtoon_GIF_18.gif",
+        "width": 274,
+        "height": 255
+      }
+    },
+    {
+      "description": "Automated Loan Restructuring Tool",
+      "img": {
+        "name": "analysis",
+        "imgUrl": "../../../../assets/img/Powtoon_GIF_19.gif",
+        "width": 274,
+        "height": 255
+      }
+    },
+    {
+      "description": "Self Correcting",
+      "img": {
+        "name": "analysis",
+        "imgUrl": "../../../../assets/img/Powtoon_GIF_20.gif",
+        "width": 274,
+        "height": 255
+      }
+    },
+    {
+      "description": "Repayment Projections & Portfolio Valuation",
+      "img": {
+        "name": "analysis",
+        "imgUrl": "../../../../assets/img/Powtoon_GIF_21.gif",
         "width": 274,
         "height": 255
       }

@@ -34,9 +34,12 @@
 @media screen and (max-width: 768px) {
   .title-large {
     font-size: 30px;
+    text-align: left;
   }
+
   .title-small {
-    font-size: 16px;
+    font-size: 13px;
+    text-align: left;
   }
 
   .large {
@@ -52,6 +55,7 @@
 
 @media screen and (max-width: 320px) {
   .title-small {
-    font-size: 8px;
+    font-size: 13px;
+    text-align: left;
   }
 }

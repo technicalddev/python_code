@@ -1,44 +1,176 @@
-<div fxLayout="row" fxLayoutAlign="space-around center">
+<div fxLayout="row wrap" fxLayoutAlign="space-around center">
   <div fxFlex="100%" fxLayoutAlign="center">
     <mt-h1 class="txt-black ta-c">{{ 'Offerings' | translate }}</mt-h1>
   </div>
 </div>
-<div class="isMobile" fxLayoutAlign="center">
-  <div fxFlex="70%" fxFlex.xs="90%" fxFlex.sm="75%">
-    <ng-container *ngFor="let offer of offers">
+<div fxLayoutAlign="center">
+  <h1>{{ 'SaaS' | translate }}</h1>
+</div>
+
+<div fxLayout="row wrap" fxLayoutAlign="space-between center" class="my-20">
+  <ng-container *ngIf="!isMobile">
+    <ng-container *ngFor="let offer of offers.slice(0, 4)">
       <div
-        [fxLayout]="offer.reverse ? 'row-reverse' : 'row'"
-        fxLayout.sm="column"
-        fxLayout.xs="column"
-        fxLayoutAlign="space-around center"
-        class="my-20"
+        fxFlex="calc(25% - 10px)"
+        fxLayout="column"
+        fxLayoutAlign="center center"
+        class="offer-set"
       >
-        <div fxFlex="30%" fxFlex.xs="100%">
+        <div>
           <img
             [src]="offer.img.imgUrl"
             [alt]="offer.img.name + offer.img.height"
-            height="50%"
-            width="100%"
+            height="60px"
+            width="60px"
+            class="centered-image"
           />
         </div>
-
-        <div
-          class="offering-content"
-          fxLayout="column"
-          fxFlex="38%"
-          fxFlex.xs="100%"
-        >
-          <mt-h1 class="txt-primary">{{ offer.title | translate }}</mt-h1>
-          <mt-body-large class="desc" fxFlex="40%">{{
-            offer.description
-          }}</mt-body-large>
-          <mt-btn
-            class="{{ offer.btn.class }} my-20 h-25"
-            (onAction)="buttonAction()"
-            >{{ offer.btn.name }}</mt-btn
-          >
+        <div>
+          <p class="description">{{ offer.description }}</p>
         </div>
       </div>
     </ng-container>
+  </ng-container>
+
+  <ng-container *ngIf="!isMobile">
+    <ng-container *ngFor="let offer of offers.slice(4, 9)">
+      <div
+        fxFlex="calc(20% - 10px)"
+        fxLayout="column"
+        fxLayoutAlign="center center"
+        class="offer-set"
+      >
+        <div>
+          <img
+            [src]="offer.img.imgUrl"
+            [alt]="offer.img.name + offer.img.height"
+            height="60px"
+            width="60px"
+            class="centered-image"
+          />
+        </div>
+        <div>
+          <p class="description">{{ offer.description }}</p>
+        </div>
+      </div>
+    </ng-container>
+  </ng-container>
+
+  <ng-container *ngIf="!isMobile || showMore">
+    <ng-container *ngFor="let offer of offers.slice(9)">
+      <div
+        fxFlex="calc(20% - 10px)"
+        fxLayout="column"
+        fxLayoutAlign="center center"
+        class="offer-set"
+      >
+        <div>
+          <img
+            [src]="offer.img.imgUrl"
+            [alt]="offer.img.name + offer.img.height"
+            height="60px"
+            width="60px"
+            class="centered-image"
+          />
+        </div>
+        <div>
+          <p class="description">{{ offer.description }}</p>
+        </div>
+      </div>
+    </ng-container>
+  </ng-container>
+
+  <ng-container *ngIf="isMobile">
+    <ng-container *ngFor="let offer of offers.slice(0, 3)">
+      <div
+        fxFlex="calc(33.33% - 10px)"
+        fxLayout="column"
+        fxLayoutAlign="center center"
+        class="offer-set"
+      >
+        <div>
+          <img
+            [src]="offer.img.imgUrl"
+            [alt]="offer.img.name + offer.img.height"
+            height="60px"
+            width="60px"
+            class="centered-image"
+          />
+        </div>
+        <div>
+          <p class="description">{{ offer.description }}</p>
+        </div>
+      </div>
+    </ng-container>
+  </ng-container>
+
+  <div
+    fxFlex="100%"
+    fxLayoutAlign="center"
+    class="mobile-buttons"
+    *ngIf="isMobile && offers.length > 3"
+  >
+    <img
+      src="./../../../../assets/img/Vector_dropdown.png"
+      alt="Show More"
+      (click)="toggleShowMore()"
+      class="show-more-icon"
+      [ngClass]="{ 'arrow-up': showMore, 'arrow-down': !showMore }"
+    />
   </div>
+
+  <ng-container *ngIf="isMobile && showMore">
+    <ng-container *ngFor="let offer of offers.slice(3)">
+      <div
+        fxFlex="calc(33.33% - 10px)"
+        fxLayout="column"
+        fxLayoutAlign="center center"
+        class="offer-set"
+      >
+        <div>
+          <img
+            [src]="offer.img.imgUrl"
+            [alt]="offer.img.name + offer.img.height"
+            height="60px"
+            width="60px"
+            class="centered-image"
+          />
+        </div>
+        <div>
+          <p class="description">{{ offer.description }}</p>
+        </div>
+      </div>
+    </ng-container>
+  </ng-container>
+
+  <ng-container *ngFor="let item of newData">
+    <div
+      fxFlex="50%"
+      fxFlex.xs="100%"
+      fxLayout="row"
+      fxLayoutAlign="space-between center"
+    >
+      <div
+        fxFlex="85%"
+        fxLayout="column"
+        fxLayoutAlign="center"
+        class="offering"
+      >
+        <h2>{{ item.heading }}</h2>
+        <p>{{ item.description }}</p>
+        <button class="custom-button" (click)="buttonAction()">
+          {{ item.button }}
+        </button>
+      </div>
+    </div>
+  </ng-container>
+  <!-- <ng-container *ngFor="let item of newData">
+    <div fxFlex="50%" fxFlex.xs="100%" fxLayout="row" fxLayoutAlign="space-between center">
+      <div fxFlex="85%" fxLayout="column" fxLayoutAlign="center" class="offering">
+        <h2>{{ item.heading }}</h2>
+        <p>{{ item.description }}</p>
+        <button class="custom-button">{{ item.button }}</button>
+      </div>
+    </div>
+  </ng-container> -->
 </div>

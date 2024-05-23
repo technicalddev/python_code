@@ -44,3 +44,9 @@
     margin: 0px;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .px-100 img {
+    height: 30px;
+  }
+}

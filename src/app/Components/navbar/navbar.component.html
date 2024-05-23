@@ -40,7 +40,16 @@
           fxFlex.xs="80%"
           [ngClass]="mobileQuery.matches ? 'mobile-logo-align' : ''"
         >
-          <img src="../../../assets/img/logo/{{ logo }}.svg" height="40" />
+          <img
+            *ngIf="logo === 'logo_light'"
+            src="../../../assets/img/logo/logo_light_new.png"
+            height="40"
+          />
+          <img
+            *ngIf="logo === 'logo_dark'"
+            src="../../../assets/img/logo/moneytor_logo_dark_new.png"
+            height="40"
+          />
         </a>
         <span class="spacer"></span>
         <div

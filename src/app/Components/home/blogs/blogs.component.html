@@ -4,10 +4,17 @@
   </div>
 </div>
 
-<!-- ngx swipper -->
-<div class="box-container blogs">
+<div
+  class="box-container blogs"
+  style="padding-left: 65px; padding-right: 35px;"
+>
   <div class="horizontal-container" fxLayout="column" fxFlex="100%">
-    <div class="content-container px-40" fxLayout="column" fxFlex="auto">
+    <div
+      class="content-container"
+      fxLayout="column"
+      fxFlex="auto"
+      style="padding-left: 0; padding-right: 0;"
+    >
       <swiper
         #swiperContainer
         *ngIf="show"
@@ -19,7 +26,11 @@
         (swiperTransitionEnd)="onSwiperEvent('transitionEnd')"
         fxFlex="auto"
       >
-        <div *ngFor="let blog of blogs; let i = index" class="swiper-slide">
+        <div
+          *ngFor="let blog of blogs; let i = index"
+          class="swiper-slide no-padding"
+          style="padding-left: 0; padding-right: 0;"
+        >
           <div
             class="mt-card no-padding full-height"
             matRipple
@@ -28,7 +39,7 @@
             fxFlex="100%"
             fxFlex.xs="100%"
           >
-            <div class="mt-card-header" style="height: 90px;">
+            <div class="mt-card-header" style="height: 80px;">
               <img
                 style="object-fit: cover;"
                 [src]="blog.src"

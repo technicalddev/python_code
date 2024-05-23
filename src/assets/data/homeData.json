@@ -1,15 +1,15 @@
 {
   "homeSection": {
     "title": "Transforming Debt <br>Management",
-    "subTitle": "resolve  •  repay  •  revive "
+    "subTitle": "Automate | Engage | Collect | Liquidate"
   },
   "secondSection": {
-    "line1": "owing money can be stressful.",
+    "line1": "We help you collect more",
 
-    "line2": "Debt free life starts by wisely eliminating your debts.",
-    "line3": "With our easy-to-use platform, you can choose the repayment plan that works best for you, and we'll do everything we can to get your debts paid off as quickly and painlessly as possible.",
-    "line4": "We negotiate the deepest reductions and terms for our clients, and serve with integrity every step of the way to make sure you're on track.",
-    "line5": "So if you're struggling with debt, know that there's a light at the end of the tunnel."
+    "line2": "Moneytor is a smart and self-learning platform designed for managing stressed consumer loans.It digitizes processes",
+    "line3": "related to loan book management, communication, and settlement decision ",
+    "line4": "making with borrowers, leading to a reduction in recovery costs coupled with improvement in recovery rates, all the",
+    "line5": "while fostering happy borrower experiences."
   },
   "backgroundImg": "../../../../assets/img/page/home-1.svg"
 }

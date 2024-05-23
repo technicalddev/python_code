@@ -11,11 +11,13 @@ import {
   templateUrl: './offering.component.html',
   styleUrls: ['./offering.component.scss'],
 })
-export class OfferingComponent implements OnInit {
+export class OfferingComponent implements OnInit, OnChanges {
   @Input() isMobile: boolean = false;
   @Input() baseURL: string = '';
   offers: any = [];
   show: boolean = true;
+  newData: any = []; // Define newData property to hold the JSON data
+  showMore: boolean = false;
 
   config: SwiperConfigInterface = {
     a11y: true,
@@ -40,6 +42,10 @@ export class OfferingComponent implements OnInit {
     },
   };
 
+  buttonAction() {
+    this.scrollService.scrollToElementById('reachus');
+  }
+
   private pagination: SwiperPaginationInterface = {
     el: '.mt-inv-pg',
     clickable: true,
@@ -53,9 +59,23 @@ export class OfferingComponent implements OnInit {
 
   ngOnInit(): void {
     this.getOffersData();
+    this.newData = [
+      {
+        heading: 'Collections',
+        description:
+          "Moneytor's digital first collection offering enables lenders to communicate with their borrowers through multiple modes and in multiple languages.",
+        button: 'Get started',
+      },
+      {
+        heading: 'Debt Purchase',
+        description:
+          'With our data driven collections portfolio analysis, we offer portfolio liquidation services enabling lenders to release up tied capital and optimize cashflows.',
+        button: 'Know more',
+      },
+    ];
   }
 
-  ngOnchages() {
+  ngOnChanges() {
     const extraConfigs: SwiperConfigInterface = {
       pagination: this.pagination,
       slidesPerView: this.isMobile ? 1 : 4,
@@ -71,8 +91,13 @@ export class OfferingComponent implements OnInit {
       }
     });
   }
-  buttonAction() {
-    this.scrollService.scrollToElementById('reachus');
+
+  // buttonAction() {
+  //   this.scrollService.scrollToElementById('reachus');
+  // }
+
+  toggleShowMore() {
+    this.showMore = !this.showMore;
   }
 
   onIndexChange(index: number) {
