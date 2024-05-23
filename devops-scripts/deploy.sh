@@ -14,7 +14,7 @@ SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 # Build the code. This is the most time and memory consuming part of the build.
 cd $SCRIPTDIR/../
 
-npm install                 # Install dependencies
+npm install --legacy-peer-deps  # Install dependencies
 node --max-old-space-size=4096 ./node_modules/.bin/ng build --prod --no-progress
 echo "**** ng build finished"
 
