@@ -41,6 +41,8 @@
     "rxjs-compat": "6.5.4",
     "swiper": "^5.4.2",
     "tslib": "1.10.0",
+    "webpack": "^4.47.0",
+    "worker-plugin": "^5.0.1",
     "zone.js": "0.10.2"
   },
   "devDependencies": {
