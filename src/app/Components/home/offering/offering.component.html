@@ -143,7 +143,7 @@
     </ng-container>
   </ng-container>
 
-  <ng-container *ngFor="let item of newData">
+  <!-- <ng-container *ngFor="let item of newData">
     <div
       fxFlex="50%"
       fxFlex.xs="100%"
@@ -151,7 +151,7 @@
       fxLayoutAlign="space-between center"
     >
       <div
-        fxFlex="95%"
+        fxFlex="80%"
         fxLayout="column"
         fxLayoutAlign="center"
         class="offering"
@@ -163,14 +163,27 @@
         </button>
       </div>
     </div>
-  </ng-container>
-  <!-- <ng-container *ngFor="let item of newData">
-    <div fxFlex="50%" fxFlex.xs="100%" fxLayout="row" fxLayoutAlign="space-between center">
-      <div fxFlex="85%" fxLayout="column" fxLayoutAlign="center" class="offering">
+  </ng-container> -->
+  <ng-container *ngFor="let item of newData">
+    <div
+      fxFlex="50%"
+      fxFlex.xs="100%"
+      fxLayout="row"
+      fxLayoutAlign="space-between center"
+    >
+      <div
+        fxFlex="85%"
+        fxLayout="column"
+        fxLayoutAlign="center"
+        class="offering"
+      >
         <h2>{{ item.heading }}</h2>
         <p>{{ item.description }}</p>
-        <button class="custom-button">{{ item.button }}</button>
+        <!-- <button class="custom-button">{{ item.button }}</button> -->
+        <button class="custom-button" (click)="buttonAction()">
+          {{ item.button }}
+        </button>
       </div>
     </div>
-  </ng-container> -->
+  </ng-container>
 </div>
