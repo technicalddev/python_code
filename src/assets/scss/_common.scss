@@ -765,6 +765,7 @@
     }
     .txt-secondary {
       color: mat-color($foreground, secondary-text);
+      font-size: 13px;
     }
   }
 }
