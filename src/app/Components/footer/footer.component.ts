@@ -26,6 +26,7 @@ export class FooterComponent implements OnInit {
   ngOnInit(): void {
     this.getFooterData();
   }
+
   getFooterData() {
     this.footerService.getFooterData().subscribe((res) => {
       const {
@@ -83,11 +84,24 @@ export class FooterComponent implements OnInit {
       return;
     }
   }
+
   onModalAction($event: boolean) {
     this.showModal = false;
     return;
   }
+
   accessSocialLinks(link: string) {
     window.open(`${link}`, '_blank');
+  }
+
+  getCompanyIconWidth(index: number): string {
+    // let obj = {
+    //   0: '22px',
+    //   1: '30px',
+    // };
+    // if (obj['index']) {
+    //   return obj['index'];
+    // }
+    return 'auto';
   }
 }

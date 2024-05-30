@@ -40,25 +40,25 @@
       "name": "contact@moneytor.in",
       "value": "contact@moneytor.in",
       "type": "email",
-      "icon": "../../../../assets/icons/mail.svg"
+      "icon": "../../../../assets/icons/cont_new.png"
     },
     {
       "name": "+91 9987676717 ",
       "value": "+91 9987676717 ",
       "type": "phone",
-      "icon": "../../../../assets/icons/call.svg"
+      "icon": "../../../../assets/icons/wthapp_new.png"
     },
     {
       "name": "+91 8655831539 ",
       "value": "+91 8655831539 ",
       "type": "whatsapp",
-      "icon": "../../../../assets/icons/whatsapp.svg"
+      "icon": "../../../../assets/icons/wthapp_new.png"
     },
     {
       "name": "Bootstart Cowork, Colaba, Mumbai",
       "value": "Bootstart Cowork Colaba Mumbai",
       "type": "map",
-      "icon": "../../../../assets/icons/location.svg"
+      "icon": "../../../../assets/icons/addes_new.png"
     }
   ],
   "companyBranches": [
@@ -70,27 +70,5 @@
     "Mangalore",
     "Noida",
     "Gurgaon"
-  ],
-  "socialLinks": [
-    {
-      "name": "Twitter",
-      "link": "https://twitter.com/MoneytorNPA",
-      "icon": "ic_twitter"
-    },
-    {
-      "name": "Facebook",
-      "link": "https://www.facebook.com/profile.php?id=100070987800052",
-      "icon": "ic_fb"
-    },
-    {
-      "name": "Linkedin",
-      "link": "https://www.linkedin.com/company/13614247/admin/",
-      "icon": "ic_linkedin"
-    },
-    {
-      "name": "Instagram",
-      "link": "https://www.instagram.com/moneytornpa/",
-      "icon": "ic_instagram"
-    }
   ]
 }
