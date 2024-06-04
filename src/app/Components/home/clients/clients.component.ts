@@ -1,4 +1,5 @@
-import { Component, OnInit, Input, OnChanges } from '@angular/core';
+// import { Component, OnInit, Input, OnChanges } from '@angular/core';
+import { Component, OnInit, Input, ElementRef, OnChanges } from '@angular/core';
 import { HomeService } from '../home.service';
 import {
   SwiperConfigInterface,
@@ -20,11 +21,44 @@ export class ClientsComponent implements OnInit, OnChanges {
   show: boolean = true;
   slides: any = [];
   disabled: boolean = false;
+  // config: SwiperConfigInterface = {
+  //   a11y: true,
+  //   direction: 'horizontal',
+  //   keyboard: true,
+  //   centeredSlides: true,
+  //   spaceBetween: 15,
+  //   loop: false,
+  //   navigation: true,
+  //   // effect: 'coverflow',
+  //   autoplay: {
+  //     delay: 3500,
+  //     disableOnInteraction: true,
+  //     waitForTransition: true,
+  //   },
+  //   breakpoints: {
+  //     400: {
+  //       initialSlide: 0,
+  //       slidesPerView: 1,
+  //     },
+  //     768: {
+  //       initialSlide: 1,
+  //       slidesPerView: 3,
+  //     },
+  //     1024: {
+  //       initialSlide: 2,
+  //       slidesPerView: 4,
+  //     },
+  //     1524: {
+  //       initialSlide: 3,
+  //       slidesPerView: 6,
+  //     },
+  //   },
+  // };
   config: SwiperConfigInterface = {
     a11y: true,
     direction: 'horizontal',
     keyboard: true,
-    centeredSlides: true,
+    centeredSlides: false,
     spaceBetween: 15,
     loop: false,
     navigation: true,
@@ -60,7 +94,10 @@ export class ClientsComponent implements OnInit, OnChanges {
     hideOnClick: false,
   };
 
-  constructor(private homeService: HomeService) {}
+  constructor(
+    private homeService: HomeService,
+    private elementRef: ElementRef
+  ) {}
 
   ngOnInit(): void {
     this.getClients();
@@ -89,6 +126,13 @@ export class ClientsComponent implements OnInit, OnChanges {
         this.loans = data;
       }
     });
+  }
+  applyPaddingToSwiperContainer() {
+    const swiperEl = this.elementRef.nativeElement.querySelector(
+      '.swiper-container'
+    );
+    swiperEl.style.paddingLeft = '25px';
+    swiperEl.style.paddingRight = '25px';
   }
   onIndexChange(index: number) {
     console.log('Swiper index: ', index);

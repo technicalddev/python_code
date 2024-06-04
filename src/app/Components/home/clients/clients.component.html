@@ -58,7 +58,10 @@
 </div>
 <!-- ngx swipper -->
 <div>
-  <div class="box-container clients">
+  <div
+    class="box-container clients"
+    style="padding-left: 32px; padding-right: 35px;"
+  >
     <div
       class="vertical-container"
       fxLayout="column"
@@ -66,7 +69,7 @@
       fxFlex.xs="100%"
     >
       <div class="content-container" fxLayout="column" fxFlex="auto">
-        <swiper
+        <!-- <swiper
           #swiperEl
           *ngIf="show"
           class="swiper-container"
@@ -76,6 +79,17 @@
           (swiperTransitionStart)="onSwiperEvent('transitionStart')"
           (swiperTransitionEnd)="onSwiperEvent('transitionEnd')"
           fxFlex="auto"
+        > -->
+        <swiper
+          *ngIf="show"
+          class="swiper-container"
+          [config]="config"
+          [disabled]="false"
+          (indexChange)="onIndexChange($event)"
+          (swiperTransitionStart)="onSwiperEvent('transitionStart')"
+          (swiperTransitionEnd)="onSwiperEvent('transitionEnd')"
+          fxFlex="auto"
+          style="padding-left: 25px; padding-right: 25px;"
         >
           <div
             *ngFor="let cl of clients; let i = index"
