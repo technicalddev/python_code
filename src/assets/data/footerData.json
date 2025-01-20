@@ -37,8 +37,8 @@
   ],
   "companyLinks": [
     {
-      "name": "contact@moneytor.in",
-      "value": "contact@moneytor.in",
+      "name": "help@moneytor.in",
+      "value": "help@moneytor.in",
       "type": "email",
       "icon": "../../../../assets/icons/cont_new.png"
     },
