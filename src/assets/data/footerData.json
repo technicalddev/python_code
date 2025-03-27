@@ -5,6 +5,11 @@
   },
   "quickLinks": [
     {
+      "name": "Terms and Conditions",
+      "value": "termsandconditions",
+      "type": "page"
+    },
+    {
       "name": "Privacy Policy",
       "value": "privacyPolicy",
       "type": "privacyPolicyPage"

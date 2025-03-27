@@ -30,6 +30,11 @@ export const navData: any = [
     class: '',
   },
   {
+    name: 'Terms and Conditions',
+    link: 'termsandconditions',
+    class: '',
+  },
+  {
     name: 'Demo',
     link: 'reachus',
     class: 'raised raised-nav',

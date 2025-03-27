@@ -17,6 +17,7 @@ import { BlogsComponent } from './blogs/blogs.component';
 import { FormatterModule } from 'src/app/shared/_Modules/formatter/formatter.module';
 import { Blogs2Component } from './testimonials/testimonials.component';
 import { TranslateModule } from '@ngx-translate/core';
+import { TermsAndConditionsComponent } from '../terms&conditions/terms-and-conditions.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { TranslateModule } from '@ngx-translate/core';
     ClearDeptComponent,
     MediaCoverageComponent,
     ContactUsComponent,
+    TermsAndConditionsComponent,
     BlogsComponent,
     Blogs2Component,
   ],
